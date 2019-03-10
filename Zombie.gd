@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var SPEED = 100
+var SPEED = 70
 var GRAVITY = 30
 var FLOOR = Vector2(0, -1)
 
@@ -14,6 +14,8 @@ func _ready():
 
 func _physics_process(delta):
 	
+	$Sprite.play("Walk")
+	
 	velocity.x = SPEED * direction
 
 	velocity.y += GRAVITY
@@ -21,9 +23,9 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity,FLOOR)
 	
 	if is_on_wall():
-		direction = direction * -1
-		$Sprite.flip_h = true
+		direction *= -1
 		$RayCast2D.position.x *= -1
-	
-	
-	
+		if direction == 1:
+			$Sprite.flip_h = false
+		else:
+			$Sprite.flip_h = true

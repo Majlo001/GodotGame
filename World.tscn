@@ -1,40 +1,90 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=2]
-[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=3]
-[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=4]
-[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=5]
-[ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=6]
-[ext_resource path="res://Individual Sprites/adventurer-run-01.png" type="Texture" id=7]
-[ext_resource path="res://Individual Sprites/adventurer-run-02.png" type="Texture" id=8]
-[ext_resource path="res://Individual Sprites/adventurer-run-03.png" type="Texture" id=9]
-[ext_resource path="res://Individual Sprites/adventurer-run-04.png" type="Texture" id=10]
-[ext_resource path="res://Individual Sprites/adventurer-run-05.png" type="Texture" id=11]
+[ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
+[ext_resource path="res://Individual Sprites/adventurer-run-01.png" type="Texture" id=3]
+[ext_resource path="res://Individual Sprites/adventurer-run-02.png" type="Texture" id=4]
+[ext_resource path="res://Individual Sprites/adventurer-run-03.png" type="Texture" id=5]
+[ext_resource path="res://Individual Sprites/adventurer-run-04.png" type="Texture" id=6]
+[ext_resource path="res://Individual Sprites/adventurer-run-05.png" type="Texture" id=7]
+[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=8]
+[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=9]
+[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=10]
+[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=11]
 [ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=12]
 [ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=13]
 [ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=14]
 [ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=15]
-[ext_resource path="res://brick.png" type="Texture" id=16]
-[ext_resource path="res://Zombie.gd" type="Script" id=17]
-[ext_resource path="res://Undead Sprite Pack/zombie.png" type="Texture" id=18]
+[ext_resource path="res://Individual Sprites/adventurer-stand-02.png" type="Texture" id=16]
+[ext_resource path="res://Individual Sprites/adventurer-stand-01.png" type="Texture" id=17]
+[ext_resource path="res://Individual Sprites/adventurer-stand-00.png" type="Texture" id=18]
+[ext_resource path="res://Individual Sprites/adventurer-slide-00.png" type="Texture" id=19]
+[ext_resource path="res://Individual Sprites/adventurer-slide-01.png" type="Texture" id=20]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=21]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=22]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=23]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=24]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=25]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=26]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=27]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=28]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=29]
+[ext_resource path="res://brick.png" type="Texture" id=30]
+[ext_resource path="res://Zombie.gd" type="Script" id=31]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk1.png" type="Texture" id=32]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk2.png" type="Texture" id=33]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk3.png" type="Texture" id=34]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk4.png" type="Texture" id=35]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk5.png" type="Texture" id=36]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk6.png" type="Texture" id=37]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk7.png" type="Texture" id=38]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk8.png" type="Texture" id=39]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk9.png" type="Texture" id=40]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk10.png" type="Texture" id=41]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk11.png" type="Texture" id=42]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk12.png" type="Texture" id=43]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk13.png" type="Texture" id=44]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk14.png" type="Texture" id=45]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk15.png" type="Texture" id=46]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk16.png" type="Texture" id=47]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk17.png" type="Texture" id=48]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk18.png" type="Texture" id=49]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk19.png" type="Texture" id=50]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk20.png" type="Texture" id=51]
+[ext_resource path="res://Area2D.gd" type="Script" id=52]
+[ext_resource path="res://icon.png" type="Texture" id=53]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 3.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Run",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Idle-NoSword",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Slide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "Idle-Sword",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -48,10 +98,24 @@ extents = Vector2( 10.6, 9.04247 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 78.9275, 10 )
+
+[sub_resource type="CircleShape2D" id=6]
+
+custom_solver_bias = 0.0
+radius = 10.0
 
 [node name="World" type="Node2D" index="0"]
 
@@ -69,7 +133,7 @@ _sections_unfolded = [ "collision" ]
 position = Vector2( 463, 275.24 )
 scale = Vector2( 2.68, 2.68 )
 frames = SubResource( 1 )
-animation = "Idle"
+animation = "Idle-NoSword"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Janek" index="1"]
 
@@ -78,8 +142,42 @@ position = Vector2( 459.178, 284.68 )
 scale = Vector2( 2.66457, 4.29827 )
 shape = SubResource( 2 )
 
+[node name="Position2D" type="Position2D" parent="Janek" index="2"]
+
+visible = false
+position = Vector2( 459.463, 284.491 )
+scale = Vector2( 2.63413, -3.86758 )
+
+[node name="Camera2D" type="Camera2D" parent="Janek" index="3"]
+
+position = Vector2( 459.796, 280.248 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -2147483647
+limit_top = -2147483647
+limit_right = 1000
+limit_bottom = 1000
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit", "Smoothing" ]
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 2.44354, 66.7894 )
 input_pickable = false
 collision_layer = 1
@@ -92,7 +190,7 @@ bounce = 0.0
 [node name="brick" type="Sprite" parent="StaticBody2D" index="0"]
 
 position = Vector2( 462.289, 367.848 )
-texture = ExtResource( 16 )
+texture = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
 
@@ -115,7 +213,7 @@ bounce = 0.0
 [node name="brick" type="Sprite" parent="StaticBody2D2" index="0"]
 
 position = Vector2( 558.292, 367.806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="1"]
 
@@ -138,7 +236,7 @@ bounce = 0.0
 [node name="brick" type="Sprite" parent="StaticBody2D3" index="0"]
 
 position = Vector2( 654.16, 367.806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="1"]
 
@@ -161,7 +259,7 @@ bounce = 0.0
 [node name="brick" type="Sprite" parent="StaticBody2D4" index="0"]
 
 position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" index="1"]
 
@@ -184,7 +282,7 @@ bounce = 0.0
 [node name="brick" type="Sprite" parent="StaticBody2D5" index="0"]
 
 position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" index="1"]
 
@@ -207,7 +305,7 @@ bounce = 0.0
 [node name="brick" type="Sprite" parent="StaticBody2D6" index="0"]
 
 position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 16 )
+texture = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="1"]
 
@@ -215,27 +313,75 @@ position = Vector2( 750.183, 368.002 )
 scale = Vector2( 4.79764, 3.19924 )
 shape = SubResource( 3 )
 
-[node name="Zombie" type="KinematicBody2D" parent="." index="7"]
+[node name="StaticBody2D7" type="StaticBody2D" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( -561.544, -0.84317 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="brick" type="Sprite" parent="StaticBody2D7" index="0"]
+
+position = Vector2( 750.147, 367.806 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="1"]
+
+position = Vector2( 750.183, 368.002 )
+scale = Vector2( 4.79764, 3.19924 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( -755.156, -13.6729 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="brick" type="Sprite" parent="StaticBody2D8" index="0"]
+
+position = Vector2( 750.147, 367.806 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" index="1"]
+
+position = Vector2( 750.183, 368.002 )
+scale = Vector2( 4.79764, 3.19924 )
+shape = SubResource( 3 )
+
+[node name="Zombie" type="KinematicBody2D" parent="." index="9"]
 
 position = Vector2( -178.604, -38.9727 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 17 )
+script = ExtResource( 31 )
 
-[node name="Sprite" type="Sprite" parent="Zombie" index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="Zombie" index="0"]
 
 position = Vector2( 765.925, 343.939 )
 scale = Vector2( 1.78188, 1.78188 )
-texture = ExtResource( 18 )
+frames = SubResource( 4 )
+animation = "Walk"
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie" index="1"]
 
 visible = false
 position = Vector2( 766.22, 348.906 )
 scale = Vector2( 0.339792, 2.355 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Zombie" index="2"]
 
@@ -245,5 +391,32 @@ enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )
 collision_mask = 1
+
+[node name="Coins" type="Node" parent="." index="10"]
+
+[node name="Coin" type="Area2D" parent="Coins" index="0"]
+
+position = Vector2( 185.248, 289.747 )
+rotation = 0.00158113
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 52 )
+
+[node name="Sprite" type="Sprite" parent="Coins/Coin" index="0"]
+
+position = Vector2( -0.800995, -0.800964 )
+scale = Vector2( 0.410912, 0.410912 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin" index="1"]
+
+visible = false
+position = Vector2( -0.948517, 0.951447 )
+shape = SubResource( 6 )
 
 
