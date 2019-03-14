@@ -17,6 +17,7 @@ func timing():
 		attack = false
 
 func get_input():
+	
 	#atak
 	if Input.is_action_just_pressed("action_attack"):
 		attack = true
@@ -29,20 +30,33 @@ func get_input():
 		add_child(timer)
 		timer.start()
 		velocity.x = 0
-		#ruch w prawo
-	elif Input.is_action_pressed("move_right"):
+		
+	#inventarz
+	if Input.is_action_pressed("action_inventory"):
+		var invenotry = load("inventory.tscn")
+		var node = invenotry.instance()
+		add_child(node)
+#	elif Input.is_action_pressed("action_inventory") && inv == true:
+#		inv = false
+#		remove_child(node)
+		
+	#ruch w prawo
+	if Input.is_action_pressed("move_right"):
 		velocity.x = SPEED
 		$Sprite.flip_h = false
 		$Sprite.play("Run")
+		
 	#ruch w lewo
 	elif Input.is_action_pressed("move_left"):
 		velocity.x = -SPEED
 		$Sprite.flip_h = true
 		$Sprite.play("Run")
+		
 	#bezruch
 	else: 
 		velocity.x = 0 
 		$Sprite.play("Idle-NoSword")
+		
 	#skok
 	if is_on_floor():
 		if attack ==false:
@@ -50,6 +64,7 @@ func get_input():
 				velocity.y = JUMP
 	else:
 		$Sprite.play("Jump")
+		
 	#ślizg
 	if Input.is_action_pressed("action_slide"):
 		if $Sprite.flip_h == true:
@@ -61,7 +76,12 @@ func get_input():
 
 	velocity.y += GRAVITY
 	
-		
+	#ESC wywala gre i elo
+func _unhandled_input(event):
+    if event is InputEventKey:
+        if event.pressed and event.scancode == KEY_ESCAPE:
+            get_tree().quit()
+
 
 func on_timeout_complete():
 	attack  = false
