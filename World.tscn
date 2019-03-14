@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -7,28 +7,28 @@
 [ext_resource path="res://Individual Sprites/adventurer-run-03.png" type="Texture" id=5]
 [ext_resource path="res://Individual Sprites/adventurer-run-04.png" type="Texture" id=6]
 [ext_resource path="res://Individual Sprites/adventurer-run-05.png" type="Texture" id=7]
-[ext_resource path="res://Individual Sprites/adventurer-stand-02.png" type="Texture" id=8]
-[ext_resource path="res://Individual Sprites/adventurer-stand-01.png" type="Texture" id=9]
-[ext_resource path="res://Individual Sprites/adventurer-stand-00.png" type="Texture" id=10]
-[ext_resource path="res://Individual Sprites/adventurer-slide-00.png" type="Texture" id=11]
-[ext_resource path="res://Individual Sprites/adventurer-slide-01.png" type="Texture" id=12]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=13]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=14]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=15]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=16]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=17]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=18]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=19]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=20]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=21]
-[ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=22]
-[ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=23]
-[ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=24]
-[ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=25]
-[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=26]
-[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=27]
-[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=28]
-[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=29]
+[ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=8]
+[ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=9]
+[ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=10]
+[ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=11]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=12]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=13]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=14]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=15]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=16]
+[ext_resource path="res://Individual Sprites/adventurer-stand-02.png" type="Texture" id=17]
+[ext_resource path="res://Individual Sprites/adventurer-stand-01.png" type="Texture" id=18]
+[ext_resource path="res://Individual Sprites/adventurer-stand-00.png" type="Texture" id=19]
+[ext_resource path="res://Individual Sprites/adventurer-slide-00.png" type="Texture" id=20]
+[ext_resource path="res://Individual Sprites/adventurer-slide-01.png" type="Texture" id=21]
+[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=22]
+[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=23]
+[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=24]
+[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=25]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=26]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=27]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=28]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=29]
 [ext_resource path="res://brick.png" type="Texture" id=30]
 [ext_resource path="res://Zombie.gd" type="Script" id=31]
 [ext_resource path="res://undead sprite pack/TheWalkingDzban/walk1.png" type="Texture" id=32]
@@ -54,6 +54,8 @@
 [ext_resource path="res://Area2D.gd" type="Script" id=52]
 [ext_resource path="res://icon.png" type="Texture" id=53]
 [ext_resource path="res://background1.png" type="Texture" id=54]
+[ext_resource path="res://eq.png" type="Texture" id=55]
+[ext_resource path="res://Inventory.gd" type="Script" id=56]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -63,29 +65,29 @@ animations = [ {
 "name": "Run",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Slide",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Idle-Sword",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Slide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "Idle-NoSword",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "Idle-Sword",
 "speed": 4.0
 } ]
 
@@ -120,8 +122,11 @@ radius = 10.0
 
 [node name="World" type="Node2D" index="0"]
 
+position = Vector2( -2.05054, 0 )
+
 [node name="Janek" type="KinematicBody2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -362,6 +367,7 @@ shape = SubResource( 3 )
 
 [node name="Zombie" type="KinematicBody2D" parent="." index="9"]
 
+editor/display_folded = true
 position = Vector2( -178.604, -38.9727 )
 input_pickable = false
 collision_layer = 1
@@ -395,6 +401,8 @@ collision_mask = 1
 
 [node name="Coins" type="Node" parent="." index="10"]
 
+editor/display_folded = true
+
 [node name="Coin" type="Area2D" parent="Coins" index="0"]
 
 position = Vector2( 185.248, 289.747 )
@@ -422,6 +430,7 @@ shape = SubResource( 6 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="11"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -446,5 +455,56 @@ _sections_unfolded = [ "Motion" ]
 position = Vector2( 378.591, 309.173 )
 texture = ExtResource( 54 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Inventory" type="Node" parent="." index="12"]
+
+_sections_unfolded = [ "Pause" ]
+
+[node name="Panel" type="Panel" parent="Inventory" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 166.0
+margin_right = 719.0
+margin_bottom = 396.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="eq" type="Sprite" parent="Inventory/Panel" index="0"]
+
+position = Vector2( 194.804, 115.608 )
+texture = ExtResource( 55 )
+
+[node name="GridContainer" type="GridContainer" parent="Inventory/Panel" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 221.0
+margin_top = 35.0
+margin_right = 363.0
+margin_bottom = 211.0
+rect_scale = Vector2( 0.95, 0.95 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 4
+script = ExtResource( 56 )
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 

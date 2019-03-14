@@ -6,4 +6,4 @@ func _on_coin_body_enter( body ):
 	if not taken and body is preload("res://KinematicBody2D.gd"):
 		taken = true
 		print("coin")
-		
+	pass
