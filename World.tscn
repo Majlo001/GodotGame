@@ -95,15 +95,15 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10.6, 9.04247 )
 
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=3]
 
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
 "frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
@@ -112,17 +112,17 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 78.9275, 10 )
 
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=7]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="World" type="Node2D" index="0"]
+[node name="World" type="Node2D"]
 
 position = Vector2( -2.05054, 0 )
 
@@ -185,7 +185,7 @@ _sections_unfolded = [ "Limit", "Smoothing" ]
 [node name="TileMap" type="TileMap" parent="Janek/Camera2D" index="0"]
 
 mode = 0
-tile_set = SubResource( 7 )
+tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -308,7 +308,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 462.337, 367.8 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="2"]
 
@@ -331,7 +331,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 558.255, 367.788 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="3"]
 
@@ -354,7 +354,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 654.246, 367.793 )
 scale = Vector2( 4.8024, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." index="4"]
 
@@ -377,7 +377,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 750.128, 367.801 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="." index="5"]
 
@@ -400,7 +400,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 750.183, 368.002 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." index="6"]
 
@@ -423,7 +423,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 750.183, 368.002 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="." index="7"]
 
@@ -446,7 +446,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 750.183, 368.002 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." index="8"]
 
@@ -469,7 +469,7 @@ texture = ExtResource( 31 )
 
 position = Vector2( 750.183, 368.002 )
 scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Zombie" type="KinematicBody2D" parent="." index="9"]
 
@@ -484,7 +484,7 @@ script = ExtResource( 32 )
 
 position = Vector2( 765.925, 343.939 )
 scale = Vector2( 1.78188, 1.78188 )
-frames = SubResource( 4 )
+frames = SubResource( 5 )
 animation = "Walk"
 frame = 4
 
@@ -493,7 +493,7 @@ frame = 4
 position = Vector2( -71.5677, -13.872 )
 scale = Vector2( 0.561205, 0.561205 )
 mode = 0
-tile_set = SubResource( 7 )
+tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -517,10 +517,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 111.0
-margin_top = -14.0
-margin_right = 141.0
-margin_bottom = 14.0
+margin_left = 95.0
+margin_top = -10.0
+margin_right = 125.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -538,10 +538,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 131.0
-margin_top = -14.0
-margin_right = 161.0
-margin_bottom = 14.0
+margin_left = 115.0
+margin_top = -10.0
+margin_right = 145.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -559,10 +559,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 151.0
-margin_top = -14.0
-margin_right = 181.0
-margin_bottom = 14.0
+margin_left = 135.0
+margin_top = -10.0
+margin_right = 165.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -580,10 +580,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 171.0
-margin_top = -14.0
-margin_right = 201.0
-margin_bottom = 14.0
+margin_left = 155.0
+margin_top = -10.0
+margin_right = 185.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -600,10 +600,11 @@ _sections_unfolded = [ "Rect" ]
 visible = false
 position = Vector2( 766.22, 348.906 )
 scale = Vector2( 0.339792, 2.355 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Zombie" index="2"]
 
+visible = false
 position = Vector2( 771.602, 326.991 )
 scale = Vector2( 1, 0.935261 )
 enabled = true
@@ -614,6 +615,7 @@ collision_mask = 1
 [node name="Coins" type="Node" parent="." index="10"]
 
 editor/display_folded = true
+_sections_unfolded = [ "Pause" ]
 
 [node name="Coin" type="Area2D" parent="Coins" index="0"]
 
@@ -636,9 +638,8 @@ texture = ExtResource( 54 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin" index="1"]
 
-visible = false
 position = Vector2( -0.948517, 0.951447 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="11"]
 
@@ -656,7 +657,6 @@ scroll_ignore_camera_zoom = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
-visible = false
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 1280, 0 )
@@ -666,6 +666,5 @@ _sections_unfolded = [ "Motion" ]
 
 position = Vector2( 401.591, 313.173 )
 texture = ExtResource( 55 )
-_sections_unfolded = [ "Transform" ]
 
 

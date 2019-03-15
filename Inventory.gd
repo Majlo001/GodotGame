@@ -1,7 +1,7 @@
 extends GridContainer
 
 const ItemClass = preload("Item.gd")
-const ItemSlotClass = preload("res://ItemSlot.gd")
+const ItemSlotClass = preload("Itemslot.gd")
 
 const slotTexture = preload("items/skil.png")
 const itemImages = [
@@ -16,7 +16,7 @@ const itemDictionary = {
 		"itemIcon": itemImages[0]
 	},
 	1: {
-		"itemName": "Pierścień",
+		"itemName": "Pierscien",
 		"itemValue": 100,
 		"itemIcon": itemImages[1]
 	},

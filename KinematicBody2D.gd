@@ -9,6 +9,7 @@ var FLOOR = Vector2(0, -1)
 var timer
 var attack_delay = 1
 var attack = false
+var inv = false
 
 var velocity = Vector2()
 
@@ -32,16 +33,18 @@ func get_input():
 		velocity.x = 0
 		
 	#inventarz
-	if Input.is_action_pressed("action_inventory"):
-		var invenotry = load("inventory.tscn")
-		var node = invenotry.instance()
-		add_child(node)
-#	elif Input.is_action_pressed("action_inventory") && inv == true:
-#		inv = false
-#		remove_child(node)
+	elif Input.is_action_pressed("action_inventory"):
+		if inv == false:
+			var invenotry = load("Inventory.tscn")
+			var node = invenotry.instance()
+			add_child(node)
+			inv = true
+#		else:
+#			remove_child(node)
+#			inv = false
 		
 	#ruch w prawo
-	if Input.is_action_pressed("move_right"):
+	elif Input.is_action_pressed("move_right"):
 		velocity.x = SPEED
 		$Sprite.flip_h = false
 		$Sprite.play("Run")
