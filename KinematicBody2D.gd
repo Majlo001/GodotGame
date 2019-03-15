@@ -11,6 +11,9 @@ var attack_delay = 1
 var attack = false
 var inv = false
 
+var invenotry = load("Inventory.tscn")
+var node = invenotry.instance()
+
 var velocity = Vector2()
 
 func timing():
@@ -32,16 +35,15 @@ func get_input():
 		timer.start()
 		velocity.x = 0
 		
+		
 	#inventarz
-	elif Input.is_action_pressed("action_inventory"):
+	elif Input.is_action_just_pressed("action_inventory"):
 		if inv == false:
-			var invenotry = load("Inventory.tscn")
-			var node = invenotry.instance()
 			add_child(node)
 			inv = true
-#		else:
-#			remove_child(node)
-#			inv = false
+		elif inv == true:
+			remove_child(node)
+			inv = false
 		
 	#ruch w prawo
 	elif Input.is_action_pressed("move_right"):
