@@ -12,7 +12,7 @@ const itemImages = [
 const itemDictionary = {
 	0: {
 		"itemName": "Miecz",
-		"itemValue": 456,
+		"itemValue": 450,
 		"itemIcon": itemImages[0]
 	},
 	1: {
@@ -22,7 +22,7 @@ const itemDictionary = {
 	},
 	2: {
 		"itemName": "Mieczor",
-		"itemValue": 987,
+		"itemValue": 999,
 		"itemIcon": itemImages[0]
 	},
 }

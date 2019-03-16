@@ -157,6 +157,7 @@ scale = Vector2( 2.63413, -3.86758 )
 
 [node name="Camera2D" type="Camera2D" parent="Janek" index="3"]
 
+editor/display_folded = true
 position = Vector2( 459.796, 280.248 )
 anchor_mode = 1
 rotating = false
@@ -184,6 +185,7 @@ _sections_unfolded = [ "Limit", "Smoothing" ]
 
 [node name="TileMap" type="TileMap" parent="Janek/Camera2D" index="0"]
 
+editor/display_folded = true
 mode = 0
 tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
