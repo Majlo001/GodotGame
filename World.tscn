@@ -122,7 +122,7 @@ extents = Vector2( 78.9275, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 position = Vector2( -2.05054, 0 )
 
@@ -616,7 +616,6 @@ collision_mask = 1
 
 [node name="Coins" type="Node" parent="." index="10"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Pause" ]
 
 [node name="Coin" type="Area2D" parent="Coins" index="0"]
