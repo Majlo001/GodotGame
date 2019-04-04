@@ -20,13 +20,13 @@ func setItem(newItem):
 func pickItem():
 	item.pickItem()
 	remove_child(item)
-	get_parent().get_parent().add_child(item)
+	get_parent().get_parent().get_parent().add_child(item)
 	item = null
 
 func putItem(newItem):
 	item = newItem
 	item.itemSlot = self
 	item.putItem()
-	get_parent().get_parent().remove_child(item)
+	get_parent().get_parent().get_parent().remove_child(item)
 	add_child(item)
 	pass

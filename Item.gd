@@ -3,6 +3,8 @@ extends TextureRect
 var itemIcon
 var itemName
 var itemSlot
+#var itemWight
+
 var picked = false
 
 func _init(itemName, itemTexture, itemSlot, itemValue):

@@ -569,10 +569,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 111.0
-margin_top = -14.0
-margin_right = 141.0
-margin_bottom = 14.0
+margin_left = 95.0
+margin_top = -10.0
+margin_right = 125.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -590,10 +590,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 131.0
-margin_top = -14.0
-margin_right = 161.0
-margin_bottom = 14.0
+margin_left = 115.0
+margin_top = -10.0
+margin_right = 145.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -611,10 +611,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 151.0
-margin_top = -14.0
-margin_right = 181.0
-margin_bottom = 14.0
+margin_left = 135.0
+margin_top = -10.0
+margin_right = 165.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -632,10 +632,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 171.0
-margin_top = -14.0
-margin_right = 201.0
-margin_bottom = 14.0
+margin_left = 155.0
+margin_top = -10.0
+margin_right = 185.0
+margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -656,6 +656,7 @@ shape = SubResource( 6 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Zombie" index="2"]
 
+visible = false
 position = Vector2( 771.602, 326.991 )
 scale = Vector2( 1, 0.935261 )
 enabled = true
@@ -665,7 +666,7 @@ collision_mask = 1
 
 [node name="Coins" type="Node" parent="." index="10"]
 
-editor/display_folded = true
+_sections_unfolded = [ "Pause" ]
 
 [node name="Coin" type="Area2D" parent="Coins" index="0"]
 
@@ -688,7 +689,6 @@ texture = ExtResource( 73 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin" index="1"]
 
-visible = false
 position = Vector2( -0.948517, 0.951447 )
 shape = SubResource( 7 )
 
@@ -708,7 +708,6 @@ scroll_ignore_camera_zoom = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
 
-visible = false
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 1280, 0 )
@@ -719,6 +718,7 @@ _sections_unfolded = [ "Motion" ]
 position = Vector2( 401.591, 313.173 )
 texture = ExtResource( 74 )
 _sections_unfolded = [ "Transform" ]
+texture = ExtResource( 55 )
 
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
