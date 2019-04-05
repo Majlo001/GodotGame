@@ -10,7 +10,6 @@ var attack_delay = 1
 var attacking = false
 var attack_anim = null
 var anim_numb = 1
-var attack = false
 var inv = false
 
 var invenotry = load("Inventory.tscn")
@@ -22,7 +21,6 @@ var velocity = Vector2()
 func get_input():
 	var friction = false
 	attack_anim = "Attack" +str(anim_numb)
-	print(anim_numb)
 
 	#inventarz
 	if Input.is_action_just_pressed("action_inventory"):
@@ -39,13 +37,19 @@ func get_input():
 		if Input.is_action_pressed("move_right"):
 			velocity.x = SPEED
 			$Sprite.flip_h = false
-			$Sprite.play("Run")
+			if $Timer2.time_left > 0:
+				$Sprite.play("Run-Sword")
+			else:
+				$Sprite.play("Run")
 			
 		#ruch w lewo
 		elif Input.is_action_pressed("move_left"):
 			velocity.x = -SPEED
 			$Sprite.flip_h = true
-			$Sprite.play("Run")
+			if $Timer2.time_left > 0:
+				$Sprite.play("Run-Sword")
+			else:
+				$Sprite.play("Run")
 			
 		#bezruch
 		else:
