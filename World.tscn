@@ -81,7 +81,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Run",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
@@ -127,7 +127,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.6, 9.04247 )
+extents = Vector2( 11.211, 9.04247 )
 
 [sub_resource type="TileSet" id=3]
 
@@ -156,7 +156,7 @@ extents = Vector2( 78.9275, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 position = Vector2( -2.05054, 0 )
 
@@ -174,8 +174,8 @@ _sections_unfolded = [ "collision" ]
 position = Vector2( 463, 275.24 )
 scale = Vector2( 2.68, 2.68 )
 frames = SubResource( 1 )
-animation = "Attack3"
-frame = 1
+animation = "Run"
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Janek" index="1"]
 
@@ -192,7 +192,6 @@ scale = Vector2( 2.63413, -3.86758 )
 
 [node name="Camera2D" type="Camera2D" parent="Janek" index="3"]
 
-editor/display_folded = true
 position = Vector2( 459.796, 280.248 )
 anchor_mode = 1
 rotating = false

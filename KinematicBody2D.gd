@@ -62,12 +62,13 @@ func get_input():
 			
 		#ślizg
 		if Input.is_action_pressed("action_slide"):
-			if $Sprite.flip_h == true:
-				self.velocity -= Vector2(150, 0)
-				$Sprite.play("Slide")
-			elif $Sprite.flip_h == false:
-				self.velocity += Vector2(150, 0)
-				$Sprite.play("Slide")
+			if is_on_floor():
+				if $Sprite.flip_h == true:
+					self.velocity -= Vector2(150, 0)
+					$Sprite.play("Slide")
+				elif $Sprite.flip_h == false:
+					self.velocity += Vector2(150, 0)
+					$Sprite.play("Slide")
 			
 		#skok
 		if is_on_floor():
@@ -101,15 +102,16 @@ func _unhandled_input(event):
 
 
 func attack():
-	attacking = true
-	velocity.x = 0
-	if $Sprite.flip_h == false:
-		self.position += Vector2(20, 0)
-	else:
-		self.position -= Vector2(20, 0)
-	$Sprite.play(attack_anim)
-	yield($Sprite, "animation_finished")
-	attacking = false
+	if is_on_floor():
+		attacking = true
+		velocity.x = 0
+		if $Sprite.flip_h == false:
+			self.position += Vector2(15, 0)
+		else:
+			self.position -= Vector2(15, 0)
+		$Sprite.play(attack_anim)
+		yield($Sprite, "animation_finished")
+		attacking = false
 
 
 func _physics_process(delta):
