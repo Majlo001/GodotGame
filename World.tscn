@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -7,47 +7,47 @@
 [ext_resource path="res://Individual Sprites/adventurer-run-03.png" type="Texture" id=5]
 [ext_resource path="res://Individual Sprites/adventurer-run-04.png" type="Texture" id=6]
 [ext_resource path="res://Individual Sprites/adventurer-run-05.png" type="Texture" id=7]
-[ext_resource path="res://Individual Sprites/adventurer-stand-02.png" type="Texture" id=8]
-[ext_resource path="res://Individual Sprites/adventurer-stand-01.png" type="Texture" id=9]
-[ext_resource path="res://Individual Sprites/adventurer-stand-00.png" type="Texture" id=10]
-[ext_resource path="res://Individual Sprites/adventurer-slide-00.png" type="Texture" id=11]
-[ext_resource path="res://Individual Sprites/adventurer-slide-01.png" type="Texture" id=12]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-00.png" type="Texture" id=13]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-01.png" type="Texture" id=14]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-02.png" type="Texture" id=15]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-03.png" type="Texture" id=16]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-04.png" type="Texture" id=17]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-05.png" type="Texture" id=18]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-00.png" type="Texture" id=19]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-01.png" type="Texture" id=20]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-02.png" type="Texture" id=21]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-03.png" type="Texture" id=22]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-04.png" type="Texture" id=23]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-05.png" type="Texture" id=24]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=25]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=26]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=27]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=28]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=29]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=30]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=31]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=32]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=33]
-[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=34]
-[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=35]
-[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=36]
-[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=37]
-[ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=38]
-[ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=39]
-[ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=40]
-[ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=41]
-[ext_resource path="res://Individual Sprites/adventurer-die-00.png" type="Texture" id=42]
-[ext_resource path="res://Individual Sprites/adventurer-die-01.png" type="Texture" id=43]
-[ext_resource path="res://Individual Sprites/adventurer-die-02.png" type="Texture" id=44]
-[ext_resource path="res://Individual Sprites/adventurer-die-03.png" type="Texture" id=45]
-[ext_resource path="res://Individual Sprites/adventurer-die-04.png" type="Texture" id=46]
-[ext_resource path="res://Individual Sprites/adventurer-die-05.png" type="Texture" id=47]
-[ext_resource path="res://Individual Sprites/adventurer-die-06.png" type="Texture" id=48]
+[ext_resource path="res://Individual Sprites/adventurer-die-00.png" type="Texture" id=8]
+[ext_resource path="res://Individual Sprites/adventurer-die-01.png" type="Texture" id=9]
+[ext_resource path="res://Individual Sprites/adventurer-die-02.png" type="Texture" id=10]
+[ext_resource path="res://Individual Sprites/adventurer-die-03.png" type="Texture" id=11]
+[ext_resource path="res://Individual Sprites/adventurer-die-04.png" type="Texture" id=12]
+[ext_resource path="res://Individual Sprites/adventurer-die-05.png" type="Texture" id=13]
+[ext_resource path="res://Individual Sprites/adventurer-die-06.png" type="Texture" id=14]
+[ext_resource path="res://Individual Sprites/adventurer-stand-02.png" type="Texture" id=15]
+[ext_resource path="res://Individual Sprites/adventurer-stand-01.png" type="Texture" id=16]
+[ext_resource path="res://Individual Sprites/adventurer-stand-00.png" type="Texture" id=17]
+[ext_resource path="res://Individual Sprites/adventurer-slide-00.png" type="Texture" id=18]
+[ext_resource path="res://Individual Sprites/adventurer-slide-01.png" type="Texture" id=19]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=20]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=21]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=22]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=23]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=24]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=25]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=26]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=27]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=28]
+[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=29]
+[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=30]
+[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=31]
+[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=32]
+[ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=33]
+[ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=34]
+[ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=35]
+[ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=36]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-00.png" type="Texture" id=37]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-01.png" type="Texture" id=38]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-02.png" type="Texture" id=39]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-03.png" type="Texture" id=40]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-04.png" type="Texture" id=41]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-05.png" type="Texture" id=42]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-00.png" type="Texture" id=43]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-01.png" type="Texture" id=44]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-02.png" type="Texture" id=45]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-03.png" type="Texture" id=46]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-04.png" type="Texture" id=47]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-05.png" type="Texture" id=48]
 [ext_resource path="res://items/heart.png" type="Texture" id=49]
 [ext_resource path="res://brick.png" type="Texture" id=50]
 [ext_resource path="res://Zombie.gd" type="Script" id=51]
@@ -83,45 +83,45 @@ animations = [ {
 "name": "Run",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Slide",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "Attack3",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
-"loop": true,
-"name": "Attack2",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "Attack1",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "Idle-Sword",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "Idle-NoSword",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 33 ) ],
 "loop": false,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
 "loop": true,
-"name": "Die",
-"speed": 5.0
+"name": "Attack3",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "Attack2",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -155,6 +155,9 @@ extents = Vector2( 78.9275, 10 )
 
 custom_solver_bias = 0.0
 radius = 10.0
+
+[sub_resource type="TileSet" id=8]
+
 
 [node name="World" type="Node2D" index="0"]
 
@@ -192,6 +195,7 @@ scale = Vector2( 2.63413, -3.86758 )
 
 [node name="Camera2D" type="Camera2D" parent="Janek" index="3"]
 
+editor/display_folded = true
 position = Vector2( 459.796, 280.248 )
 anchor_mode = 1
 rotating = false
@@ -199,8 +203,8 @@ current = true
 zoom = Vector2( 1, 1 )
 limit_left = -2147483647
 limit_top = -2147483647
-limit_right = 1000
-limit_bottom = 1000
+limit_right = 2147483647
+limit_bottom = 2147483647
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -215,7 +219,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = true
-_sections_unfolded = [ "Drag Margin", "Editor" ]
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit" ]
 
 [node name="TileMap" type="TileMap" parent="Janek/Camera2D" index="0"]
 
@@ -693,6 +697,7 @@ shape = SubResource( 7 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="11"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -717,6 +722,27 @@ _sections_unfolded = [ "Motion" ]
 position = Vector2( 401.591, 313.173 )
 texture = ExtResource( 74 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="12"]
+
+position = Vector2( 1.30487, 2.42401 )
+mode = 0
+tile_set = SubResource( 8 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
 
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
