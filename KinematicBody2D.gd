@@ -128,3 +128,7 @@ func _on_Timer_timeout():
 
 func _on_Timer2_timeout():
 	pass # replace with function body
+
+
+func _on_Coin_body_entered(body):
+	pass # replace with function body

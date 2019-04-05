@@ -722,4 +722,6 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="timeout" from="Janek/Timer2" to="Janek" method="_on_Timer2_timeout"]
 
+[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
+
 
