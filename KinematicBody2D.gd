@@ -65,14 +65,11 @@ func get_input():
 				
 			
 		#ślizg
-		if Input.is_action_pressed("action_slide"):
-			if is_on_floor():
-				if $Sprite.flip_h == true:
-					self.velocity -= Vector2(150, 0)
-					$Sprite.play("Slide")
-				elif $Sprite.flip_h == false:
-					self.velocity += Vector2(150, 0)
-					$Sprite.play("Slide")
+		if Input.is_action_just_pressed("action_slide"):
+			dash()
+			
+		if SPEED == 500 and friction == false:
+			$Sprite.play("Slide")
 			
 		#skok
 		if is_on_floor():
@@ -104,6 +101,9 @@ func _unhandled_input(event):
 		if event.pressed and event.scancode == KEY_ESCAPE:
 			get_tree().quit()
 
+func dash():
+	SPEED = 500
+	$Timer3.start()
 
 func attack():
 	if is_on_floor():
@@ -133,6 +133,8 @@ func _on_Timer_timeout():
 func _on_Timer2_timeout():
 	pass # replace with function body
 
+func _on_Timer3_timeout():
+	SPEED = 150
 
 func _on_Coin_body_entered(body):
 	pass # replace with function body
