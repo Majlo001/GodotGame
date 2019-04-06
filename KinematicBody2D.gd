@@ -66,8 +66,9 @@ func get_input():
 			
 		#ślizg
 		if Input.is_action_just_pressed("action_slide"):
-			dash()
-			
+			if is_on_floor():
+				dash()
+#			
 		if SPEED == 500 and friction == false:
 			$Sprite.play("Slide")
 			
