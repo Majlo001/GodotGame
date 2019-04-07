@@ -170,7 +170,7 @@ radius = 10.0
 [sub_resource type="TileSet" id=8]
 
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" index="0"]
 
 position = Vector2( -2.05054, 0 )
 
