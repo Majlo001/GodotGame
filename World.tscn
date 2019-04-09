@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -80,6 +80,9 @@
 [ext_resource path="res://Area2D.gd" type="Script" id=78]
 [ext_resource path="res://icon.png" type="Texture" id=79]
 [ext_resource path="res://background1.png" type="Texture" id=80]
+[ext_resource path="res://jegomosc.gd" type="Script" id=81]
+[ext_resource path="res://other/jegomosc.png" type="Texture" id=82]
+[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=83]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -170,12 +173,27 @@ radius = 10.0
 [sub_resource type="TileSet" id=8]
 
 
+[sub_resource type="CapsuleShape2D" id=9]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 8
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 83 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="World" type="Node2D" index="0"]
 
 position = Vector2( -2.05054, 0 )
 
 [node name="Janek" type="KinematicBody2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -700,6 +718,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 78 )
+jeden = true
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin" index="0"]
 
@@ -761,6 +780,58 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray(  )
 
+[node name="Jegomość" type="Area2D" parent="." index="13"]
+
+position = Vector2( 882.161, 274.839 )
+scale = Vector2( 2.34879, 2.34879 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 81 )
+
+[node name="Sprite" type="Sprite" parent="Jegomość" index="0"]
+
+position = Vector2( -15.6924, 11.7946 )
+scale = Vector2( 0.954328, 0.954328 )
+texture = ExtResource( 82 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomość" index="1"]
+
+position = Vector2( -15.9439, 15.1948 )
+scale = Vector2( 1.61138, 1.80274 )
+shape = SubResource( 9 )
+
+[node name="Label" type="Label" parent="Jegomość" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -67.0
+margin_top = -36.0
+margin_right = 37.0
+margin_bottom = -17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 10 )
+text = "interakcja (enter)"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
 [connection signal="timeout" from="Janek/Timer2" to="Janek" method="_on_Timer2_timeout"]
@@ -768,5 +839,9 @@ tile_data = PoolIntArray(  )
 [connection signal="timeout" from="Janek/Timer3" to="Janek" method="_on_Timer3_timeout"]
 
 [connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
+
+[connection signal="body_entered" from="Jegomość" to="Jegomość" method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="Jegomość" to="Jegomość" method="_on_Area2D_body_exited"]
 
 
