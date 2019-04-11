@@ -115,10 +115,10 @@ func get_input():
 	velocity.y += GRAVITY
 	
 	#ESC wywala gre i elo
-func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed and event.scancode == KEY_ESCAPE:
-			get_tree().quit()
+#func _unhandled_input(event):
+#	if event is InputEventKey:
+#		if event.pressed and event.scancode == KEY_ESCAPE:
+#			get_tree().quit()
 
 func dash():
 	SPEED = 500

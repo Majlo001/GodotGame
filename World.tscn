@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -83,6 +83,7 @@
 [ext_resource path="res://jegomosc.gd" type="Script" id=81]
 [ext_resource path="res://other/jegomosc.png" type="Texture" id=82]
 [ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=83]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=84]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -195,6 +196,7 @@ position = Vector2( -2.05054, 0 )
 "character",
 ]]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -720,6 +722,7 @@ collision_mask = 1
 
 [node name="Coins" type="Node" parent="." index="10"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Pause" ]
 
 [node name="Coin" type="Area2D" parent="Coins" index="0"]
@@ -798,6 +801,7 @@ tile_data = PoolIntArray(  )
 
 [node name="Jegomość" type="Area2D" parent="." index="13"]
 
+editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
 scale = Vector2( 2.34879, 2.34879 )
 input_pickable = true
@@ -847,6 +851,18 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="14"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Pause" parent="CanvasLayer" index="0" instance=ExtResource( 84 )]
+
+visible = false
 
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
