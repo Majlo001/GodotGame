@@ -5,18 +5,36 @@ var SPEED = 150
 var GRAVITY = 10
 var JUMP = -300
 var FLOOR = Vector2(0, -1)
+var velocity = Vector2()
+
+export(String) var weapon_scene_path = "res://weapons/spear/Spear.tscn"
+var weapon = null
+var weapon_path = ""
+
+export var max_health = 1
+var health
 
 var attack_delay = 1
 var attacking = false
 var attack_anim = null
 var anim_numb = 1
-var inv = false
 
+var inv = false
 var invenotry = load("Inventory.tscn")
 var node = invenotry.instance()
 
-var velocity = Vector2()
+func _ready():
+	health = max_health
 
+	# Weapon setup
+	var weapon_instance = load("res://weapons/Weapon.tscn").instance()
+	var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
+	weapon_anchor.add_child(weapon_instance)
+
+	weapon = weapon_anchor.get_child(0)
+
+	weapon_path = weapon.get_path()
+	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
 
 func get_input():
 	var friction = false
@@ -110,6 +128,7 @@ func attack():
 	if is_on_floor():
 		attacking = true
 		velocity.x = 0
+		weapon.attack()
 		if $Sprite.flip_h == false:
 			self.position += Vector2(15, 0)
 		else:
@@ -118,6 +137,19 @@ func attack():
 		yield($Sprite, "animation_finished")
 		attacking = false
 
+func take_damage(count):
+#	if current_state == DEAD:
+#		return
+		
+	health -= count
+	if health <= 0:
+		health = 0
+#		_change_state(DEAD)
+		emit_signal("died")
+		return
+
+#	_change_state(STAGGER)
+	emit_signal("health_changed", health)
 
 func _physics_process(delta):
 	
