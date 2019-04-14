@@ -14,3 +14,10 @@ func _input(event):
 		$MarginContainer/CenterContainer/VBoxContainer/TextureButton.grab_focus()
 		get_tree().paused = not get_tree().paused
 		visible = not visible
+
+func _on_TextureButton_pressed():
+	get_tree().paused = not get_tree().paused
+	visible = not visible
+
+func _on_TextureButton2_pressed():
+	get_tree().quit()

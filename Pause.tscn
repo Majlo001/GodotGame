@@ -6,8 +6,9 @@
 [ext_resource path="res://other/wyjście1.png" type="Texture" id=4]
 [ext_resource path="res://other/wyjście2.png" type="Texture" id=5]
 
-[node name="Pause" type="Control"]
+[node name="Pause" type="Control" index="0"]
 
+pause_mode = 2
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -19,6 +20,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
@@ -130,5 +132,9 @@ group = null
 texture_normal = ExtResource( 4 )
 texture_focused = ExtResource( 5 )
 _sections_unfolded = [ "Textures" ]
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
 
 
