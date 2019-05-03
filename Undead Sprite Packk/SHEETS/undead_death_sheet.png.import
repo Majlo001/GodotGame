@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/undead_death_sheet.png-e5e25cdc7bbc85b08e80baf13eb0afa7.stex"
+path="res://.import/undead_death_sheet.png-eff41f11623e69e3c3ae0c62ccf38b61.stex"
 
 [deps]
 
-source_file="res://Undead Sprite Pack/SHEETS/undead_death_sheet.png"
-dest_files=[ "res://.import/undead_death_sheet.png-e5e25cdc7bbc85b08e80baf13eb0afa7.stex" ]
+source_file="res://Undead Sprite Packk/SHEETS/undead_death_sheet.png"
+dest_files=[ "res://.import/undead_death_sheet.png-eff41f11623e69e3c3ae0c62ccf38b61.stex" ]
 
 [params]
 

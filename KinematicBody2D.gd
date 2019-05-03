@@ -11,8 +11,9 @@ export(String) var weapon_scene_path = "res://weapons/spear/Spear.tscn"
 var weapon = null
 var weapon_path = ""
 
-export var max_health = 1
-var health
+export var max_health = 4
+var health 
+var score = 0
 
 var attack_delay = 1
 var attacking = false
@@ -24,6 +25,7 @@ var invenotry = load("Inventory.tscn")
 var node = invenotry.instance()
 
 func _ready():
+	set_process(true)
 	health = max_health
 
 	# Weapon setup
@@ -137,19 +139,38 @@ func attack():
 		yield($Sprite, "animation_finished")
 		attacking = false
 
+func _process(delta):
+	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
+	LabelNode.text = str(score)
+
 func take_damage(count):
 #	if current_state == DEAD:
 #		return
+	if (health == 4):
+		var Health3 = get_parent().get_node("UI/UI/Health/Health3")
+		Health3.hide()
+	
+	if (health == 3):
+		var Health2 = get_parent().get_node("UI/UI/Health/Health2")
+		Health2.hide()
+	
+	if (health == 2):
+		var Health1 = get_parent().get_node("UI/UI/Health/Health1")
+		Health1.hide()
 		
-	health -= count
-	if health <= 0:
-		health = 0
+	if (health == 1):
+		queue_free()
+		get_tree().reload_current_scene()
+		
+#	health -= count
+#	if health <= 0:
+#		health = 0
 #		_change_state(DEAD)
-		emit_signal("died")
-		return
+#		emit_signal("died")
+#		return
 
 #	_change_state(STAGGER)
-	emit_signal("health_changed", health)
+#	emit_signal("health_changed", health)
 
 func _physics_process(delta):
 	
@@ -170,4 +191,9 @@ func _on_Timer3_timeout():
 	SPEED = 150
 
 func _on_Coin_body_entered(body):
+	score += 1
+	print(score)
+
+
+func _on_Coin2_body_entered(body):
 	pass # replace with function body

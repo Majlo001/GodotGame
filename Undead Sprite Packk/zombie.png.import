@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zombie.png-b7021da239c50c3fcb104eebcb7f8219.stex"
+path="res://.import/zombie.png-e5696651a418b4646bd424044284e648.stex"
 
 [deps]
 
-source_file="res://Undead Sprite Pack/zombie.png"
-dest_files=[ "res://.import/zombie.png-b7021da239c50c3fcb104eebcb7f8219.stex" ]
+source_file="res://Undead Sprite Packk/zombie.png"
+dest_files=[ "res://.import/zombie.png-e5696651a418b4646bd424044284e648.stex" ]
 
 [params]
 

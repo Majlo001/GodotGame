@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/undead_attack_sheet.png-7064be1b85384a75f4c69e11efb84c4a.stex"
+path="res://.import/undead_attack_sheet.png-d99556bf7a73390c9d3b953e98c10e42.stex"
 
 [deps]
 
-source_file="res://Undead Sprite Pack/SHEETS/undead_attack_sheet.png"
-dest_files=[ "res://.import/undead_attack_sheet.png-7064be1b85384a75f4c69e11efb84c4a.stex" ]
+source_file="res://Undead Sprite Packk/SHEETS/undead_attack_sheet.png"
+dest_files=[ "res://.import/undead_attack_sheet.png-d99556bf7a73390c9d3b953e98c10e42.stex" ]
 
 [params]
 

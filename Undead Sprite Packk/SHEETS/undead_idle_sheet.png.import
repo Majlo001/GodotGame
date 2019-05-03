@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/undead_idle_sheet.png-f59f36832f949ff074c2d253457ff0d4.stex"
+path="res://.import/undead_idle_sheet.png-f1b9419cad09dfd023d88cb45bf39579.stex"
 
 [deps]
 
-source_file="res://Undead Sprite Pack/SHEETS/undead_idle_sheet.png"
-dest_files=[ "res://.import/undead_idle_sheet.png-f59f36832f949ff074c2d253457ff0d4.stex" ]
+source_file="res://Undead Sprite Packk/SHEETS/undead_idle_sheet.png"
+dest_files=[ "res://.import/undead_idle_sheet.png-f1b9419cad09dfd023d88cb45bf39579.stex" ]
 
 [params]
 
