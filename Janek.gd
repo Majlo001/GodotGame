@@ -7,7 +7,7 @@ var JUMP = -300
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
-export(String) var weapon_scene_path = "res://weapons/spear/Spear.tscn"
+export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
 

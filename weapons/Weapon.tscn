@@ -137,7 +137,7 @@ tracks/3/keys = {
 "values": [ -100.102, 98.7122, 90.0 ]
 }
 
-[node name="Weapon" type="Area2D" groups=[
+[node name="Weapon" type="Area2D" index="0" groups=[
 "weapon",
 ]]
 

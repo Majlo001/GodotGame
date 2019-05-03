@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://Janek.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -55,34 +55,35 @@
 [ext_resource path="res://Individual Sprites/run3/adventurer-run3-04.png" type="Texture" id=53]
 [ext_resource path="res://Individual Sprites/run3/adventurer-run3-05.png" type="Texture" id=54]
 [ext_resource path="res://Zombie.gd" type="Script" id=55]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk1.png" type="Texture" id=56]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk2.png" type="Texture" id=57]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk3.png" type="Texture" id=58]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk4.png" type="Texture" id=59]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk5.png" type="Texture" id=60]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk6.png" type="Texture" id=61]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk7.png" type="Texture" id=62]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk8.png" type="Texture" id=63]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk9.png" type="Texture" id=64]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk10.png" type="Texture" id=65]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk11.png" type="Texture" id=66]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk12.png" type="Texture" id=67]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk13.png" type="Texture" id=68]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk14.png" type="Texture" id=69]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk15.png" type="Texture" id=70]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk16.png" type="Texture" id=71]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk18.png" type="Texture" id=72]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk17.png" type="Texture" id=73]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk19.png" type="Texture" id=74]
-[ext_resource path="res://items/heart.png" type="Texture" id=75]
-[ext_resource path="res://Area2D.gd" type="Script" id=76]
-[ext_resource path="res://icon.png" type="Texture" id=77]
-[ext_resource path="res://background1.png" type="Texture" id=78]
-[ext_resource path="res://brick1.tres" type="TileSet" id=79]
-[ext_resource path="res://jegomosc.gd" type="Script" id=80]
-[ext_resource path="res://other/jegomosc.png" type="Texture" id=81]
-[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=82]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=83]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk1.png" type="Texture" id=56]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk2.png" type="Texture" id=57]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk3.png" type="Texture" id=58]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk4.png" type="Texture" id=59]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk5.png" type="Texture" id=60]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk6.png" type="Texture" id=61]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk7.png" type="Texture" id=62]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk8.png" type="Texture" id=63]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk9.png" type="Texture" id=64]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk17.png" type="Texture" id=65]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk10.png" type="Texture" id=66]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk11.png" type="Texture" id=67]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk12.png" type="Texture" id=68]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk13.png" type="Texture" id=69]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk14.png" type="Texture" id=70]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk15.png" type="Texture" id=71]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk16.png" type="Texture" id=72]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk18.png" type="Texture" id=73]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk19.png" type="Texture" id=74]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk20.png" type="Texture" id=75]
+[ext_resource path="res://items/heart.png" type="Texture" id=76]
+[ext_resource path="res://Area2D.gd" type="Script" id=77]
+[ext_resource path="res://icon.png" type="Texture" id=78]
+[ext_resource path="res://background1.png" type="Texture" id=79]
+[ext_resource path="res://brick1.tres" type="TileSet" id=80]
+[ext_resource path="res://jegomosc.gd" type="Script" id=81]
+[ext_resource path="res://other/jegomosc.png" type="Texture" id=82]
+[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=83]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=84]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -146,10 +147,10 @@ extents = Vector2( 11.211, 9.04247 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 72 ), null, ExtResource( 72 ), null, ExtResource( 74 ), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ],
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
 "loop": true,
 "name": "Walk",
-"speed": 10.0
+"speed": 5.0
 } ]
 
 [sub_resource type="TileSet" id=4]
@@ -202,7 +203,7 @@ height = 20.0
 size = 8
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 82 )
+font_data = ExtResource( 83 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="World" type="Node2D" index="0"]
@@ -213,14 +214,13 @@ position = Vector2( -2.05054, 0 )
 "character",
 ]]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "collision" ]
-weapon_scene_path = "res://weapons/spear/Spear.tscn"
+weapon_scene_path = "res://weapons/Weapon.tscn"
 max_health = 4
 
 [node name="Sprite" type="AnimatedSprite" parent="Janek" index="0"]
@@ -306,7 +306,6 @@ autostart = false
 "character",
 ]]
 
-editor/display_folded = true
 position = Vector2( -178.604, -38.9727 )
 input_pickable = false
 collision_layer = 1
@@ -321,7 +320,6 @@ position = Vector2( 765.925, 343.939 )
 scale = Vector2( 1.78188, 1.78188 )
 frames = SubResource( 3 )
 animation = "Walk"
-frame = 13
 
 [node name="TileMap2" type="TileMap" parent="Zombie/Sprite" index="0"]
 
@@ -363,7 +361,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -384,7 +382,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -405,7 +403,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -426,7 +424,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -463,13 +461,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 76 )
+script = ExtResource( 77 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin" index="0"]
 
 position = Vector2( -246.606, 122.588 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 77 )
+texture = ExtResource( 78 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin" index="1"]
 
@@ -491,13 +489,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 76 )
+script = ExtResource( 77 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin2" index="0"]
 
 position = Vector2( -0.800995, -0.800964 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 77 )
+texture = ExtResource( 78 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2" index="1"]
 
@@ -519,13 +517,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 76 )
+script = ExtResource( 77 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin3" index="0"]
 
 position = Vector2( 181.204, 1.91132 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 77 )
+texture = ExtResource( 78 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3" index="1"]
 
@@ -560,7 +558,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 78 )
+texture = ExtResource( 79 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Tilemap" type="Node" parent="." index="4"]
@@ -571,7 +569,7 @@ editor/display_folded = true
 
 position = Vector2( 0.156826, 2.42401 )
 mode = 0
-tile_set = ExtResource( 79 )
+tile_set = ExtResource( 80 )
 cell_size = Vector2( 31, 31 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
@@ -760,13 +758,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 80 )
+script = ExtResource( 81 )
 
 [node name="Sprite" type="Sprite" parent="Jegomość" index="0"]
 
 position = Vector2( -4.19711, 23.7156 )
 scale = Vector2( 0.954328, 0.954328 )
-texture = ExtResource( 81 )
+texture = ExtResource( 82 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomość" index="1"]
 
@@ -810,7 +808,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Pause" parent="Pauza" index="0" instance=ExtResource( 83 )]
+[node name="Pause" parent="Pauza" index="0" instance=ExtResource( 84 )]
 
 visible = false
 
@@ -858,7 +856,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health" index="1"]
 
@@ -876,7 +874,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health" index="2"]
 
@@ -894,7 +892,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health" index="3"]
 
@@ -912,7 +910,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 75 )
+texture = ExtResource( 76 )
 
 [node name="Control" type="Control" parent="UI/UI" index="1"]
 
@@ -947,7 +945,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 77 )
+texture = ExtResource( 78 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control" index="1"]
 
@@ -994,9 +992,9 @@ _sections_unfolded = [ "Focus", "Rect", "custom_fonts" ]
 
 [connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 
-[connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
-
 [connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
+
+[connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
 
 [connection signal="body_entered" from="Jegomość" to="Jegomość" method="_on_Area2D_body_entered"]
 
