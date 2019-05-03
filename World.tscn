@@ -1,84 +1,84 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=97 format=2]
 
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Janek.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
 [ext_resource path="res://Individual Sprites/adventurer-run-01.png" type="Texture" id=3]
 [ext_resource path="res://Individual Sprites/adventurer-run-02.png" type="Texture" id=4]
 [ext_resource path="res://Individual Sprites/adventurer-run-03.png" type="Texture" id=5]
 [ext_resource path="res://Individual Sprites/adventurer-run-04.png" type="Texture" id=6]
 [ext_resource path="res://Individual Sprites/adventurer-run-05.png" type="Texture" id=7]
-[ext_resource path="res://Individual Sprites/run3/adventurer-run3-00.png" type="Texture" id=8]
-[ext_resource path="res://Individual Sprites/run3/adventurer-run3-01.png" type="Texture" id=9]
-[ext_resource path="res://Individual Sprites/run3/adventurer-run3-02.png" type="Texture" id=10]
-[ext_resource path="res://Individual Sprites/run3/adventurer-run3-03.png" type="Texture" id=11]
-[ext_resource path="res://Individual Sprites/run3/adventurer-run3-04.png" type="Texture" id=12]
-[ext_resource path="res://Individual Sprites/run3/adventurer-run3-05.png" type="Texture" id=13]
-[ext_resource path="res://Individual Sprites/adventurer-die-00.png" type="Texture" id=14]
-[ext_resource path="res://Individual Sprites/adventurer-die-01.png" type="Texture" id=15]
-[ext_resource path="res://Individual Sprites/adventurer-die-02.png" type="Texture" id=16]
-[ext_resource path="res://Individual Sprites/adventurer-die-03.png" type="Texture" id=17]
-[ext_resource path="res://Individual Sprites/adventurer-die-04.png" type="Texture" id=18]
-[ext_resource path="res://Individual Sprites/adventurer-die-05.png" type="Texture" id=19]
-[ext_resource path="res://Individual Sprites/adventurer-die-06.png" type="Texture" id=20]
-[ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=21]
-[ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=22]
-[ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=23]
-[ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=24]
-[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=25]
-[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=26]
-[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=27]
-[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=28]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=8]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=9]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=10]
+[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=11]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-00.png" type="Texture" id=12]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-01.png" type="Texture" id=13]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-02.png" type="Texture" id=14]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-03.png" type="Texture" id=15]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-04.png" type="Texture" id=16]
+[ext_resource path="res://Individual Sprites/adventurer-attack2-05.png" type="Texture" id=17]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=18]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=19]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=20]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=21]
+[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=22]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-00.png" type="Texture" id=23]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-01.png" type="Texture" id=24]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-02.png" type="Texture" id=25]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-03.png" type="Texture" id=26]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-04.png" type="Texture" id=27]
+[ext_resource path="res://Individual Sprites/adventurer-attack3-05.png" type="Texture" id=28]
 [ext_resource path="res://Individual Sprites/adventurer-stand-02.png" type="Texture" id=29]
 [ext_resource path="res://Individual Sprites/adventurer-stand-01.png" type="Texture" id=30]
 [ext_resource path="res://Individual Sprites/adventurer-stand-00.png" type="Texture" id=31]
 [ext_resource path="res://Individual Sprites/adventurer-slide-00.png" type="Texture" id=32]
 [ext_resource path="res://Individual Sprites/adventurer-slide-01.png" type="Texture" id=33]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-00.png" type="Texture" id=34]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-01.png" type="Texture" id=35]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-02.png" type="Texture" id=36]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-03.png" type="Texture" id=37]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-04.png" type="Texture" id=38]
-[ext_resource path="res://Individual Sprites/adventurer-attack3-05.png" type="Texture" id=39]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-00.png" type="Texture" id=40]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-01.png" type="Texture" id=41]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-02.png" type="Texture" id=42]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-03.png" type="Texture" id=43]
-[ext_resource path="res://Individual Sprites/adventurer-attack1-04.png" type="Texture" id=44]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-00.png" type="Texture" id=45]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-01.png" type="Texture" id=46]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-02.png" type="Texture" id=47]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-03.png" type="Texture" id=48]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-04.png" type="Texture" id=49]
-[ext_resource path="res://Individual Sprites/adventurer-attack2-05.png" type="Texture" id=50]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-00.png" type="Texture" id=51]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-01.png" type="Texture" id=52]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-02.png" type="Texture" id=53]
-[ext_resource path="res://Individual Sprites/adventurer-idle-2-03.png" type="Texture" id=54]
-[ext_resource path="res://brick.png" type="Texture" id=55]
-[ext_resource path="res://Zombie.gd" type="Script" id=56]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk1.png" type="Texture" id=57]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk2.png" type="Texture" id=58]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk3.png" type="Texture" id=59]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk4.png" type="Texture" id=60]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk5.png" type="Texture" id=61]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk6.png" type="Texture" id=62]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk7.png" type="Texture" id=63]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk8.png" type="Texture" id=64]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk9.png" type="Texture" id=65]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk10.png" type="Texture" id=66]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk11.png" type="Texture" id=67]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk12.png" type="Texture" id=68]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk13.png" type="Texture" id=69]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk14.png" type="Texture" id=70]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk15.png" type="Texture" id=71]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk16.png" type="Texture" id=72]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk18.png" type="Texture" id=73]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk17.png" type="Texture" id=74]
-[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk19.png" type="Texture" id=75]
-[ext_resource path="res://items/heart.png" type="Texture" id=76]
-[ext_resource path="res://Area2D.gd" type="Script" id=77]
-[ext_resource path="res://icon.png" type="Texture" id=78]
-[ext_resource path="res://background1.png" type="Texture" id=79]
+[ext_resource path="res://Individual Sprites/adventurer-idle-00.png" type="Texture" id=34]
+[ext_resource path="res://Individual Sprites/adventurer-idle-01.png" type="Texture" id=35]
+[ext_resource path="res://Individual Sprites/adventurer-idle-02.png" type="Texture" id=36]
+[ext_resource path="res://Individual Sprites/adventurer-idle-03.png" type="Texture" id=37]
+[ext_resource path="res://Individual Sprites/adventurer-jump-00.png" type="Texture" id=38]
+[ext_resource path="res://Individual Sprites/adventurer-jump-01.png" type="Texture" id=39]
+[ext_resource path="res://Individual Sprites/adventurer-jump-02.png" type="Texture" id=40]
+[ext_resource path="res://Individual Sprites/adventurer-jump-03.png" type="Texture" id=41]
+[ext_resource path="res://Individual Sprites/adventurer-die-00.png" type="Texture" id=42]
+[ext_resource path="res://Individual Sprites/adventurer-die-01.png" type="Texture" id=43]
+[ext_resource path="res://Individual Sprites/adventurer-die-02.png" type="Texture" id=44]
+[ext_resource path="res://Individual Sprites/adventurer-die-03.png" type="Texture" id=45]
+[ext_resource path="res://Individual Sprites/adventurer-die-04.png" type="Texture" id=46]
+[ext_resource path="res://Individual Sprites/adventurer-die-05.png" type="Texture" id=47]
+[ext_resource path="res://Individual Sprites/adventurer-die-06.png" type="Texture" id=48]
+[ext_resource path="res://Individual Sprites/run3/adventurer-run3-00.png" type="Texture" id=49]
+[ext_resource path="res://Individual Sprites/run3/adventurer-run3-01.png" type="Texture" id=50]
+[ext_resource path="res://Individual Sprites/run3/adventurer-run3-02.png" type="Texture" id=51]
+[ext_resource path="res://Individual Sprites/run3/adventurer-run3-03.png" type="Texture" id=52]
+[ext_resource path="res://Individual Sprites/run3/adventurer-run3-04.png" type="Texture" id=53]
+[ext_resource path="res://Individual Sprites/run3/adventurer-run3-05.png" type="Texture" id=54]
+[ext_resource path="res://Zombie.gd" type="Script" id=55]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk1.png" type="Texture" id=56]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk2.png" type="Texture" id=57]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk3.png" type="Texture" id=58]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk4.png" type="Texture" id=59]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk5.png" type="Texture" id=60]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk6.png" type="Texture" id=61]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk7.png" type="Texture" id=62]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk8.png" type="Texture" id=63]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk9.png" type="Texture" id=64]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk10.png" type="Texture" id=65]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk11.png" type="Texture" id=66]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk12.png" type="Texture" id=67]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk13.png" type="Texture" id=68]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk14.png" type="Texture" id=69]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk15.png" type="Texture" id=70]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk16.png" type="Texture" id=71]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk18.png" type="Texture" id=72]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk17.png" type="Texture" id=73]
+[ext_resource path="res://undead sprite pack/TheWalkingDzban/walk19.png" type="Texture" id=74]
+[ext_resource path="res://items/heart.png" type="Texture" id=75]
+[ext_resource path="res://Area2D.gd" type="Script" id=76]
+[ext_resource path="res://icon.png" type="Texture" id=77]
+[ext_resource path="res://background1.png" type="Texture" id=78]
+[ext_resource path="res://brick1.tres" type="TileSet" id=79]
 [ext_resource path="res://jegomosc.gd" type="Script" id=80]
 [ext_resource path="res://other/jegomosc.png" type="Texture" id=81]
 [ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=82]
@@ -92,50 +92,50 @@ animations = [ {
 "name": "Run",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "Run-Sword",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "Die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 21 ) ],
-"loop": false,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "Idle-NoSword",
+"name": "Idle-Sword",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Attack2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Attack1",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Attack3",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "Slide",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
 "loop": true,
-"name": "Attack3",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
-"loop": true,
-"name": "Attack1",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
-"loop": true,
-"name": "Attack2",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
-"loop": true,
-"name": "Idle-Sword",
+"name": "Idle-NoSword",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "Die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "Run-Sword",
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -143,43 +143,61 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 11.211, 9.04247 )
 
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 73 ), null, ExtResource( 73 ), null, ExtResource( 75 ), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ],
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 72 ), null, ExtResource( 72 ), null, ExtResource( 74 ), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ],
 "loop": true,
 "name": "Walk",
 "speed": 10.0
 } ]
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=4]
 
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 78.9275, 10 )
 
-[sub_resource type="CircleShape2D" id=7]
+[sub_resource type="CircleShape2D" id=6]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="TileSet" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 
+custom_solver_bias = 0.0
+extents = Vector2( 324.482, 33.5466 )
+_sections_unfolded = [ "Resource" ]
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.4926, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.92131, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 12.6029 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 84.1635, 0.931501 )
+
+[sub_resource type="CapsuleShape2D" id=12]
 
 custom_solver_bias = 0.0
 radius = 10.0
 height = 20.0
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=13]
 
 size = 8
 use_mipmaps = false
@@ -284,191 +302,7 @@ wait_time = 0.2
 one_shot = true
 autostart = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
-
-editor/display_folded = true
-position = Vector2( 2.44354, 66.7894 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D" index="0"]
-
-position = Vector2( 462.289, 367.848 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
-
-position = Vector2( 462.337, 367.8 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="." index="2"]
-
-editor/display_folded = true
-position = Vector2( 2.44354, 66.7894 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D2" index="0"]
-
-position = Vector2( 558.292, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="1"]
-
-position = Vector2( 558.255, 367.788 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." index="3"]
-
-editor/display_folded = true
-position = Vector2( 2.44354, 66.7894 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D3" index="0"]
-
-position = Vector2( 654.16, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="1"]
-
-position = Vector2( 654.246, 367.793 )
-scale = Vector2( 4.8024, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="." index="4"]
-
-editor/display_folded = true
-position = Vector2( 2.44354, 66.7894 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D4" index="0"]
-
-position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" index="1"]
-
-position = Vector2( 750.128, 367.801 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="." index="5"]
-
-editor/display_folded = true
-position = Vector2( 98.9131, 1.97388 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D5" index="0"]
-
-position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" index="1"]
-
-position = Vector2( 750.183, 368.002 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="." index="6"]
-
-editor/display_folded = true
-position = Vector2( -381.927, 4.98856 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D6" index="0"]
-
-position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="1"]
-
-position = Vector2( 750.183, 368.002 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="." index="7"]
-
-editor/display_folded = true
-position = Vector2( -561.544, -0.84317 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D7" index="0"]
-
-position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="1"]
-
-position = Vector2( 750.183, 368.002 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="." index="8"]
-
-editor/display_folded = true
-position = Vector2( -755.156, -13.6729 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="brick" type="Sprite" parent="StaticBody2D8" index="0"]
-
-position = Vector2( 750.147, 367.806 )
-texture = ExtResource( 55 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" index="1"]
-
-position = Vector2( 750.183, 368.002 )
-scale = Vector2( 4.79764, 3.19924 )
-shape = SubResource( 4 )
-
-[node name="Zombie" type="KinematicBody2D" parent="." index="9" groups=[
+[node name="Zombie" type="KinematicBody2D" parent="." index="1" groups=[
 "character",
 ]]
 
@@ -478,14 +312,14 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 56 )
+script = ExtResource( 55 )
 max_health = 2
 
 [node name="Sprite" type="AnimatedSprite" parent="Zombie" index="0"]
 
 position = Vector2( 765.925, 343.939 )
 scale = Vector2( 1.78188, 1.78188 )
-frames = SubResource( 5 )
+frames = SubResource( 3 )
 animation = "Walk"
 frame = 13
 
@@ -494,7 +328,7 @@ frame = 13
 position = Vector2( -71.5677, -13.872 )
 scale = Vector2( 0.561205, 0.561205 )
 mode = 0
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -529,7 +363,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -550,7 +384,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -571,7 +405,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -592,7 +426,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -601,7 +435,7 @@ _sections_unfolded = [ "Rect" ]
 visible = false
 position = Vector2( 766.22, 348.906 )
 scale = Vector2( 0.339792, 2.355 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Zombie" index="2"]
 
@@ -613,9 +447,8 @@ exclude_parent = true
 cast_to = Vector2( 0, 50 )
 collision_mask = 1
 
-[node name="Coins" type="Node" parent="." index="10"]
+[node name="Coins" type="Node" parent="." index="2"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Pause" ]
 
 [node name="Coin" type="Area2D" parent="Coins" index="0"]
@@ -630,23 +463,26 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 77 )
+script = ExtResource( 76 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin" index="0"]
 
-position = Vector2( -0.800995, -0.800964 )
+position = Vector2( -246.606, 122.588 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 78 )
+texture = ExtResource( 77 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin" index="1"]
 
-position = Vector2( -0.948517, 0.951447 )
-shape = SubResource( 7 )
+position = Vector2( -247.756, 123.342 )
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Coin2" type="Area2D" parent="Coins" index="1"]
 
 editor/display_folded = true
-position = Vector2( 364.248, 306.747 )
+position = Vector2( 766.248, 401.747 )
 rotation = 0.00158113
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -655,23 +491,26 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 77 )
+script = ExtResource( 76 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin2" index="0"]
 
 position = Vector2( -0.800995, -0.800964 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 78 )
+texture = ExtResource( 77 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2" index="1"]
 
 position = Vector2( -0.948517, 0.951447 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Coin3" type="Area2D" parent="Coins" index="2"]
 
 editor/display_folded = true
-position = Vector2( -183.752, 275.747 )
+position = Vector2( -242.752, 288.747 )
 rotation = 0.00158113
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -680,20 +519,23 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 77 )
+script = ExtResource( 76 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin3" index="0"]
 
-position = Vector2( 179.215, 8.91449 )
+position = Vector2( 181.204, 1.91132 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 78 )
+texture = ExtResource( 77 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3" index="1"]
 
-position = Vector2( 179.064, 8.6669 )
-shape = SubResource( 7 )
+position = Vector2( 180.056, 3.66534 )
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="11"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
 
 editor/display_folded = true
 layer = -1
@@ -718,31 +560,195 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 79 )
+texture = ExtResource( 78 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="TileMap" type="TileMap" parent="." index="12"]
+[node name="Tilemap" type="Node" parent="." index="4"]
 
-position = Vector2( 1.30487, 2.42401 )
+editor/display_folded = true
+
+[node name="TileMap" type="TileMap" parent="Tilemap" index="0"]
+
+position = Vector2( 0.156826, 2.42401 )
 mode = 0
-tile_set = SubResource( 8 )
-cell_size = Vector2( 64, 64 )
+tile_set = ExtResource( 79 )
+cell_size = Vector2( 31, 31 )
 cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_half_offset = 2
 cell_tile_origin = 0
 cell_y_sort = false
 cell_clip_uv = false
-collision_use_kinematic = false
+collision_use_kinematic = true
 collision_friction = 1.0
 collision_bounce = 0.0
 collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray(  )
+tile_data = PoolIntArray( -6, 16, 0, 30, 15, 0, 196602, 16, 0, 196638, 15, 0, 393210, 16, 0, 393246, 15, 0, 589818, 16, 0, 589854, 15, 0, 786426, 16, 0, 786427, 11, 0, 786428, 11, 0, 786429, 11, 0, 786459, 0, 0, 786462, 2, 0, 786463, 2, 0, 851968, 0, 0, 851994, 0, 0, 851998, 2, 0, 851999, 2, 0, 983034, 2, 0, 983035, 2, 0, 983036, 0, 0, 983039, 0, 0, 917506, 0, 0, 917509, 0, 0, 917512, 0, 0, 917515, 0, 0, 917527, 0, 0, 917530, 0, 0, 917533, 2, 0, 917534, 2, 0, 917535, 2, 0, 1048570, 2, 0, 1048571, 2, 0, 983069, 2, 0, 983070, 2, 0, 983071, 2, 0, 1114106, 2, 0, 1114107, 2, 0, 1114108, 2, 0, 1114109, 2, 0, 1114110, 2, 0, 1114111, 2, 0, 1048576, 2, 0, 1048577, 2, 0, 1048578, 2, 0, 1048579, 2, 0, 1048580, 2, 0, 1048581, 2, 0, 1048582, 2, 0, 1048583, 2, 0, 1048584, 2, 0, 1048585, 2, 0, 1048586, 2, 0, 1048587, 2, 0, 1048588, 2, 0, 1048589, 2, 0, 1048590, 0, 0, 1048593, 0, 0, 1048596, 0, 0, 1048599, 2, 0, 1048600, 2, 0, 1048601, 2, 0, 1048602, 2, 0, 1048603, 2, 0, 1048604, 2, 0, 1048605, 2, 0, 1048606, 2, 0, 1048607, 2, 0, 1179642, 2, 0, 1179643, 2, 0, 1179644, 2, 0, 1179645, 2, 0, 1179646, 2, 0, 1179647, 2, 0, 1114112, 2, 0, 1114113, 2, 0, 1114114, 2, 0, 1114115, 2, 0, 1114116, 2, 0, 1114117, 2, 0, 1114118, 2, 0, 1114119, 2, 0, 1114120, 2, 0, 1114121, 2, 0, 1114122, 2, 0, 1114123, 2, 0, 1114124, 2, 0, 1114125, 2, 0, 1114135, 2, 0, 1114136, 2, 0, 1114137, 2, 0, 1114138, 2, 0, 1114139, 2, 0, 1114140, 2, 0, 1114141, 2, 0, 1114142, 2, 0, 1114143, 2, 0, 1245178, 2, 0, 1245179, 2, 0, 1245180, 2, 0, 1245181, 2, 0, 1245182, 2, 0, 1245183, 2, 0, 1179648, 2, 0, 1179649, 2, 0, 1179650, 2, 0, 1179651, 2, 0, 1179652, 2, 0, 1179653, 2, 0, 1179654, 2, 0, 1179655, 2, 0, 1179656, 2, 0, 1179657, 2, 0, 1179658, 2, 0, 1179659, 2, 0, 1179660, 2, 0, 1179661, 2, 0, 1179662, 2, 0, 1179663, 2, 0, 1179664, 2, 0, 1179665, 2, 0, 1179666, 2, 0, 1179667, 2, 0, 1179668, 2, 0, 1179669, 2, 0, 1179670, 2, 0, 1179671, 2, 0, 1179672, 2, 0, 1179673, 2, 0, 1179674, 2, 0, 1179675, 2, 0, 1179676, 2, 0, 1179677, 2, 0, 1179678, 2, 0, 1179679, 2, 0, 1310714, 2, 0, 1310715, 2, 0, 1310716, 2, 0, 1310717, 2, 0, 1310718, 2, 0, 1310719, 2, 0, 1245184, 2, 0, 1245185, 2, 0, 1245186, 2, 0, 1245187, 2, 0, 1245188, 2, 0, 1245189, 2, 0, 1245190, 2, 0, 1245191, 2, 0, 1245192, 2, 0, 1245193, 2, 0, 1245194, 2, 0, 1245195, 2, 0, 1245196, 2, 0, 1245197, 2, 0, 1245198, 2, 0, 1245199, 2, 0, 1245200, 2, 0, 1245201, 2, 0, 1245202, 2, 0, 1245203, 2, 0, 1245204, 2, 0, 1245205, 2, 0, 1245206, 2, 0, 1245207, 2, 0, 1245208, 2, 0, 1245209, 2, 0, 1245210, 2, 0, 1245211, 2, 0, 1245212, 2, 0, 1245213, 2, 0, 1245214, 2, 0, 1245215, 2, 0 )
+_sections_unfolded = [ "Cell" ]
 
-[node name="Jegomość" type="Area2D" parent="." index="13"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Tilemap" index="1"]
+
+editor/display_folded = true
+position = Vector2( 89.0001, 533.001 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D" index="0"]
+
+position = Vector2( 66.7793, -62.9915 )
+scale = Vector2( 0.856148, 1 )
+shape = SubResource( 7 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Tilemap" index="2"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tilemap/StaticBody2D2" index="0"]
+
+position = Vector2( 575.54, 536.123 )
+scale = Vector2( 11.4838, 3.78775 )
+shape = SubResource( 8 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Tilemap" index="3"]
+
+position = Vector2( 746.001, 468 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D3" index="0"]
+
+position = Vector2( -697.819, -36.5 )
+scale = Vector2( 9.72171, 2.65385 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Tilemap" index="4"]
+
+editor/display_folded = true
+position = Vector2( 746.001, 468 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D4" index="0"]
+
+position = Vector2( 16.8969, -0.376115 )
+scale = Vector2( 9.99207, 3.12492 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Tilemap" index="5"]
+
+editor/display_folded = true
+position = Vector2( 746.001, 468 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D5" index="0"]
+
+position = Vector2( 109.897, -32.3761 )
+scale = Vector2( 9.99207, 3.12492 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Tilemap" index="6"]
+
+editor/display_folded = true
+position = Vector2( 746.001, 468 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D6" index="0"]
+
+position = Vector2( 140.897, -61.3762 )
+scale = Vector2( 9.99207, 3.12492 )
+shape = SubResource( 9 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Tilemap" index="7"]
+
+editor/display_folded = true
+position = Vector2( 1077, 339 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D7" index="0"]
+
+position = Vector2( -136, -123.639 )
+scale = Vector2( 1, 17.0468 )
+shape = SubResource( 10 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Tilemap" index="8"]
+
+editor/display_folded = true
+position = Vector2( -248.773, 305.608 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D8" index="0"]
+
+position = Vector2( 114.895, -83.0264 )
+scale = Vector2( 1, 17.0468 )
+shape = SubResource( 10 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Tilemap" index="9"]
+
+position = Vector2( -248.773, 305.608 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D9" index="0"]
+
+position = Vector2( 149.888, 53.8305 )
+scale = Vector2( 0.452828, 17.0468 )
+shape = SubResource( 11 )
+
+[node name="Jegomość" type="Area2D" parent="." index="5"]
 
 editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
@@ -758,15 +764,15 @@ script = ExtResource( 80 )
 
 [node name="Sprite" type="Sprite" parent="Jegomość" index="0"]
 
-position = Vector2( -15.6924, 11.7946 )
+position = Vector2( -4.19711, 23.7156 )
 scale = Vector2( 0.954328, 0.954328 )
 texture = ExtResource( 81 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomość" index="1"]
 
-position = Vector2( -15.9439, 15.1948 )
-scale = Vector2( 1.61138, 1.80274 )
-shape = SubResource( 9 )
+position = Vector2( -4.79312, 24.5613 )
+scale = Vector2( 2.37089, 1.80274 )
+shape = SubResource( 12 )
 
 [node name="Label" type="Label" parent="Jegomość" index="2"]
 
@@ -785,7 +791,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 13 )
 text = "interakcja (enter)"
 align = 1
 valign = 1
@@ -795,7 +801,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Pauza" type="CanvasLayer" parent="." index="14"]
+[node name="Pauza" type="CanvasLayer" parent="." index="6"]
 
 editor/display_folded = true
 layer = 1
@@ -808,7 +814,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 visible = false
 
-[node name="UI" type="Node" parent="." index="15"]
+[node name="UI" type="Node" parent="." index="7"]
 
 [node name="UI" type="CanvasLayer" parent="UI" index="0"]
 
@@ -825,8 +831,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = -4.0
+margin_top = -10.0
+margin_right = 36.0
+margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -850,7 +858,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health" index="1"]
 
@@ -868,7 +876,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health" index="2"]
 
@@ -886,7 +894,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health" index="3"]
 
@@ -904,7 +912,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 75 )
 
 [node name="Control" type="Control" parent="UI/UI" index="1"]
 
@@ -912,8 +920,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 58.0
+margin_top = -13.0
+margin_right = 98.0
+margin_bottom = 27.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -937,7 +947,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 78 )
+texture = ExtResource( 77 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control" index="1"]
 
@@ -945,11 +955,12 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 816.0
-margin_top = 30.0
-margin_right = 856.0
-margin_bottom = 70.0
-rect_scale = Vector2( 3, 3 )
+margin_left = 809.0
+margin_top = 22.0
+margin_right = 829.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 5, 5 )
+rect_scale = Vector2( 4, 4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -967,7 +978,7 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Focus", "Rect", "custom_fonts" ]
 
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
@@ -979,13 +990,13 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
 
-[connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
-
 [connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
 
-[connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 
 [connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
+
+[connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
 
 [connection signal="body_entered" from="Jegomość" to="Jegomość" method="_on_Area2D_body_entered"]
 

@@ -1,7 +1,7 @@
 extends Area2D
 
 func _on_Coin_body_entered(body):
-	if body is preload("res://KinematicBody2D.gd"):
+	if body is preload("res://Janek.gd"):
 		print("coin")
 		queue_free()
 		
