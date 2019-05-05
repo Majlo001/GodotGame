@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk14.png-f1d4758fab12191a73e808cd0330d917.stex"
+path="res://.import/walk14.png-3a859ac5f356947a5a057d76eb63f3e4.stex"
 
 [deps]
 
-source_file="res://Undead Sprite Pack/TheWalkingDzban/walk14.png"
-dest_files=[ "res://.import/walk14.png-f1d4758fab12191a73e808cd0330d917.stex" ]
+source_file="res://undead sprite pack/TheWalkingDzban/walk14.png"
+dest_files=[ "res://.import/walk14.png-3a859ac5f356947a5a057d76eb63f3e4.stex" ]
 
 [params]
 
