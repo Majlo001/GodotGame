@@ -18,7 +18,7 @@ func _ready():
 func _physics_process(delta):
 	var overlapping_bodies = get_overlapping_bodies()
 	if not overlapping_bodies:
-		print("wykonanie")
+#		print("wykonanie")
 		return
 
 	for body in overlapping_bodies:

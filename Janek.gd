@@ -11,7 +11,7 @@ export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
 
-export var max_health = 4
+export var max_health = 5
 var health 
 var score = 0
 
@@ -28,16 +28,15 @@ func _ready():
 	set_process(true)
 	health = max_health
 	
-	if attacking == false:
 	# Weapon setup
-		var weapon_instance = load("res://weapons/Weapon.tscn").instance()
-		var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
-		weapon_anchor.add_child(weapon_instance)
-	
-		weapon = weapon_anchor.get_child(0)
-	
-		weapon_path = weapon.get_path()
-		weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
+	var weapon_instance = load("res://weapons/Weapon.tscn").instance()
+	var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
+	weapon_anchor.add_child(weapon_instance)
+
+	weapon = weapon_anchor.get_child(0)
+
+	weapon_path = weapon.get_path()
+	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
 
 
 
@@ -146,6 +145,8 @@ func attack():
 func _process(delta):
 	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
 	LabelNode.text = str(score)
+	
+	print(health)
 	
 	if $Sprite.flip_h == true:
 		$WeaponSpawnPoint.rotation = 22

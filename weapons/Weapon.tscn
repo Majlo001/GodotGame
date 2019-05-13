@@ -170,9 +170,9 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
-position = Vector2( -0.142455, 8.30421 )
+position = Vector2( 0.0655738, 9.54234 )
 rotation = -1.73726
-scale = Vector2( 0.421593, 0.487833 )
+scale = Vector2( 0.333179, 0.487833 )
 build_mode = 0
 polygon = PoolVector2Array( 26, -13, 26, 13, 129, 13, 160, 0, 130, -13 )
 one_way_collision = true

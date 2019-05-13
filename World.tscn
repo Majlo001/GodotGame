@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Janek.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -75,16 +75,18 @@
 [ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk18.png" type="Texture" id=73]
 [ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk19.png" type="Texture" id=74]
 [ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk20.png" type="Texture" id=75]
-[ext_resource path="res://items/heart.png" type="Texture" id=76]
-[ext_resource path="res://Area2D.gd" type="Script" id=77]
-[ext_resource path="res://icon.png" type="Texture" id=78]
-[ext_resource path="res://background1.png" type="Texture" id=79]
-[ext_resource path="res://brick1.tres" type="TileSet" id=80]
-[ext_resource path="res://jegomosc.gd" type="Script" id=81]
-[ext_resource path="res://other/jegomosc.png" type="Texture" id=82]
-[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=83]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=84]
-[ext_resource path="res://torch.tscn" type="PackedScene" id=85]
+[ext_resource path="res://weapons/sword/sword_player.png" type="Texture" id=76]
+[ext_resource path="res://weapons/sword/sword_enemy.png" type="Texture" id=77]
+[ext_resource path="res://items/heart.png" type="Texture" id=78]
+[ext_resource path="res://Area2D.gd" type="Script" id=79]
+[ext_resource path="res://icon.png" type="Texture" id=80]
+[ext_resource path="res://background1.png" type="Texture" id=81]
+[ext_resource path="res://brick1.tres" type="TileSet" id=82]
+[ext_resource path="res://jegomosc.gd" type="Script" id=83]
+[ext_resource path="res://other/jegomosc.png" type="Texture" id=84]
+[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=85]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=86]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=87]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -152,6 +154,11 @@ animations = [ {
 "loop": true,
 "name": "Walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
 } ]
 
 [sub_resource type="TileSet" id=4]
@@ -204,7 +211,7 @@ height = 20.0
 size = 8
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 83 )
+font_data = ExtResource( 85 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="World" type="Node2D" index="0"]
@@ -215,38 +222,37 @@ position = Vector2( -2.05054, 0 )
 "character",
 ]]
 
+position = Vector2( 392.591, 304.851 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "collision" ]
 weapon_scene_path = "res://weapons/Weapon.tscn"
 max_health = 5
 
 [node name="Sprite" type="AnimatedSprite" parent="Janek" index="0"]
 
-position = Vector2( 463, 275.24 )
 scale = Vector2( 2.68, 2.68 )
 frames = SubResource( 1 )
 animation = "Idle-NoSword"
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Janek" index="1"]
 
-visible = false
-position = Vector2( 459.178, 284.68 )
+position = Vector2( 0, 10 )
 scale = Vector2( 2.66457, 4.29827 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Position2D" type="Position2D" parent="Janek" index="2"]
 
 visible = false
-position = Vector2( 459.463, 284.491 )
 scale = Vector2( 2.63413, -3.86758 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="Janek" index="3"]
 
-position = Vector2( 459.796, 280.248 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -269,15 +275,15 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = true
-_sections_unfolded = [ "Drag Margin", "Editor", "Limit" ]
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Transform" ]
 
 [node name="WeaponSpawnPoint" type="Node2D" parent="Janek" index="4"]
 
-position = Vector2( 462.991, 283.931 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="WeaponAnchorPoint" type="Node2D" parent="Janek/WeaponSpawnPoint" index="0"]
 
+position = Vector2( 25, 0 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Timer" type="Timer" parent="Janek" index="5"]
@@ -305,22 +311,22 @@ autostart = false
 "character",
 ]]
 
-editor/display_folded = true
-position = Vector2( -178.604, -38.9727 )
+position = Vector2( 599.522, 377.298 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 55 )
+weapon_scene_path = "res://weapons/Weapon.tscn"
 max_health = 4
 
 [node name="Sprite" type="AnimatedSprite" parent="Zombie" index="0"]
 
 editor/display_folded = true
-position = Vector2( 765.925, 343.939 )
 scale = Vector2( 1.78188, 1.78188 )
 frames = SubResource( 3 )
 animation = "Walk"
+_sections_unfolded = [ "Transform" ]
 
 [node name="TileMap2" type="TileMap" parent="Zombie/Sprite" index="0"]
 
@@ -363,7 +369,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -384,7 +390,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -405,7 +411,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -426,26 +432,42 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie" index="1"]
 
-visible = false
-position = Vector2( 766.22, 348.906 )
-scale = Vector2( 0.339792, 2.355 )
+position = Vector2( 0, 5 )
+scale = Vector2( 0.361029, 2.355 )
 shape = SubResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="Zombie" index="2"]
+[node name="WeaponSpawnPoint" type="Node2D" parent="Zombie" index="2"]
+
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="WeaponAnchorPoint" type="Node2D" parent="Zombie/WeaponSpawnPoint" index="0"]
+
+position = Vector2( 25, 0 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="RayCast2D" type="RayCast2D" parent="Zombie" index="3"]
 
 visible = false
-position = Vector2( 771.602, 326.991 )
 scale = Vector2( 1, 0.935261 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )
 collision_mask = 1
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="Zombie" index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [node name="Coins" type="Node" parent="." index="2"]
 
@@ -464,13 +486,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 77 )
+script = ExtResource( 79 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin" index="0"]
 
 position = Vector2( -246.606, 122.588 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 78 )
+texture = ExtResource( 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin" index="1"]
 
@@ -492,13 +514,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 77 )
+script = ExtResource( 79 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin2" index="0"]
 
 position = Vector2( -0.800995, -0.800964 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 78 )
+texture = ExtResource( 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2" index="1"]
 
@@ -520,13 +542,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 77 )
+script = ExtResource( 79 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin3" index="0"]
 
 position = Vector2( 181.204, 1.91132 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 78 )
+texture = ExtResource( 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3" index="1"]
 
@@ -561,7 +583,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
 
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 79 )
+texture = ExtResource( 81 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Tilemap" type="Node" parent="." index="4"]
@@ -570,7 +592,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0.156826, 2.42401 )
 mode = 0
-tile_set = ExtResource( 80 )
+tile_set = ExtResource( 82 )
 cell_size = Vector2( 31, 31 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
@@ -757,13 +779,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 81 )
+script = ExtResource( 83 )
 
 [node name="Sprite" type="Sprite" parent="Jegomość" index="0"]
 
 position = Vector2( -26.1211, 40.018 )
 scale = Vector2( 0.954328, 0.954328 )
-texture = ExtResource( 82 )
+texture = ExtResource( 84 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomość" index="1"]
 
@@ -807,11 +829,11 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Pause" parent="Pauza" index="0" instance=ExtResource( 84 )]
+[node name="Pause" parent="Pauza" index="0" instance=ExtResource( 86 )]
 
 visible = false
 
-[node name="torch" parent="." index="7" instance=ExtResource( 85 )]
+[node name="torch" parent="." index="7" instance=ExtResource( 87 )]
 
 position = Vector2( 64.0745, 391.995 )
 scale = Vector2( 6.3887, 6.3887 )
@@ -859,7 +881,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health" index="1"]
 
@@ -877,7 +899,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health" index="2"]
 
@@ -895,7 +917,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health" index="3"]
 
@@ -913,7 +935,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 76 )
+texture = ExtResource( 78 )
 
 [node name="Control" type="Control" parent="UI/UI" index="1"]
 
@@ -948,7 +970,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 78 )
+texture = ExtResource( 80 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control" index="1"]
 
@@ -986,6 +1008,8 @@ _sections_unfolded = [ "Focus", "Rect", "custom_fonts" ]
 [connection signal="timeout" from="Janek/Timer2" to="Janek" method="_on_Timer2_timeout"]
 
 [connection signal="timeout" from="Janek/Timer3" to="Janek" method="_on_Timer3_timeout"]
+
+[connection signal="timeout" from="Zombie/Timer" to="Zombie" method="_on_Timer_timeout"]
 
 [connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
 
