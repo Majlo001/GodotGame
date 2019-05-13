@@ -27,16 +27,20 @@ var node = invenotry.instance()
 func _ready():
 	set_process(true)
 	health = max_health
-
+	
+	if attacking == false:
 	# Weapon setup
-	var weapon_instance = load("res://weapons/Weapon.tscn").instance()
-	var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
-	weapon_anchor.add_child(weapon_instance)
+		var weapon_instance = load("res://weapons/Weapon.tscn").instance()
+		var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
+		weapon_anchor.add_child(weapon_instance)
+	
+		weapon = weapon_anchor.get_child(0)
+	
+		weapon_path = weapon.get_path()
+		weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
 
-	weapon = weapon_anchor.get_child(0)
 
-	weapon_path = weapon.get_path()
-	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
+
 
 func get_input():
 	var friction = false
@@ -130,18 +134,23 @@ func attack():
 	if is_on_floor():
 		attacking = true
 		velocity.x = 0
-		weapon.attack()
 		if $Sprite.flip_h == false:
 			self.position += Vector2(15, 0)
 		else:
 			self.position -= Vector2(15, 0)
 		$Sprite.play(attack_anim)
+		weapon.attack()
 		yield($Sprite, "animation_finished")
 		attacking = false
 
 func _process(delta):
 	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
 	LabelNode.text = str(score)
+	
+	if $Sprite.flip_h == true:
+		$WeaponSpawnPoint.rotation = 22
+	else:
+		$WeaponSpawnPoint.rotation = 0
 
 func take_damage(count):
 #	if current_state == DEAD:

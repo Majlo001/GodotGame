@@ -37,6 +37,20 @@ func _physics_process(delta):
 func take_damage(count):
 #	if current_state == DEAD:
 #		return
+	if (health == 4):
+		var Health3 = get_parent().get_node("Zombie/Sprite/TileMap2/heart4")
+		Health3.hide()
+	
+	if (health == 3):
+		var Health2 = get_parent().get_node("Zombie/Sprite/TileMap2/heart3")
+		Health2.hide()
+	
+	if (health == 2):
+		var Health1 = get_parent().get_node("Zombie/Sprite/TileMap2/heart2")
+		Health1.hide()
+		
+	if (health == 1):
+		set_process(false)
 
 	health -= count
 	if health <= 0:
