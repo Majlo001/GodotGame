@@ -5,7 +5,6 @@
 
 [sub_resource type="Animation" id=1]
 
-resource_name = "_setup"
 length = 1.0
 loop = false
 step = 0.1
@@ -137,10 +136,11 @@ tracks/3/keys = {
 "values": [ -100.102, 98.7122, 90.0 ]
 }
 
-[node name="Weapon" type="Area2D" groups=[
+[node name="Weapon" type="Area2D" index="0" groups=[
 "weapon",
 ]]
 
+visible = false
 rotation = 1.72285
 input_pickable = false
 gravity_vec = Vector2( 0, 1 )
@@ -170,18 +170,18 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
-position = Vector2( 0.0655738, 9.54234 )
+position = Vector2( -0.190285, 8.01954 )
 rotation = -1.73726
-scale = Vector2( 0.333179, 0.487833 )
+scale = Vector2( 0.441922, 0.487833 )
 build_mode = 0
 polygon = PoolVector2Array( 26, -13, 26, 13, 129, 13, 160, 0, 130, -13 )
+disabled = true
 one_way_collision = true
 
 [node name="Sprite" type="Sprite" parent="." index="2"]
 
 position = Vector2( -0.0137252, 2.51446 )
 rotation = -1.72206
-scale = Vector2( 0.428187, 0.302043 )
 texture = ExtResource( 2 )
 offset = Vector2( 72, 0 )
 _sections_unfolded = [ "Offset", "Transform" ]

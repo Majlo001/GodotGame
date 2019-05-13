@@ -11,14 +11,12 @@ export(int) var damage = 1
 
 
 func _ready():
-	#print("wykonanie")
 	set_physics_process(false)
 
 
 func _physics_process(delta):
 	var overlapping_bodies = get_overlapping_bodies()
 	if not overlapping_bodies:
-#		print("wykonanie")
 		return
 
 	for body in overlapping_bodies:
@@ -32,6 +30,7 @@ func _physics_process(delta):
 
 
 func is_owner(node):
+	return node.weapon_path == get_path()
 	pass
 
 

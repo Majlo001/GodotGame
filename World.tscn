@@ -55,28 +55,28 @@
 [ext_resource path="res://Individual Sprites/adventurer-die-05.png" type="Texture" id=53]
 [ext_resource path="res://Individual Sprites/adventurer-die-06.png" type="Texture" id=54]
 [ext_resource path="res://Zombie.gd" type="Script" id=55]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk1.png" type="Texture" id=56]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk2.png" type="Texture" id=57]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk3.png" type="Texture" id=58]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk4.png" type="Texture" id=59]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk5.png" type="Texture" id=60]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk6.png" type="Texture" id=61]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk7.png" type="Texture" id=62]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk8.png" type="Texture" id=63]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk9.png" type="Texture" id=64]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk17.png" type="Texture" id=65]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk10.png" type="Texture" id=66]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk11.png" type="Texture" id=67]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk12.png" type="Texture" id=68]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk13.png" type="Texture" id=69]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk14.png" type="Texture" id=70]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk15.png" type="Texture" id=71]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk16.png" type="Texture" id=72]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk18.png" type="Texture" id=73]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk19.png" type="Texture" id=74]
-[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk20.png" type="Texture" id=75]
-[ext_resource path="res://weapons/sword/sword_player.png" type="Texture" id=76]
-[ext_resource path="res://weapons/sword/sword_enemy.png" type="Texture" id=77]
+[ext_resource path="res://weapons/sword/sword_player.png" type="Texture" id=56]
+[ext_resource path="res://weapons/sword/sword_enemy.png" type="Texture" id=57]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk1.png" type="Texture" id=58]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk2.png" type="Texture" id=59]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk3.png" type="Texture" id=60]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk4.png" type="Texture" id=61]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk5.png" type="Texture" id=62]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk6.png" type="Texture" id=63]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk7.png" type="Texture" id=64]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk8.png" type="Texture" id=65]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk9.png" type="Texture" id=66]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk17.png" type="Texture" id=67]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk10.png" type="Texture" id=68]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk11.png" type="Texture" id=69]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk12.png" type="Texture" id=70]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk13.png" type="Texture" id=71]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk14.png" type="Texture" id=72]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk15.png" type="Texture" id=73]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk16.png" type="Texture" id=74]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk18.png" type="Texture" id=75]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk19.png" type="Texture" id=76]
+[ext_resource path="res://Undead Sprite Pack/TheWalkingDzban/walk20.png" type="Texture" id=77]
 [ext_resource path="res://items/heart.png" type="Texture" id=78]
 [ext_resource path="res://Area2D.gd" type="Script" id=79]
 [ext_resource path="res://icon.png" type="Texture" id=80]
@@ -150,14 +150,14 @@ extents = Vector2( 11.211, 9.04247 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 77 ) ],
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "Attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "Walk",
 "speed": 5.0
 } ]
 
@@ -229,7 +229,7 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 weapon_scene_path = "res://weapons/Weapon.tscn"
-max_health = 5
+max_health = 4
 
 [node name="Sprite" type="AnimatedSprite" parent="Janek" index="0"]
 
@@ -283,7 +283,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="WeaponAnchorPoint" type="Node2D" parent="Janek/WeaponSpawnPoint" index="0"]
 
-position = Vector2( 25, 0 )
+position = Vector2( 20, 15 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Timer" type="Timer" parent="Janek" index="5"]
@@ -465,7 +465,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Timer" type="Timer" parent="Zombie" index="4"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 2.0
 one_shot = true
 autostart = false
 
@@ -1011,13 +1011,13 @@ _sections_unfolded = [ "Focus", "Rect", "custom_fonts" ]
 
 [connection signal="timeout" from="Zombie/Timer" to="Zombie" method="_on_Timer_timeout"]
 
-[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
-
 [connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
 
-[connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
 
 [connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
+
+[connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
 
 [connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
 

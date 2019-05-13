@@ -11,9 +11,10 @@ export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
 
-export var max_health = 5
+export var max_health = 4
 var health 
 var score = 0
+
 
 var attack_delay = 1
 var attacking = false
@@ -114,9 +115,6 @@ func get_input():
 			if anim_numb == 4:
 				anim_numb = 1
 
-
-
-
 	velocity.y += GRAVITY
 	
 	#ESC wywala gre i elo
@@ -146,8 +144,6 @@ func _process(delta):
 	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
 	LabelNode.text = str(score)
 	
-	print(health)
-	
 	if $Sprite.flip_h == true:
 		$WeaponSpawnPoint.rotation = 22
 	else:
@@ -172,12 +168,12 @@ func take_damage(count):
 		queue_free()
 		get_tree().reload_current_scene()
 		
-#	health -= count
-#	if health <= 0:
-#		health = 0
+	health -= count
+	if health <= 0:
+		health = 0
 #		_change_state(DEAD)
 #		emit_signal("died")
-#		return
+		return
 
 #	_change_state(STAGGER)
 #	emit_signal("health_changed", health)

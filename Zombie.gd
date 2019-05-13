@@ -19,6 +19,7 @@ var health
 var direction = 1
 
 func _ready():
+	set_process(true)
 	health = max_health
 	
 	
@@ -39,13 +40,13 @@ func _physics_process(delta):
 		
 		velocity.x = SPEED * direction
 	
-		velocity.y += GRAVITY
+
 		
 		velocity = move_and_slide(velocity,FLOOR)
 		
 	
-
-	
+	velocity.y += GRAVITY
+	print(health)
 	if $Sprite.flip_h == true:
 		$WeaponSpawnPoint.rotation = 22
 	else:
@@ -95,7 +96,7 @@ func take_damage(count):
 	if health <= 0:
 		health = 0
 		queue_free()
-		emit_signal("died")
+#		emit_signal("died")
 		return
 
 func _on_Timer_timeout():
