@@ -23,7 +23,7 @@ func _ready():
 	health = max_health
 	
 	
-	var weapon_instance = load("res://weapons/Weapon.tscn").instance()
+	var weapon_instance = load("res://weapons/Weaponz.tscn").instance()
 	var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
 	weapon_anchor.add_child(weapon_instance)
 
@@ -38,9 +38,10 @@ func _physics_process(delta):
 	if attacking == false:
 		$Sprite.play("Walk")
 		
-		velocity.x = SPEED * direction
+		velocity.x = -SPEED * direction
 	
-
+		if set_process(false):
+			$Timer2.start()
 		
 		velocity = move_and_slide(velocity,FLOOR)
 		
@@ -48,9 +49,9 @@ func _physics_process(delta):
 	velocity.y += GRAVITY
 	print(health)
 	if $Sprite.flip_h == true:
-		$WeaponSpawnPoint.rotation = 22
-	else:
 		$WeaponSpawnPoint.rotation = 0
+	else:
+		$WeaponSpawnPoint.rotation = 22
 	
 	if is_on_wall():
 		direction *= -1
@@ -64,7 +65,7 @@ func attack():
 	if is_on_floor():
 		attacking = true
 		velocity.x = 0
-		if $Sprite.flip_h == false:
+		if $Sprite.flip_h == true:
 			self.position += Vector2(15, 0)
 		else:
 			self.position -= Vector2(15, 0)
@@ -101,3 +102,7 @@ func take_damage(count):
 
 func _on_Timer_timeout():
 	attack()
+
+
+func _on_Timer2_timeout():
+	set_process(true)

@@ -22,16 +22,16 @@ func _physics_process(delta):
 	for body in overlapping_bodies:
 		if not body.is_in_group("character"):
 			return
-#		if is_owner(body):
-#			return
+		if is_owner(body):
+			return
 		
 		body.take_damage(damage)
 	set_physics_process(false)
 
 
-#func is_owner(node):
-#	return node.weapon_path == get_path()
-#	pass
+func is_owner(node):
+	return node.weapon_path == get_path()
+	pass
 
 
 func _change_state(new_state):
