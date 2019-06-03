@@ -59,23 +59,23 @@
 [ext_resource path="res://Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=57]
 [ext_resource path="res://Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=58]
 [ext_resource path="res://Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=59]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-0.png" type="Texture" id=60]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-1.png" type="Texture" id=61]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-2.png" type="Texture" id=62]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-3.png" type="Texture" id=63]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=60]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=61]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=62]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=63]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=64]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=65]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=66]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=67]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=68]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-0.png" type="Texture" id=69]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-1.png" type="Texture" id=70]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-2.png" type="Texture" id=71]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-3.png" type="Texture" id=72]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=73]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=74]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=75]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=76]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-0.png" type="Texture" id=69]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-1.png" type="Texture" id=70]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-2.png" type="Texture" id=71]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-3.png" type="Texture" id=72]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-0.png" type="Texture" id=73]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-1.png" type="Texture" id=74]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-2.png" type="Texture" id=75]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-3.png" type="Texture" id=76]
 [ext_resource path="res://items/heart.png" type="Texture" id=77]
 [ext_resource path="res://Area2D.gd" type="Script" id=78]
 [ext_resource path="res://icon.png" type="Texture" id=79]
@@ -156,7 +156,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ) ],
 "loop": true,
-"name": "Walk",
+"name": "Hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ) ],
@@ -166,12 +166,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
 "loop": true,
-"name": "Die",
+"name": "Walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
 "loop": true,
-"name": "Hurt",
+"name": "Die",
 "speed": 5.0
 } ]
 
