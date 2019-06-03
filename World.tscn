@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://Janek.gd" type="Script" id=1]
 [ext_resource path="res://Individual Sprites/adventurer-run-00.png" type="Texture" id=2]
@@ -68,10 +68,10 @@
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=66]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=67]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=68]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-0.png" type="Texture" id=69]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-1.png" type="Texture" id=70]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-2.png" type="Texture" id=71]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-3.png" type="Texture" id=72]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=69]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=70]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=71]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=72]
 [ext_resource path="res://Slime/Individual Sprites/slime-die-0.png" type="Texture" id=73]
 [ext_resource path="res://Slime/Individual Sprites/slime-die-1.png" type="Texture" id=74]
 [ext_resource path="res://Slime/Individual Sprites/slime-die-2.png" type="Texture" id=75]
@@ -86,8 +86,9 @@
 [ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=84]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=85]
 [ext_resource path="res://torch.tscn" type="PackedScene" id=86]
+[ext_resource path="res://changeLevel.gd" type="Script" id=87]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
@@ -141,12 +142,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.211, 9.04247 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=15]
 
 animations = [ {
 "frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
@@ -166,7 +167,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
 "loop": true,
-"name": "Walk",
+"name": "Hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
@@ -175,7 +176,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=16]
 
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -228,7 +229,12 @@ use_filter = false
 font_data = ExtResource( 84 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="World" type="Node2D" index="0"]
+[sub_resource type="CircleShape2D" id=14]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="World" type="Node2D"]
 
 position = Vector2( -2.05054, 0 )
 
@@ -236,6 +242,7 @@ position = Vector2( -2.05054, 0 )
 "character",
 ]]
 
+editor/display_folded = true
 position = Vector2( 392.591, 304.851 )
 input_pickable = false
 collision_layer = 1
@@ -248,7 +255,7 @@ max_health = 4
 [node name="Sprite" type="AnimatedSprite" parent="Janek" index="0"]
 
 scale = Vector2( 2.68, 2.68 )
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 animation = "Idle-NoSword"
 _sections_unfolded = [ "Transform" ]
 
@@ -256,7 +263,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0, 10 )
 scale = Vector2( 2.66457, 4.29827 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Position2D" type="Position2D" parent="Janek" index="2"]
@@ -326,6 +333,7 @@ autostart = false
 "character",
 ]]
 
+editor/display_folded = true
 position = Vector2( 599.522, 377.298 )
 input_pickable = false
 collision_layer = 1
@@ -338,7 +346,7 @@ max_health = 4
 [node name="Sprite" type="AnimatedSprite" parent="Zombie" index="0"]
 
 scale = Vector2( 1.78188, 1.78188 )
-frames = SubResource( 3 )
+frames = SubResource( 15 )
 animation = "Walk"
 _sections_unfolded = [ "Transform" ]
 
@@ -348,7 +356,7 @@ editor/display_folded = true
 position = Vector2( -71.5677, -13.872 )
 scale = Vector2( 0.561205, 0.561205 )
 mode = 0
-tile_set = SubResource( 4 )
+tile_set = SubResource( 16 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -609,6 +617,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Tilemap" type="Node" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="TileMap" type="TileMap" parent="Tilemap" index="0"]
 
 position = Vector2( 0.156826, 2.42401 )
@@ -791,6 +801,7 @@ shape = SubResource( 11 )
 
 [node name="Jegomość" type="Area2D" parent="." index="5"]
 
+editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
 scale = Vector2( 2.34879, 2.34879 )
 input_pickable = true
@@ -861,8 +872,11 @@ scale = Vector2( 6.3887, 6.3887 )
 
 [node name="UI" type="Node" parent="." index="8"]
 
+editor/display_folded = true
+
 [node name="UI" type="CanvasLayer" parent="UI" index="0"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -1023,6 +1037,29 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Focus", "Rect", "custom_fonts" ]
+
+[node name="Area2D" type="Area2D" parent="." index="9"]
+
+position = Vector2( 892, 334 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 87 )
+
+[node name="icon" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 2.05054, 1 )
+texture = ExtResource( 79 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( 2.55054, 5.72205e-06 )
+scale = Vector2( 3.25, 3.2 )
+shape = SubResource( 14 )
 
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
