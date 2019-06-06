@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://brick1.tres" type="TileSet" id=1]
 [ext_resource path="res://Janek.gd" type="Script" id=2]
@@ -62,23 +62,25 @@
 [ext_resource path="res://Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=60]
 [ext_resource path="res://Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=61]
 [ext_resource path="res://Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=62]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=63]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=64]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=65]
-[ext_resource path="res://Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=66]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-0.png" type="Texture" id=63]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-1.png" type="Texture" id=64]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-2.png" type="Texture" id=65]
+[ext_resource path="res://Slime/Individual Sprites/slime-move-3.png" type="Texture" id=66]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=67]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=68]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=69]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=70]
 [ext_resource path="res://Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=71]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-0.png" type="Texture" id=72]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-1.png" type="Texture" id=73]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-2.png" type="Texture" id=74]
-[ext_resource path="res://Slime/Individual Sprites/slime-die-3.png" type="Texture" id=75]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-0.png" type="Texture" id=76]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-1.png" type="Texture" id=77]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-2.png" type="Texture" id=78]
-[ext_resource path="res://Slime/Individual Sprites/slime-move-3.png" type="Texture" id=79]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=72]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=73]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=74]
+[ext_resource path="res://Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=75]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-0.png" type="Texture" id=76]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-1.png" type="Texture" id=77]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-2.png" type="Texture" id=78]
+[ext_resource path="res://Slime/Individual Sprites/slime-die-3.png" type="Texture" id=79]
+[ext_resource path="res://moving_platform.tscn" type="PackedScene" id=80]
+[ext_resource path="res://background1.png" type="Texture" id=81]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -159,7 +161,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
 "loop": true,
-"name": "Hurt",
+"name": "Walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ) ],
@@ -169,12 +171,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
 "loop": true,
-"name": "Die",
+"name": "Hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ) ],
 "loop": true,
-"name": "Walk",
+"name": "Die",
 "speed": 5.0
 } ]
 
@@ -283,6 +285,7 @@ shape = SubResource( 2 )
 "character",
 ]]
 
+editor/display_folded = true
 position = Vector2( 392.591, 304.851 )
 input_pickable = false
 collision_layer = 1
@@ -340,7 +343,7 @@ _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Transform" ]
 
 [node name="WeaponSpawnPoint" type="Node2D" parent="Janek" index="4"]
 
-position = Vector2( -3.05176e-005, 3.05176e-005 )
+position = Vector2( -3.05176e-05, 3.05176e-05 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="WeaponAnchorPoint" type="Node2D" parent="Janek/WeaponSpawnPoint" index="0"]
@@ -705,6 +708,38 @@ process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[node name="KinematicBody2D" parent="." index="8" instance=ExtResource( 80 )]
+
+position = Vector2( 976, 380 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="9"]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1280, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+position = Vector2( 401.591, 313.173 )
+texture = ExtResource( 81 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 
