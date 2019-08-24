@@ -22,7 +22,7 @@ func _on_Area2D_body_exited(body):
 			
 		vis1 = true
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("ui_accept") and interact == true:
 		$Label.text = "Czego chcesz? Ja tu tylko stoje."
 		

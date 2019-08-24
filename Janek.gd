@@ -1,6 +1,7 @@
+#warning-ignore-all:unused_variable
 extends KinematicBody2D
 
-var SSPEED = 170
+#var SSPEED = 170
 var SPEED = 150
 var GRAVITY = 10
 var JUMP = -300
@@ -16,7 +17,7 @@ var health
 var score = 0
 
 
-var attack_delay = 1
+#var attack_delay = 1
 var attacking = false
 var attack_anim = null
 var anim_numb = 1
@@ -140,7 +141,7 @@ func attack():
 		yield($Sprite, "animation_finished")
 		attacking = false
 
-func _process(delta):
+func _process(_delta):		#_delta zamiast delta (inernet podpowiedział)
 	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
 	LabelNode.text = str(score)
 	
@@ -178,11 +179,9 @@ func take_damage(count):
 #	_change_state(STAGGER)
 #	emit_signal("health_changed", health)
 
-func _physics_process(delta):
+func _physics_process(_delta):		#_delta zamiast delta (inernet podpowiedział)
 	
 	get_input()
-	
-	
 	velocity = move_and_slide(velocity,FLOOR)
 
 
@@ -196,10 +195,10 @@ func _on_Timer2_timeout():
 func _on_Timer3_timeout():
 	SPEED = 150
 
-func _on_Coin_body_entered(body):
+func _on_Coin_body_entered(_body):
 	score += 1
 	print(score)
 
 
-func _on_Coin2_body_entered(body):
+func _on_Coin2_body_entered(_body):
 	pass # replace with function body

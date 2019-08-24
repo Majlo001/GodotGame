@@ -2,18 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk20.png-e45b5cc8367cc7ddbc070ec5b686406a.stex"
+path="res://.import/walk20.png-e3a4fbb0d8d0396f7719eb13a62ce779.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://undead sprite pack/TheWalkingDzban/walk20.png"
-dest_files=[ "res://.import/walk20.png-e45b5cc8367cc7ddbc070ec5b686406a.stex" ]
+source_file="res://Undead Sprite Pack/TheWalkingDzban/walk20.png"
+dest_files=[ "res://.import/walk20.png-e3a4fbb0d8d0396f7719eb13a62ce779.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -23,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

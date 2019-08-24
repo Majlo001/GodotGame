@@ -2,18 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk8.png-2a672989b483fff5c5107c0a92a8d192.stex"
+path="res://.import/walk8.png-315c11071dfc9cf214aa100a871a9e0f.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://undead sprite pack/TheWalkingDzban/walk8.png"
-dest_files=[ "res://.import/walk8.png-2a672989b483fff5c5107c0a92a8d192.stex" ]
+source_file="res://Undead Sprite Pack/TheWalkingDzban/walk8.png"
+dest_files=[ "res://.import/walk8.png-315c11071dfc9cf214aa100a871a9e0f.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -23,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

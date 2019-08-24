@@ -1,6 +1,6 @@
 extends TextureRect
 
-var itemIcon
+#var itemIcon
 var itemName
 var itemSlot
 #var itemWight

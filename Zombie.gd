@@ -4,11 +4,11 @@ var SPEED = 70
 var GRAVITY = 30
 var FLOOR = Vector2(0, -1)
 
-onready var body = $CollisionShape2D
+# onready var body = $CollisionShape2D
 
 var velocity = Vector2()
 
-export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
+#export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
 var attacking = false
@@ -34,7 +34,7 @@ func _ready():
 	$Timer.start()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if attacking == false:
 		$Sprite.play("Walk")
 		
