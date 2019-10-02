@@ -5,7 +5,7 @@ signal attack_finished
 onready var animation_player = $AnimationPlayer
 
 enum STATES {IDLE, ATTACK}
-var current_state = IDLE
+var current_state = STATES.IDLE
 
 export(int) var damage = 1
 
@@ -39,18 +39,18 @@ func _change_state(new_state):
 
 	# Initialize the new state
 	match new_state:
-		ATTACK:
+		STATES.ATTACK:
 			set_physics_process(true)
-		IDLE:
+		STATES.IDLE:
 			set_physics_process(false)
 
 
 func attack():
 	animation_player.play("attack")
-	_change_state(ATTACK)
+	_change_state(STATES.ATTACK)
 
 
 func _on_AnimationPlayer_animation_finished( name ):
 	if name == "attack":
-		_change_state(IDLE)
+		_change_state(STATES.IDLE)
 		emit_signal("attack_finished")
