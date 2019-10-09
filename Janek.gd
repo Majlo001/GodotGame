@@ -8,7 +8,7 @@ var JUMP = -300
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
-export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
+#export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
 
@@ -202,3 +202,7 @@ func _on_Coin_body_entered(_body):
 
 func _on_Coin2_body_entered(_body):
 	pass # replace with function body
+	
+#onready var fps_label = get_node('fps_label')
+
+#fps_label.set_text(str(OS.get_frames_per_second()))
