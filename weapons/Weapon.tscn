@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://weapons/Weapon.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -152,7 +153,8 @@ disabled = true
 one_way_collision = true
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.0137252, 2.51446 )
+position = Vector2( 6.25512, 41.1757 )
 rotation = -1.72206
+texture = ExtResource( 2 )
 offset = Vector2( 72, 0 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
