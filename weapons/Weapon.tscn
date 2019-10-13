@@ -3,10 +3,6 @@
 [ext_resource path="res://weapons/Weapon.gd" type="Script" id=1]
 
 [sub_resource type="Animation" id=1]
-
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -81,10 +77,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "attack"
 length = 0.4
-loop = false
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -138,51 +132,27 @@ tracks/3/keys = {
 [node name="Weapon" type="Area2D" groups=[
 "weapon",
 ]]
-
 rotation = 1.72285
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
 monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
-damage = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0" groups=[
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
 "weapon",
 ]]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/_setup = SubResource( 1 )
 anims/attack = SubResource( 2 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
-
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -0.190285, 8.01954 )
 rotation = -1.73726
 scale = Vector2( 0.441922, 0.487833 )
-build_mode = 0
 polygon = PoolVector2Array( 26, -13, 26, 13, 129, 13, 160, 0, 130, -13 )
 disabled = true
 one_way_collision = true
 
-[node name="Sprite" type="Sprite" parent="." index="2"]
-
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.0137252, 2.51446 )
 rotation = -1.72206
 offset = Vector2( 72, 0 )
-_sections_unfolded = [ "Offset", "Transform" ]
-
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
-
-
