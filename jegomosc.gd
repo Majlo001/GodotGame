@@ -24,11 +24,11 @@ func _on_Area2D_body_exited(body):
 
 func _input(_event):
 	if Input.is_action_just_pressed("ui_accept") and interact == true:
-		$Label.text = "Czego chcesz? Ja tu tylko stoje."
+		$Label.text = "Poruszaj się W A S D, a walcz SPACJĄ."
 		
 		if vis1 == true:
-			$Label.text = "Serio. Dalej tu stoje."
+			$Label.text = "Poruszaj się W A S D, a walcz SPACJĄ."
 			
 			if vis2 == true:
-				$Label.text = "Nie masz nic lepszego do roboty?"
+				$Label.text = "Poruszaj się W A S D, a walcz SPACJĄ."
 		

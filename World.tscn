@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://Janek.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-run-00.png" type="Texture" id=2]
@@ -7,53 +7,53 @@
 [ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-run-03.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-run-04.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-run-05.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-00.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-01.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-02.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-03.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-04.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-05.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-00.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-01.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-02.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-03.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-stand-02.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-stand-01.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-stand-00.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-slide-00.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-slide-01.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-00.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-01.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-02.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-03.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-00.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-01.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-02.png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-03.png" type="Texture" id=30]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-04.png" type="Texture" id=31]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run4.png" type="Texture" id=32]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run5.png" type="Texture" id=33]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run6.png" type="Texture" id=34]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run7.png" type="Texture" id=35]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run8.png" type="Texture" id=36]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run9.png" type="Texture" id=37]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-00.png" type="Texture" id=38]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-01.png" type="Texture" id=39]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-02.png" type="Texture" id=40]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-03.png" type="Texture" id=41]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-00.png" type="Texture" id=42]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-01.png" type="Texture" id=43]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-02.png" type="Texture" id=44]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-03.png" type="Texture" id=45]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-04.png" type="Texture" id=46]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-05.png" type="Texture" id=47]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-06.png" type="Texture" id=48]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-00.png" type="Texture" id=49]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-01.png" type="Texture" id=50]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-02.png" type="Texture" id=51]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-03.png" type="Texture" id=52]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-04.png" type="Texture" id=53]
-[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-05.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run5.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run6.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run7.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run8.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/run/adventurer-run9.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-00.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-01.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-02.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-03.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-04.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack3-05.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-00.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-01.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-02.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-03.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack1-04.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-00.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-01.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-02.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-2-03.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-00.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-01.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-02.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-03.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-04.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-05.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-die-06.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-00.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-01.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-02.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-idle-03.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-00.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-01.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-02.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-03.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-04.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-attack2-05.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-00.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-01.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-02.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-jump-03.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-stand-02.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-stand-01.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-stand-00.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-slide-00.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/Individual Sprites - Janek/adventurer-slide-01.png" type="Texture" id=54]
 [ext_resource path="res://Zombie.gd" type="Script" id=55]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-0.png" type="Texture" id=56]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=57]
@@ -82,11 +82,12 @@
 [ext_resource path="res://background1.png" type="Texture" id=80]
 [ext_resource path="res://brick1.tres" type="TileSet" id=81]
 [ext_resource path="res://jegomosc.gd" type="Script" id=82]
-[ext_resource path="res://other/jegomosc.png" type="Texture" id=83]
+[ext_resource path="res://other/sign.png" type="Texture" id=83]
 [ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=84]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=85]
 [ext_resource path="res://torch.tscn" type="PackedScene" id=86]
 [ext_resource path="res://changeLevel.gd" type="Script" id=87]
+[ext_resource path="res://other/jegomosc.png" type="Texture" id=88]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -97,48 +98,48 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
+"name": "Run-Sword",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
 "name": "Attack3",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": false,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "Slide",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "Idle-Sword",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "Attack1",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "Run-Sword",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "Idle-NoSword",
+"name": "Idle-Sword",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "Die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "Idle-NoSword",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ],
 "loop": true,
 "name": "Attack2",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "Slide",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -201,6 +202,8 @@ size = 8
 font_data = ExtResource( 84 )
 
 [sub_resource type="CircleShape2D" id=14]
+
+[sub_resource type="CapsuleShape2D" id=15]
 
 [node name="World" type="Node2D"]
 position = Vector2( -2.05054, 0 )
@@ -386,6 +389,7 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
@@ -481,28 +485,29 @@ position = Vector2( 149.888, 53.8305 )
 scale = Vector2( 0.452828, 17.0468 )
 shape = SubResource( 11 )
 
-[node name="Jegomość" type="Area2D" parent="."]
+[node name="Sign" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
 scale = Vector2( 2.34879, 2.34879 )
 script = ExtResource( 82 )
 
-[node name="Sprite" type="Sprite" parent="Jegomość"]
-position = Vector2( -26.1211, 40.018 )
-scale = Vector2( 0.954328, 0.954328 )
+[node name="sign" type="Sprite" parent="Sign"]
+position = Vector2( -281.612, 57.7265 )
+scale = Vector2( 0.170233, 0.170233 )
+z_index = -17
 texture = ExtResource( 83 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomość"]
-position = Vector2( -27.8413, 37.1161 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
+position = Vector2( -282, 50 )
 scale = Vector2( 2.37089, 1.80274 )
 shape = SubResource( 12 )
+one_way_collision_margin = 0.0
 
-[node name="Label" type="Label" parent="Jegomość"]
+[node name="Label" type="Label" parent="Sign"]
 visible = false
-margin_left = -87.0
-margin_top = -35.0
-margin_right = 65.0
-margin_bottom = 3.0
+margin_left = -355.0
+margin_right = -203.0
+margin_bottom = 39.0
 custom_fonts/font = SubResource( 13 )
 text = "interakcja (enter)"
 align = 1
@@ -597,16 +602,29 @@ texture = ExtResource( 79 )
 position = Vector2( 2.55054, 5.72205e-006 )
 scale = Vector2( 3.25, 3.2 )
 shape = SubResource( 14 )
+
+[node name="Jegomosc" type="Area2D" parent="."]
+position = Vector2( 892, 334 )
+
+[node name="Sprite" type="Sprite" parent="Jegomosc"]
+position = Vector2( -71.192, 34.8329 )
+scale = Vector2( 2.24152, 2.24152 )
+texture = ExtResource( 88 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomosc"]
+position = Vector2( -70, 30 )
+scale = Vector2( 5, 4 )
+shape = SubResource( 15 )
 [connection signal="timeout" from="Janek/Timer" to="Janek" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Janek/Timer2" to="Janek" method="_on_Timer2_timeout"]
 [connection signal="timeout" from="Janek/Timer3" to="Janek" method="_on_Timer3_timeout"]
 [connection signal="timeout" from="Zombie/Timer" to="Zombie" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Zombie/Timer2" to="Zombie" method="_on_Timer2_timeout"]
-[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
-[connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
-[connection signal="body_entered" from="Jegomość" to="Jegomość" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Jegomość" to="Jegomość" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Sign" to="Sign" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Sign" to="Sign" method="_on_Area2D_body_exited"]
