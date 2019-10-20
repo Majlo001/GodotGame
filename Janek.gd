@@ -25,6 +25,7 @@ var anim_numb = 1
 var inv = false
 var invenotry = load("Inventory.tscn")
 var node = invenotry.instance()
+var dying = false
 
 func _ready():
 	set_process(true)
@@ -47,74 +48,75 @@ func get_input():
 	var friction = false
 	attack_anim = "Attack" +str(anim_numb)
 
-	#inventarz
-	if Input.is_action_just_pressed("action_inventory"):
-		if inv == false:
-			add_child(node)
-			inv = true
-		elif inv == true:
-			remove_child(node)
-			inv = false
-
-	if attacking == false:
-			
-		#ruch w prawo
-		if Input.is_action_pressed("move_right"):
-			velocity.x = SPEED
-			$Sprite.flip_h = false
-			if $Timer2.time_left > 0:
-				$Sprite.play("Run-Sword")
-			else:
-				$Sprite.play("Run")
-			
-		#ruch w lewo
-		elif Input.is_action_pressed("move_left"):
-			velocity.x = -SPEED
-			$Sprite.flip_h = true
-			if $Timer2.time_left > 0:
-				$Sprite.play("Run-Sword")
-			else:
-				$Sprite.play("Run")
-			
-		#bezruch
-		else:
-			friction = true
-			
-		if is_on_floor():
-			if friction == true:
-				velocity.x = 0
-				if $Timer2.time_left > 0:
-					$Sprite.play("Idle-Sword")
-				else:
-					$Sprite.play("Idle-NoSword")
+	if dying == false:
+		#inventarz
+		if Input.is_action_just_pressed("action_inventory"):
+			if inv == false:
+				add_child(node)
+				inv = true
+			elif inv == true:
+				remove_child(node)
+				inv = false
+	
+		if attacking == false:
 				
-			
-		#ślizg
-		if Input.is_action_just_pressed("action_slide"):
+			#ruch w prawo
+			if Input.is_action_pressed("move_right"):
+				velocity.x = SPEED
+				$Sprite.flip_h = false
+				if $Timer2.time_left > 0:
+					$Sprite.play("Run-Sword")
+				else:
+					$Sprite.play("Run")
+				
+			#ruch w lewo
+			elif Input.is_action_pressed("move_left"):
+				velocity.x = -SPEED
+				$Sprite.flip_h = true
+				if $Timer2.time_left > 0:
+					$Sprite.play("Run-Sword")
+				else:
+					$Sprite.play("Run")
+				
+			#bezruch
+			else:
+				friction = true
+				
 			if is_on_floor():
-				dash()
-#			
-		if SPEED == 500 and friction == false:
-			$Sprite.play("Slide")
-			
-		#skok
-		if is_on_floor():
-			if Input.is_action_just_pressed("action_jump"):
-				velocity.y = JUMP
-		else:
-			$Sprite.play("Jump")
-			
-			#atak
-		if Input.is_action_just_pressed("action_attack"):
-			$Timer.start()
-			$Timer2.start()
-			attack()
-			
-			if $Timer.time_left > 0:
-				anim_numb += 1
-			
-			if anim_numb == 4:
-				anim_numb = 1
+				if friction == true:
+					velocity.x = 0
+					if $Timer2.time_left > 0:
+						$Sprite.play("Idle-Sword")
+					else:
+						$Sprite.play("Idle-NoSword")
+					
+				
+			#ślizg
+			if Input.is_action_just_pressed("action_slide"):
+				if is_on_floor():
+					dash()
+	#			
+			if SPEED == 500 and friction == false:
+				$Sprite.play("Slide")
+				
+			#skok
+			if is_on_floor():
+				if Input.is_action_just_pressed("action_jump"):
+					velocity.y = JUMP
+			else:
+				$Sprite.play("Jump")
+				
+				#atak
+			if Input.is_action_just_pressed("action_attack"):
+				$Timer.start()
+				$Timer2.start()
+				attack()
+				
+				if $Timer.time_left > 0:
+					anim_numb += 1
+				
+				if anim_numb == 4:
+					anim_numb = 1
 
 	velocity.y += GRAVITY
 	
@@ -166,6 +168,10 @@ func take_damage(count):
 		Health1.hide()
 		
 	if (health == 1):
+		dying = true
+		$Sprite.play("Die")
+		yield($Sprite, "animation_finished")
+		dying = false
 		queue_free()
 		get_tree().reload_current_scene()
 		
