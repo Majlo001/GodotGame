@@ -1,73 +1,19 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://brick1.tres" type="TileSet" id=1]
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=2]
 [ext_resource path="res://items/heart.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://Zombie.gd" type="Script" id=5]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-0.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=26]
-[ext_resource path="res://moving_platform.tscn" type="PackedScene" id=27]
-[ext_resource path="res://background1.png" type="Texture" id=28]
-[ext_resource path="res://src/changeScene2.gd" type="Script" id=29]
+[ext_resource path="res://Zombie.tscn" type="PackedScene" id=5]
+[ext_resource path="res://moving_platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://background1.png" type="Texture" id=7]
+[ext_resource path="res://src/changeScene2.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "Hurt",
-"speed": 5.0
-} ]
-
-[sub_resource type="TileSet" id=4]
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 78.9275, 10 )
-
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=3]
 radius = 31.4925
 
 [node name="World2" type="Node"]
@@ -184,80 +130,9 @@ rect_min_size = Vector2( 5, 5 )
 rect_scale = Vector2( 4, 4 )
 text = "0"
 
-[node name="Zombie" type="KinematicBody2D" parent="." groups=[
-"character",
-]]
-position = Vector2( 599.522, 377.298 )
-script = ExtResource( 5 )
+[node name="Zombie2" parent="." instance=ExtResource( 5 )]
 
-[node name="Sprite" type="AnimatedSprite" parent="Zombie"]
-scale = Vector2( 1.78188, 1.78188 )
-frames = SubResource( 3 )
-animation = "Walk"
-
-[node name="TileMap2" type="TileMap" parent="Zombie/Sprite"]
-editor/display_folded = true
-position = Vector2( -71.5677, -13.872 )
-scale = Vector2( 0.561205, 0.561205 )
-tile_set = SubResource( 4 )
-cell_size = Vector2( 16, 16 )
-format = 1
-
-[node name="heart" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 95.0
-margin_top = -10.0
-margin_right = 125.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-
-[node name="heart2" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 115.0
-margin_top = -10.0
-margin_right = 145.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-
-[node name="heart3" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 135.0
-margin_top = -10.0
-margin_right = 165.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-
-[node name="heart4" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 155.0
-margin_top = -10.0
-margin_right = 185.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
-position = Vector2( 0, -10.0613 )
-scale = Vector2( 0.361029, 2.98314 )
-shape = SubResource( 5 )
-
-[node name="WeaponSpawnPoint" type="Node2D" parent="Zombie"]
-
-[node name="WeaponAnchorPoint" type="Node2D" parent="Zombie/WeaponSpawnPoint"]
-position = Vector2( 25, 0 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Zombie"]
-visible = false
-scale = Vector2( 1, 0.935261 )
-enabled = true
-
-[node name="Timer" type="Timer" parent="Zombie"]
-wait_time = 2.0
-one_shot = true
-
-[node name="Timer2" type="Timer" parent="Zombie"]
-one_shot = true
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 27 )]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 976, 380 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -268,10 +143,10 @@ motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 28 )
+texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource( 29 )
+script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
 position = Vector2( 1659.62, 450.067 )
@@ -282,6 +157,4 @@ texture = ExtResource( 4 )
 visible = false
 position = Vector2( 1659.62, 450.067 )
 scale = Vector2( 1.69374, 1.67233 )
-shape = SubResource( 6 )
-[connection signal="timeout" from="Zombie/Timer" to="Zombie" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Zombie/Timer2" to="Zombie" method="_on_Timer2_timeout"]
+shape = SubResource( 3 )

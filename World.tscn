@@ -1,175 +1,53 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Zombie.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-0.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=19]
-[ext_resource path="res://items/heart.png" type="Texture" id=20]
-[ext_resource path="res://Area2D.gd" type="Script" id=21]
-[ext_resource path="res://icon.png" type="Texture" id=22]
-[ext_resource path="res://background1.png" type="Texture" id=23]
-[ext_resource path="res://brick1.tres" type="TileSet" id=24]
-[ext_resource path="res://jegomosc.gd" type="Script" id=25]
-[ext_resource path="res://other/sign.png" type="Texture" id=26]
-[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=27]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=28]
-[ext_resource path="res://torch.tscn" type="PackedScene" id=29]
-[ext_resource path="res://changeLevel.gd" type="Script" id=30]
-[ext_resource path="res://other/jegomosc.png" type="Texture" id=31]
+[ext_resource path="res://Zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Area2D.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://background1.png" type="Texture" id=5]
+[ext_resource path="res://brick1.tres" type="TileSet" id=6]
+[ext_resource path="res://jegomosc.gd" type="Script" id=7]
+[ext_resource path="res://other/sign.png" type="Texture" id=8]
+[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=10]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=11]
+[ext_resource path="res://items/heart.png" type="Texture" id=12]
+[ext_resource path="res://changeLevel.gd" type="Script" id=13]
+[ext_resource path="res://other/jegomosc.png" type="Texture" id=14]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Hurt",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-} ]
+[sub_resource type="CircleShape2D" id=1]
 
-[sub_resource type="TileSet" id=2]
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 7.62804 )
-
-[sub_resource type="CircleShape2D" id=4]
-
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 324.482, 33.5466 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 12.4926, 10 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.92131, 10 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 12.6029 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 84.1635, 0.931501 )
 
-[sub_resource type="CapsuleShape2D" id=10]
+[sub_resource type="CapsuleShape2D" id=7]
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=8]
 size = 8
-font_data = ExtResource( 27 )
+font_data = ExtResource( 9 )
 
-[sub_resource type="CircleShape2D" id=12]
+[sub_resource type="CircleShape2D" id=9]
 
-[sub_resource type="CapsuleShape2D" id=13]
+[sub_resource type="CapsuleShape2D" id=10]
 
 [node name="World" type="Node2D"]
 position = Vector2( -2.05054, 0 )
 
 [node name="Janek" parent="." instance=ExtResource( 1 )]
 
-[node name="Zombie" type="KinematicBody2D" parent="." groups=[
-"character",
-]]
-position = Vector2( 599.522, 377.298 )
-script = ExtResource( 2 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Zombie"]
-position = Vector2( -2.23132, -10.5066 )
-scale = Vector2( 1.78188, 1.78188 )
-frames = SubResource( 1 )
-animation = "Walk"
-
-[node name="TileMap2" type="TileMap" parent="Zombie/Sprite"]
-editor/display_folded = true
-position = Vector2( -71.5677, -13.872 )
-scale = Vector2( 0.561205, 0.561205 )
-tile_set = SubResource( 2 )
-cell_size = Vector2( 16, 16 )
-format = 1
-
-[node name="heart" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 95.0
-margin_top = -10.0
-margin_right = 125.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="heart2" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 115.0
-margin_top = -10.0
-margin_right = 145.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="heart3" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 135.0
-margin_top = -10.0
-margin_right = 165.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="heart4" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
-margin_left = 155.0
-margin_top = -10.0
-margin_right = 185.0
-margin_bottom = 18.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
-scale = Vector2( 2.5, 1.5 )
-shape = SubResource( 3 )
-one_way_collision_margin = 0.0
-
-[node name="WeaponSpawnPoint" type="Node2D" parent="Zombie"]
-
-[node name="WeaponAnchorPoint" type="Node2D" parent="Zombie/WeaponSpawnPoint"]
-position = Vector2( 25, 0 )
-
-[node name="RayCast2D" type="RayCast2D" parent="Zombie"]
-visible = false
-scale = Vector2( 1, 0.935261 )
-enabled = true
-
-[node name="Timer" type="Timer" parent="Zombie"]
-wait_time = 2.0
-one_shot = true
-
-[node name="Timer2" type="Timer" parent="Zombie"]
-one_shot = true
+[node name="Zombie" parent="." instance=ExtResource( 2 )]
 
 [node name="Coins" type="Node" parent="."]
 editor/display_folded = true
@@ -178,16 +56,16 @@ editor/display_folded = true
 editor/display_folded = true
 position = Vector2( 185.248, 289.747 )
 rotation = 0.00158113
-script = ExtResource( 21 )
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin"]
 position = Vector2( -246.606, 122.588 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 22 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin"]
 position = Vector2( -247.756, 123.342 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -196,16 +74,16 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( 766.248, 401.747 )
 rotation = 0.00158113
-script = ExtResource( 21 )
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin2"]
 position = Vector2( -0.800995, -0.800964 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 22 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2"]
 position = Vector2( -0.948517, 0.951447 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -214,16 +92,16 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( -242.752, 288.747 )
 rotation = 0.00158113
-script = ExtResource( 21 )
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin3"]
 position = Vector2( 181.204, 1.91132 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 22 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3"]
 position = Vector2( 180.056, 3.66534 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -236,14 +114,14 @@ motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 23 )
+texture = ExtResource( 5 )
 
 [node name="Tilemap" type="Node" parent="."]
 editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="Tilemap"]
 position = Vector2( 0.156826, 2.42401 )
-tile_set = ExtResource( 24 )
+tile_set = ExtResource( 6 )
 cell_size = Vector2( 31, 31 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_use_kinematic = true
@@ -256,7 +134,7 @@ position = Vector2( 89.0001, 533.001 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D"]
 position = Vector2( 66.7793, -62.9915 )
 scale = Vector2( 0.856148, 1 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -264,7 +142,7 @@ editor/display_folded = true
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Tilemap/StaticBody2D2"]
 position = Vector2( 575.54, 536.123 )
 scale = Vector2( 11.4838, 3.78775 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Tilemap"]
 position = Vector2( 746.001, 468 )
@@ -272,7 +150,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D3"]
 position = Vector2( -697.819, -36.5 )
 scale = Vector2( 9.72171, 2.65385 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -281,7 +159,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D4"]
 position = Vector2( 16.8969, -0.376115 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -290,7 +168,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D5"]
 position = Vector2( 109.897, -32.3761 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -299,7 +177,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D6"]
 position = Vector2( 140.897, -61.3762 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -308,7 +186,7 @@ position = Vector2( 1077, 339 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D7"]
 position = Vector2( -136, -123.639 )
 scale = Vector2( 1, 17.0468 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -317,7 +195,7 @@ position = Vector2( -248.773, 305.608 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D8"]
 position = Vector2( 114.895, -83.0264 )
 scale = Vector2( 1, 17.0468 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Tilemap"]
 position = Vector2( -248.773, 305.608 )
@@ -325,24 +203,24 @@ position = Vector2( -248.773, 305.608 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D9"]
 position = Vector2( 149.888, 53.8305 )
 scale = Vector2( 0.452828, 17.0468 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="Sign" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
 scale = Vector2( 2.34879, 2.34879 )
-script = ExtResource( 25 )
+script = ExtResource( 7 )
 
 [node name="sign" type="Sprite" parent="Sign"]
 position = Vector2( -281.612, 57.7265 )
 scale = Vector2( 0.170233, 0.170233 )
 z_index = -17
-texture = ExtResource( 26 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
 position = Vector2( -282, 50 )
 scale = Vector2( 2.37089, 1.80274 )
-shape = SubResource( 10 )
+shape = SubResource( 7 )
 one_way_collision_margin = 0.0
 
 [node name="Label" type="Label" parent="Sign"]
@@ -350,7 +228,7 @@ visible = false
 margin_left = -355.0
 margin_right = -203.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 8 )
 text = "interakcja (enter)"
 align = 1
 valign = 1
@@ -362,10 +240,10 @@ autowrap = true
 
 [node name="Pauza" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="Pauza" instance=ExtResource( 28 )]
+[node name="Pause" parent="Pauza" instance=ExtResource( 10 )]
 visible = false
 
-[node name="torch" parent="." instance=ExtResource( 29 )]
+[node name="torch" parent="." instance=ExtResource( 11 )]
 position = Vector2( 64.0745, 391.995 )
 scale = Vector2( 6.3887, 6.3887 )
 
@@ -385,28 +263,28 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 90.0
 margin_bottom = 80.0
-texture = ExtResource( 20 )
+texture = ExtResource( 12 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 110.0
 margin_top = 20.0
 margin_right = 180.0
 margin_bottom = 80.0
-texture = ExtResource( 20 )
+texture = ExtResource( 12 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 200.0
 margin_top = 20.0
 margin_right = 270.0
 margin_bottom = 80.0
-texture = ExtResource( 20 )
+texture = ExtResource( 12 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 290.0
 margin_top = 20.0
 margin_right = 360.0
 margin_bottom = 80.0
-texture = ExtResource( 20 )
+texture = ExtResource( 12 )
 
 [node name="Control" type="Control" parent="UI/UI"]
 editor/display_folded = true
@@ -420,7 +298,7 @@ margin_left = 740.0
 margin_top = 20.0
 margin_right = 800.0
 margin_bottom = 80.0
-texture = ExtResource( 22 )
+texture = ExtResource( 4 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control"]
 margin_left = 809.0
@@ -437,16 +315,16 @@ margin_bottom = 40.0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 892, 334 )
-script = ExtResource( 30 )
+script = ExtResource( 13 )
 
 [node name="icon" type="Sprite" parent="Area2D"]
 position = Vector2( 2.05054, 1 )
-texture = ExtResource( 22 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 2.55054, 5.72205e-006 )
 scale = Vector2( 3.25, 3.2 )
-shape = SubResource( 12 )
+shape = SubResource( 9 )
 
 [node name="Jegomosc" type="Area2D" parent="."]
 position = Vector2( 892, 334 )
@@ -454,14 +332,12 @@ position = Vector2( 892, 334 )
 [node name="Sprite" type="Sprite" parent="Jegomosc"]
 position = Vector2( -71.192, 34.8329 )
 scale = Vector2( 2.24152, 2.24152 )
-texture = ExtResource( 31 )
+texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomosc"]
 position = Vector2( -70, 30 )
 scale = Vector2( 5, 4 )
-shape = SubResource( 13 )
-[connection signal="timeout" from="Zombie/Timer" to="Zombie" method="_on_Timer_timeout"]
-[connection signal="timeout" from="Zombie/Timer2" to="Zombie" method="_on_Timer2_timeout"]
+shape = SubResource( 10 )
 [connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
