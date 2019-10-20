@@ -6,23 +6,23 @@
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=23]
 [ext_resource path="res://items/heart.png" type="Texture" id=24]
 [ext_resource path="res://Area2D.gd" type="Script" id=25]
 [ext_resource path="res://icon.png" type="Texture" id=26]
@@ -36,7 +36,7 @@
 [ext_resource path="res://changeLevel.gd" type="Script" id=34]
 [ext_resource path="res://other/jegomosc.png" type="Texture" id=35]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
@@ -45,56 +45,56 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": true,
 "name": "Die",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Attack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
-"name": "Hurt",
+"name": "Walk",
 "speed": 5.0
 } ]
 
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=2]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 7.62804 )
 
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=4]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 324.482, 33.5466 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 12.4926, 10 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 4.92131, 10 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10, 12.6029 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 84.1635, 0.931501 )
 
-[sub_resource type="CapsuleShape2D" id=12]
+[sub_resource type="CapsuleShape2D" id=10]
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=11]
 size = 8
 font_data = ExtResource( 31 )
 
-[sub_resource type="CircleShape2D" id=14]
+[sub_resource type="CircleShape2D" id=12]
 
-[sub_resource type="CapsuleShape2D" id=15]
+[sub_resource type="CapsuleShape2D" id=13]
 
 [node name="World" type="Node2D"]
 position = Vector2( -2.05054, 0 )
@@ -110,14 +110,14 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="Zombie"]
 position = Vector2( -2.23132, -10.5066 )
 scale = Vector2( 1.78188, 1.78188 )
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 animation = "Walk"
 
 [node name="TileMap2" type="TileMap" parent="Zombie/Sprite"]
 editor/display_folded = true
 position = Vector2( -71.5677, -13.872 )
 scale = Vector2( 0.561205, 0.561205 )
-tile_set = SubResource( 4 )
+tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
@@ -155,7 +155,7 @@ texture = ExtResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
 scale = Vector2( 2.5, 1.5 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 one_way_collision_margin = 0.0
 
 [node name="WeaponSpawnPoint" type="Node2D" parent="Zombie"]
@@ -191,7 +191,7 @@ texture = ExtResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin"]
 position = Vector2( -247.756, 123.342 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -209,7 +209,7 @@ texture = ExtResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2"]
 position = Vector2( -0.948517, 0.951447 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -227,7 +227,7 @@ texture = ExtResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3"]
 position = Vector2( 180.056, 3.66534 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -260,7 +260,7 @@ position = Vector2( 89.0001, 533.001 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D"]
 position = Vector2( 66.7793, -62.9915 )
 scale = Vector2( 0.856148, 1 )
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -268,7 +268,7 @@ editor/display_folded = true
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Tilemap/StaticBody2D2"]
 position = Vector2( 575.54, 536.123 )
 scale = Vector2( 11.4838, 3.78775 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Tilemap"]
 position = Vector2( 746.001, 468 )
@@ -276,7 +276,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D3"]
 position = Vector2( -697.819, -36.5 )
 scale = Vector2( 9.72171, 2.65385 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -285,7 +285,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D4"]
 position = Vector2( 16.8969, -0.376115 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -294,7 +294,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D5"]
 position = Vector2( 109.897, -32.3761 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -303,7 +303,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D6"]
 position = Vector2( 140.897, -61.3762 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -312,7 +312,7 @@ position = Vector2( 1077, 339 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D7"]
 position = Vector2( -136, -123.639 )
 scale = Vector2( 1, 17.0468 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -321,7 +321,7 @@ position = Vector2( -248.773, 305.608 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D8"]
 position = Vector2( 114.895, -83.0264 )
 scale = Vector2( 1, 17.0468 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Tilemap"]
 position = Vector2( -248.773, 305.608 )
@@ -329,7 +329,7 @@ position = Vector2( -248.773, 305.608 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D9"]
 position = Vector2( 149.888, 53.8305 )
 scale = Vector2( 0.452828, 17.0468 )
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="Sign" type="Area2D" parent="."]
 editor/display_folded = true
@@ -346,7 +346,7 @@ texture = ExtResource( 30 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
 position = Vector2( -282, 50 )
 scale = Vector2( 2.37089, 1.80274 )
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 one_way_collision_margin = 0.0
 
 [node name="Label" type="Label" parent="Sign"]
@@ -354,14 +354,17 @@ visible = false
 margin_left = -355.0
 margin_right = -203.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 11 )
 text = "interakcja (enter)"
 align = 1
 valign = 1
 autowrap = true
 
+[node name="Death" type="CanvasLayer" parent="."]
+
+[node name="Death" type="Node2D" parent="Death"]
+
 [node name="Pauza" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Pause" parent="Pauza" instance=ExtResource( 32 )]
 visible = false
@@ -448,7 +451,7 @@ texture = ExtResource( 26 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 2.55054, 5.72205e-006 )
 scale = Vector2( 3.25, 3.2 )
-shape = SubResource( 14 )
+shape = SubResource( 12 )
 
 [node name="Jegomosc" type="Area2D" parent="."]
 position = Vector2( 892, 334 )
@@ -461,7 +464,7 @@ texture = ExtResource( 35 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomosc"]
 position = Vector2( -70, 30 )
 scale = Vector2( 5, 4 )
-shape = SubResource( 15 )
+shape = SubResource( 13 )
 [connection signal="timeout" from="Zombie/Timer" to="Zombie" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Zombie/Timer2" to="Zombie" method="_on_Timer2_timeout"]
 [connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
