@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Zombie.gd" type="Script" id=2]
@@ -19,22 +19,18 @@
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-0.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-1.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-2.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-hurt-3.png" type="Texture" id=23]
-[ext_resource path="res://items/heart.png" type="Texture" id=24]
-[ext_resource path="res://Area2D.gd" type="Script" id=25]
-[ext_resource path="res://icon.png" type="Texture" id=26]
-[ext_resource path="res://background1.png" type="Texture" id=27]
-[ext_resource path="res://brick1.tres" type="TileSet" id=28]
-[ext_resource path="res://jegomosc.gd" type="Script" id=29]
-[ext_resource path="res://other/sign.png" type="Texture" id=30]
-[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=31]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=32]
-[ext_resource path="res://torch.tscn" type="PackedScene" id=33]
-[ext_resource path="res://changeLevel.gd" type="Script" id=34]
-[ext_resource path="res://other/jegomosc.png" type="Texture" id=35]
+[ext_resource path="res://items/heart.png" type="Texture" id=20]
+[ext_resource path="res://Area2D.gd" type="Script" id=21]
+[ext_resource path="res://icon.png" type="Texture" id=22]
+[ext_resource path="res://background1.png" type="Texture" id=23]
+[ext_resource path="res://brick1.tres" type="TileSet" id=24]
+[ext_resource path="res://jegomosc.gd" type="Script" id=25]
+[ext_resource path="res://other/sign.png" type="Texture" id=26]
+[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=28]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=29]
+[ext_resource path="res://changeLevel.gd" type="Script" id=30]
+[ext_resource path="res://other/jegomosc.png" type="Texture" id=31]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -53,14 +49,14 @@ animations = [ {
 "name": "Die",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Walk",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "Attack",
 "speed": 5.0
 } ]
 
@@ -90,7 +86,7 @@ extents = Vector2( 84.1635, 0.931501 )
 
 [sub_resource type="DynamicFont" id=11]
 size = 8
-font_data = ExtResource( 31 )
+font_data = ExtResource( 27 )
 
 [sub_resource type="CircleShape2D" id=12]
 
@@ -127,7 +123,7 @@ margin_top = -10.0
 margin_right = 125.0
 margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="heart2" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
 margin_left = 115.0
@@ -135,7 +131,7 @@ margin_top = -10.0
 margin_right = 145.0
 margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="heart3" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
 margin_left = 135.0
@@ -143,7 +139,7 @@ margin_top = -10.0
 margin_right = 165.0
 margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="heart4" type="TextureRect" parent="Zombie/Sprite/TileMap2"]
 margin_left = 155.0
@@ -151,7 +147,7 @@ margin_top = -10.0
 margin_right = 185.0
 margin_bottom = 18.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zombie"]
 scale = Vector2( 2.5, 1.5 )
@@ -182,12 +178,12 @@ editor/display_folded = true
 editor/display_folded = true
 position = Vector2( 185.248, 289.747 )
 rotation = 0.00158113
-script = ExtResource( 25 )
+script = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin"]
 position = Vector2( -246.606, 122.588 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 26 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin"]
 position = Vector2( -247.756, 123.342 )
@@ -200,12 +196,12 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( 766.248, 401.747 )
 rotation = 0.00158113
-script = ExtResource( 25 )
+script = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin2"]
 position = Vector2( -0.800995, -0.800964 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 26 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2"]
 position = Vector2( -0.948517, 0.951447 )
@@ -218,12 +214,12 @@ __meta__ = {
 editor/display_folded = true
 position = Vector2( -242.752, 288.747 )
 rotation = 0.00158113
-script = ExtResource( 25 )
+script = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="Coins/Coin3"]
 position = Vector2( 181.204, 1.91132 )
 scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 26 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3"]
 position = Vector2( 180.056, 3.66534 )
@@ -240,14 +236,14 @@ motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 27 )
+texture = ExtResource( 23 )
 
 [node name="Tilemap" type="Node" parent="."]
 editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="Tilemap"]
 position = Vector2( 0.156826, 2.42401 )
-tile_set = ExtResource( 28 )
+tile_set = ExtResource( 24 )
 cell_size = Vector2( 31, 31 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_use_kinematic = true
@@ -335,13 +331,13 @@ shape = SubResource( 9 )
 editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
 scale = Vector2( 2.34879, 2.34879 )
-script = ExtResource( 29 )
+script = ExtResource( 25 )
 
 [node name="sign" type="Sprite" parent="Sign"]
 position = Vector2( -281.612, 57.7265 )
 scale = Vector2( 0.170233, 0.170233 )
 z_index = -17
-texture = ExtResource( 30 )
+texture = ExtResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
 position = Vector2( -282, 50 )
@@ -366,10 +362,10 @@ autowrap = true
 
 [node name="Pauza" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="Pauza" instance=ExtResource( 32 )]
+[node name="Pause" parent="Pauza" instance=ExtResource( 28 )]
 visible = false
 
-[node name="torch" parent="." instance=ExtResource( 33 )]
+[node name="torch" parent="." instance=ExtResource( 29 )]
 position = Vector2( 64.0745, 391.995 )
 scale = Vector2( 6.3887, 6.3887 )
 
@@ -389,28 +385,28 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 90.0
 margin_bottom = 80.0
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 110.0
 margin_top = 20.0
 margin_right = 180.0
 margin_bottom = 80.0
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 200.0
 margin_top = 20.0
 margin_right = 270.0
 margin_bottom = 80.0
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 290.0
 margin_top = 20.0
 margin_right = 360.0
 margin_bottom = 80.0
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="Control" type="Control" parent="UI/UI"]
 editor/display_folded = true
@@ -424,7 +420,7 @@ margin_left = 740.0
 margin_top = 20.0
 margin_right = 800.0
 margin_bottom = 80.0
-texture = ExtResource( 26 )
+texture = ExtResource( 22 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control"]
 margin_left = 809.0
@@ -441,11 +437,11 @@ margin_bottom = 40.0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 892, 334 )
-script = ExtResource( 34 )
+script = ExtResource( 30 )
 
 [node name="icon" type="Sprite" parent="Area2D"]
 position = Vector2( 2.05054, 1 )
-texture = ExtResource( 26 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 2.55054, 5.72205e-006 )
@@ -458,7 +454,7 @@ position = Vector2( 892, 334 )
 [node name="Sprite" type="Sprite" parent="Jegomosc"]
 position = Vector2( -71.192, 34.8329 )
 scale = Vector2( 2.24152, 2.24152 )
-texture = ExtResource( 35 )
+texture = ExtResource( 31 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomosc"]
 position = Vector2( -70, 30 )
