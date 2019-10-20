@@ -173,7 +173,8 @@ func take_damage(count):
 		yield($Sprite, "animation_finished")
 		dying = false
 		queue_free()
-		get_tree().reload_current_scene()
+		var death = preload("res://Death.tscn")
+		get_tree().get_root().add_child(death)
 		
 	health -= count
 	if health <= 0:

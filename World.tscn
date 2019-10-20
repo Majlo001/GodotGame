@@ -99,24 +99,39 @@ animations = [ {
 "name": "Run",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Run-Sword",
-"speed": 8.0
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+
+
+
+
+
+
+
+
+
+
 "loop": true,
 "name": "Idle-Sword",
 "speed": 4.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "Die",
+"name": "Slide",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+
+
+
+
+
 "loop": true,
-"name": "Attack2",
+"name": "Attack1",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
@@ -167,12 +182,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
 "loop": true,
-"name": "Hurt",
+"name": "Attack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
 "loop": true,
-"name": "Attack",
+"name": "Hurt",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ) ],
@@ -633,7 +648,8 @@ shape = SubResource( 15 )
 [connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
-[connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Sign" to="Sign" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Sign" to="Sign" method="_on_Area2D_body_exited"]
