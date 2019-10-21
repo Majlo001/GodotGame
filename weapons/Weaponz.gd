@@ -53,4 +53,4 @@ func attack():
 func _on_AnimationPlayer_animation_finished( name ):
 	if name == "attack":
 		_change_state(STATES.IDLE)
-		emit_signal("attack_finished")
+#		emit_signal("attack_finished")

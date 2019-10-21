@@ -56,5 +56,4 @@ func _on_VisibilityNotifier2D_exit_screen():
 	
 func update_health(damage):
 	health -= damage
-	print(health)
 	pass

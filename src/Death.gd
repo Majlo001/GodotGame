@@ -1,4 +1,4 @@
-extends Control
+0extends Control
 
 func _ready():
 	$MarginContainer/CenterContainer/VBoxContainer/TextureButton.grab_focus()

@@ -47,7 +47,6 @@ func _physics_process(_delta):
 		
 	
 	velocity.y += GRAVITY
-	print(health)
 	if $Sprite.flip_h == true:
 		$WeaponSpawnPoint.rotation = 0
 	else:
