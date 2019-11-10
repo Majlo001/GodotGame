@@ -1,5 +1,5 @@
 extends MapAction
-class_name FialogueAction
+class_name DialogueAction
 
 export (String, FILE, "*.json") var dialogue_file_path : String
 

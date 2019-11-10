@@ -10,12 +10,24 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "MapAction",
-"class": "FialogueAction",
+"class": "DialogueAction",
 "language": "GDScript",
 "path": "res://dialogue/DialogueAction.gd"
+}, {
+"base": "Control",
+"class": "DialogueBox",
+"language": "GDScript",
+"path": "res://dialogue/DialogueBox.gd"
+}, {
+"base": "Node",
+"class": "DialoguePlayer",
+"language": "GDScript",
+"path": "res://dialogue/DialoguePlayer.gd"
 } ]
 _global_script_class_icons={
-"FialogueAction": ""
+"DialogueAction": "",
+"DialogueBox": "",
+"DialoguePlayer": ""
 }
 
 [application]
