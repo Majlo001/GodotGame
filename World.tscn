@@ -1,46 +1,44 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Zombie.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Area2D.gd" type="Script" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://background1.png" type="Texture" id=5]
-[ext_resource path="res://brick1.tres" type="TileSet" id=6]
-[ext_resource path="res://jegomosc.gd" type="Script" id=7]
-[ext_resource path="res://other/sign.png" type="Texture" id=8]
-[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Pause.tscn" type="PackedScene" id=10]
-[ext_resource path="res://torch.tscn" type="PackedScene" id=11]
-[ext_resource path="res://items/heart.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://background1.png" type="Texture" id=4]
+[ext_resource path="res://brick1.tres" type="TileSet" id=5]
+[ext_resource path="res://jegomosc.gd" type="Script" id=6]
+[ext_resource path="res://other/sign.png" type="Texture" id=7]
+[ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=9]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=10]
+[ext_resource path="res://items/heart.png" type="Texture" id=11]
+[ext_resource path="res://icon.png" type="Texture" id=12]
 [ext_resource path="res://changeLevel.gd" type="Script" id=13]
 [ext_resource path="res://other/jegomosc.png" type="Texture" id=14]
 
-[sub_resource type="CircleShape2D" id=1]
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 324.482, 33.5466 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12.4926, 10 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 4.92131, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 12.6029 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 84.1635, 0.931501 )
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=6]
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=7]
 size = 8
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CircleShape2D" id=8]
 
-[sub_resource type="CapsuleShape2D" id=10]
+[sub_resource type="CapsuleShape2D" id=9]
 
 [node name="World" type="Node2D"]
 position = Vector2( -2.05054, 0 )
@@ -50,61 +48,15 @@ position = Vector2( -2.05054, 0 )
 [node name="Zombie" parent="." instance=ExtResource( 2 )]
 
 [node name="Coins" type="Node" parent="."]
-editor/display_folded = true
 
-[node name="Coin" type="Area2D" parent="Coins"]
-editor/display_folded = true
-position = Vector2( 185.248, 289.747 )
-rotation = 0.00158113
-script = ExtResource( 3 )
+[node name="Coin2" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( -83.1033, 288.422 )
 
-[node name="Sprite" type="Sprite" parent="Coins/Coin"]
-position = Vector2( -246.606, 122.588 )
-scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 4 )
+[node name="Coin" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( -51.579, 408.422 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin"]
-position = Vector2( -247.756, 123.342 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Coin2" type="Area2D" parent="Coins"]
-editor/display_folded = true
-position = Vector2( 766.248, 401.747 )
-rotation = 0.00158113
-script = ExtResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Coins/Coin2"]
-position = Vector2( -0.800995, -0.800964 )
-scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin2"]
-position = Vector2( -0.948517, 0.951447 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Coin3" type="Area2D" parent="Coins"]
-editor/display_folded = true
-position = Vector2( -242.752, 288.747 )
-rotation = 0.00158113
-script = ExtResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Coins/Coin3"]
-position = Vector2( 181.204, 1.91132 )
-scale = Vector2( 0.410912, 0.410912 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coins/Coin3"]
-position = Vector2( 180.056, 3.66534 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Coin3" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 729.475, 360.001 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -114,14 +66,14 @@ motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 401.591, 313.173 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Tilemap" type="Node" parent="."]
 editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="Tilemap"]
 position = Vector2( 0.156826, 2.42401 )
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 31, 31 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_use_kinematic = true
@@ -134,7 +86,7 @@ position = Vector2( 89.0001, 533.001 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D"]
 position = Vector2( 66.7793, -62.9915 )
 scale = Vector2( 0.856148, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -142,7 +94,7 @@ editor/display_folded = true
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Tilemap/StaticBody2D2"]
 position = Vector2( 575.54, 536.123 )
 scale = Vector2( 11.4838, 3.78775 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Tilemap"]
 position = Vector2( 746.001, 468 )
@@ -150,7 +102,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D3"]
 position = Vector2( -697.819, -36.5 )
 scale = Vector2( 9.72171, 2.65385 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -159,7 +111,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D4"]
 position = Vector2( 16.8969, -0.376115 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -168,7 +120,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D5"]
 position = Vector2( 109.897, -32.3761 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -177,7 +129,7 @@ position = Vector2( 746.001, 468 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D6"]
 position = Vector2( 140.897, -61.3762 )
 scale = Vector2( 9.99207, 3.12492 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -186,7 +138,7 @@ position = Vector2( 1077, 339 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D7"]
 position = Vector2( -136, -123.639 )
 scale = Vector2( 1, 17.0468 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Tilemap"]
 editor/display_folded = true
@@ -195,7 +147,7 @@ position = Vector2( -248.773, 305.608 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D8"]
 position = Vector2( 114.895, -83.0264 )
 scale = Vector2( 1, 17.0468 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Tilemap"]
 position = Vector2( -248.773, 305.608 )
@@ -203,24 +155,24 @@ position = Vector2( -248.773, 305.608 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemap/StaticBody2D9"]
 position = Vector2( 149.888, 53.8305 )
 scale = Vector2( 0.452828, 17.0468 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Sign" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 882.161, 274.839 )
 scale = Vector2( 2.34879, 2.34879 )
-script = ExtResource( 7 )
+script = ExtResource( 6 )
 
 [node name="sign" type="Sprite" parent="Sign"]
 position = Vector2( -281.612, 57.7265 )
 scale = Vector2( 0.170233, 0.170233 )
 z_index = -17
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
 position = Vector2( -282, 50 )
 scale = Vector2( 2.37089, 1.80274 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 one_way_collision_margin = 0.0
 
 [node name="Label" type="Label" parent="Sign"]
@@ -228,7 +180,7 @@ visible = false
 margin_left = -355.0
 margin_right = -203.0
 margin_bottom = 39.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 text = "interakcja (enter)"
 align = 1
 valign = 1
@@ -240,10 +192,10 @@ autowrap = true
 
 [node name="Pauza" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="Pauza" instance=ExtResource( 10 )]
+[node name="Pause" parent="Pauza" instance=ExtResource( 9 )]
 visible = false
 
-[node name="torch" parent="." instance=ExtResource( 11 )]
+[node name="torch" parent="." instance=ExtResource( 10 )]
 position = Vector2( 64.0745, 391.995 )
 scale = Vector2( 6.3887, 6.3887 )
 
@@ -263,28 +215,28 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 90.0
 margin_bottom = 80.0
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 110.0
 margin_top = 20.0
 margin_right = 180.0
 margin_bottom = 80.0
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 200.0
 margin_top = 20.0
 margin_right = 270.0
 margin_bottom = 80.0
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 290.0
 margin_top = 20.0
 margin_right = 360.0
 margin_bottom = 80.0
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="Control" type="Control" parent="UI/UI"]
 editor/display_folded = true
@@ -298,7 +250,7 @@ margin_left = 740.0
 margin_top = 20.0
 margin_right = 800.0
 margin_bottom = 80.0
-texture = ExtResource( 4 )
+texture = ExtResource( 12 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control"]
 margin_left = 809.0
@@ -319,12 +271,12 @@ script = ExtResource( 13 )
 
 [node name="icon" type="Sprite" parent="Area2D"]
 position = Vector2( 2.05054, 1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 2.55054, 5.72205e-006 )
 scale = Vector2( 3.25, 3.2 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="Jegomosc" type="Area2D" parent="."]
 position = Vector2( 892, 334 )
@@ -337,9 +289,6 @@ texture = ExtResource( 14 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jegomosc"]
 position = Vector2( -70, 30 )
 scale = Vector2( 5, 4 )
-shape = SubResource( 10 )
-[connection signal="body_entered" from="Coins/Coin" to="Coins/Coin" method="_on_Coin_body_entered"]
-[connection signal="body_entered" from="Coins/Coin2" to="Coins/Coin2" method="_on_Coin_body_entered"]
-[connection signal="body_entered" from="Coins/Coin3" to="Coins/Coin3" method="_on_Coin_body_entered"]
+shape = SubResource( 9 )
 [connection signal="body_entered" from="Sign" to="Sign" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Sign" to="Sign" method="_on_Area2D_body_exited"]
