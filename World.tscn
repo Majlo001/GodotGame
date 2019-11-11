@@ -16,10 +16,10 @@
 [ext_resource path="res://other/jegomosc.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 324.482, 33.5466 )
+extents = Vector2( 329.207, 33.5466 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 12.4926, 10 )
+extents = Vector2( 12.4018, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 4.92131, 10 )
@@ -69,7 +69,6 @@ position = Vector2( 401.591, 313.173 )
 texture = ExtResource( 4 )
 
 [node name="Tilemap" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="Tilemap"]
 position = Vector2( 0.156826, 2.42401 )
@@ -89,7 +88,6 @@ scale = Vector2( 0.856148, 1 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Tilemap"]
-editor/display_folded = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Tilemap/StaticBody2D2"]
 position = Vector2( 575.54, 536.123 )
@@ -239,7 +237,6 @@ margin_bottom = 80.0
 texture = ExtResource( 11 )
 
 [node name="Control" type="Control" parent="UI/UI"]
-editor/display_folded = true
 margin_left = 58.0
 margin_top = -13.0
 margin_right = 98.0
@@ -259,6 +256,7 @@ margin_right = 829.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 5, 5 )
 rect_scale = Vector2( 4, 4 )
+tab_size = 1
 text = "0"
 
 [node name="Fps counter" type="Control" parent="UI/UI"]
@@ -290,5 +288,8 @@ texture = ExtResource( 14 )
 position = Vector2( -70, 30 )
 scale = Vector2( 5, 4 )
 shape = SubResource( 9 )
+[connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Sign" to="Sign" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Sign" to="Sign" method="_on_Area2D_body_exited"]
