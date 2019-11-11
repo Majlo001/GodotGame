@@ -16,7 +16,7 @@
 [sub_resource type="CircleShape2D" id=3]
 radius = 31.4925
 
-[node name="World2" type="Node"]
+[node name="World2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -131,6 +131,7 @@ rect_scale = Vector2( 4, 4 )
 text = "0"
 
 [node name="Zombie2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 596.392, 370 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
 position = Vector2( 976, 380 )
