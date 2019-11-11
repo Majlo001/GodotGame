@@ -143,7 +143,7 @@ func attack():
 		yield($Sprite, "animation_finished")
 		attacking = false
 
-func _process(_delta):		#_delta zamiast delta (inernet podpowiedział)
+func _process(delta):
 	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
 	LabelNode.text = str(score)
 	
@@ -209,9 +209,6 @@ func _on_Coin_body_entered(_body):
 	print(score)
 
 
-func _on_Coin2_body_entered(_body):
-	pass # replace with function body
-	
 #onready var fps_label = get_node('fps_label')
 
 #fps_label.set_text(str(OS.get_frames_per_second()))

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://brick1.tres" type="TileSet" id=1]
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=2]
@@ -7,7 +7,8 @@
 [ext_resource path="res://Zombie.tscn" type="PackedScene" id=5]
 [ext_resource path="res://moving_platform.tscn" type="PackedScene" id=6]
 [ext_resource path="res://background1.png" type="Texture" id=7]
-[ext_resource path="res://src/changeScene2.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/changeScene2.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -66,13 +67,12 @@ position = Vector2( 1270, 125 )
 scale = Vector2( 17.6492, 3.07693 )
 shape = SubResource( 2 )
 
-[node name="Janek2" parent="." instance=ExtResource( 2 )]
+[node name="Janek" parent="." instance=ExtResource( 2 )]
 
 [node name="UI" type="Node" parent="."]
 editor/display_folded = true
 
 [node name="UI" type="CanvasLayer" parent="UI"]
-editor/display_folded = true
 
 [node name="Health" type="Control" parent="UI/UI"]
 margin_left = -4.0
@@ -146,8 +146,12 @@ motion_mirroring = Vector2( 1280, 0 )
 position = Vector2( 401.591, 313.173 )
 texture = ExtResource( 7 )
 
+[node name="Coin" parent="." instance=ExtResource( 8 )]
+position = Vector2( 77.925, 271.884 )
+
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource( 8 )
+editor/display_folded = true
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
 position = Vector2( 1659.62, 450.067 )
@@ -159,3 +163,4 @@ visible = false
 position = Vector2( 1659.62, 450.067 )
 scale = Vector2( 1.69374, 1.67233 )
 shape = SubResource( 3 )
+[connection signal="body_entered" from="Coin" to="Janek" method="_on_Coin_body_entered"]

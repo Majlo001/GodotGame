@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk6.png-a7c39229a5a2ea10a6064b9379d440df.stex"
+path="res://.import/walk7.png-4bc5214fb75007e7cb2ea4a50bfb1fd2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Undead Sprite Pack/TheWalkingDzban/walk6.png"
-dest_files=[ "res://.import/walk6.png-a7c39229a5a2ea10a6064b9379d440df.stex" ]
+source_file="res://Sprites/TheWalkingDzban/walk7.png"
+dest_files=[ "res://.import/walk7.png-4bc5214fb75007e7cb2ea4a50bfb1fd2.stex" ]
 
 [params]
 
