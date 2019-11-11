@@ -56,8 +56,8 @@ func set_dir(target_dir):
 		next_dir_time = OS.get_ticks_msec() + react_time
 
 func sees_player():
-	var positioning = dummy.position
-	var eye_center = positioning
+#	var positioning = dummy.position
+	var eye_center = position
 	var eye_top =eye_center + Vector2(0, -eye_reach)
 	var eye_left =eye_center + Vector2(-eye_reach, 0)
 	var eye_right =eye_center + Vector2(eye_reach, 0)
