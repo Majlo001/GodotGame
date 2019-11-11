@@ -212,3 +212,18 @@ func _on_Coin_body_entered(_body):
 #onready var fps_label = get_node('fps_label')
 
 #fps_label.set_text(str(OS.get_frames_per_second()))
+
+
+func _on_Bolce_body_entered(body):
+	var Health1 = get_parent().get_node("UI/UI/Health/Health1")
+	var Health2 = get_parent().get_node("UI/UI/Health/Health2")
+	var Health3 = get_parent().get_node("UI/UI/Health/Health3")
+	Health1.hide()
+	Health2.hide()
+	Health3.hide()
+	dying = true
+	$Sprite.play("Die")
+	yield($Sprite, "animation_finished")
+	dying = false
+	queue_free()
+	get_tree().change_scene("res://Death.tscn")

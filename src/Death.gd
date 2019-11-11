@@ -1,4 +1,4 @@
-0extends Control
+extends Control
 
 func _ready():
 	$MarginContainer/CenterContainer/VBoxContainer/TextureButton.grab_focus()
@@ -16,8 +16,6 @@ func _input(event):
 		visible = not visible
 
 func _on_TextureButton_pressed():
-	get_tree().paused = not get_tree().paused
-	visible = not visible
 	get_tree().reload_current_scene()
 
 func _on_TextureButton2_pressed():
