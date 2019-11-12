@@ -19,17 +19,19 @@ var attacking = false
 export var max_health = 4
 var health
 
-var react_time = 400
+var react_time = 200
 var dir = 0
 var next_dir = 0
 var next_dir_time = 0
 
 var next_jump_time = -1
 
-var target_player_dsit = 20
+var target_player_dsit = 100
 
 var eye_reach = 15
 var vision = 200
+
+var timing = 0
 
 var dummy = null
 
@@ -81,34 +83,42 @@ func sees_player():
 	return false
 
 func _physics_process(_delta):
-
+	print (sees_player())
 	
-	if  Player.position.x < position.x - target_player_dsit and sees_player():
-		$Sprite.play("Walk")
-		set_dir(-1)
-	elif Player.position.x > position.x + target_player_dsit and sees_player():
-		$Sprite.play("Walk")
-		set_dir(1)
-	else:
-		$Sprite.play("Idle")
-		set_dir(0)
+	if attacking == false:
+		
+		if  Player.position.x < position.x - target_player_dsit and sees_player():
+			$Sprite.play("Walk")
+			set_dir(-1)
+		elif Player.position.x > position.x + target_player_dsit and sees_player():
+			$Sprite.play("Walk")
+			set_dir(1)
+		elif Player.position.x < position.x - target_player_dsit or Player.position.x > position.x + target_player_dsit and sees_player():
+			print("spelnia")
+			$Timer.start()
+		else:
+			$Sprite.play("Idle")
+			set_dir(0)
+		
+		if OS.get_ticks_msec() > next_dir_time:
+			dir = next_dir
+		
+		
+		if OS.get_ticks_msec() > next_jump_time and next_jump_time != -1 and is_on_floor():
+			if Player.position.y < position.y - 40 and sees_player():
+				velocity.y = -300
+			next_jump_time = -1
+		
+		
+		velocity.x = dir * SPEED
+		
+		if Player.position.y < position.y - 40 and next_jump_time == -1 and sees_player():
+			next_jump_time = OS.get_ticks_msec() + react_time
+		
+		velocity.y += GRAVITY
 	
-	if OS.get_ticks_msec() > next_dir_time:
-		dir = next_dir
-	
-	
-	if OS.get_ticks_msec() > next_jump_time and next_jump_time != -1 and is_on_floor():
-		if Player.position.y < position.y - 40 and sees_player():
-			velocity.y = -300
-		next_jump_time = -1
-	
-	
-	velocity.x = dir * SPEED
-	
-	if Player.position.y < position.y - 40 and next_jump_time == -1 and sees_player():
-		next_jump_time = OS.get_ticks_msec() + react_time
-	
-	velocity.y += GRAVITY
+#	if Player.position.x < position.x - target_player_dsit or Player.position.x > position.x + target_player_dsit:
+#		$Timer.start()
 
 	
 	if is_on_floor() and velocity.y > 0:
@@ -126,17 +136,17 @@ func _physics_process(_delta):
 #		
 #		velocity.x = -SPEED * direction
 #	
-#		if set_process(false):
-#			$Timer2.start()
+		if set_process(false):
+			$Timer2.start()
 #		
 #		velocity = move_and_slide(velocity,FLOOR)
 #		
 #	
 #	velocity.y += GRAVITY
-#	if $Sprite.flip_h == true:
-#		$WeaponSpawnPoint.rotation = 0
-#	else:
-#		$WeaponSpawnPoint.rotation = 22
+	if $Sprite.flip_h == true:
+		$WeaponSpawnPoint.rotation = 0
+	else:
+		$WeaponSpawnPoint.rotation = 22
 #	
 #	if is_on_wall():
 #		direction *= -1
@@ -150,10 +160,11 @@ func attack():
 	if is_on_floor():
 		attacking = true
 		velocity.x = 0
-		if $Sprite.flip_h == true:
-			self.position += Vector2(15, 0)
-		else:
-			self.position -= Vector2(15, 0)
+		velocity.y = 0
+#		if $Sprite.flip_h == true:
+#			self.position += Vector2(15, 0)
+#		else:
+#			self.position -= Vector2(15, 0)
 		$Sprite.play("Attack")
 		weapon.attack()
 		yield($Sprite, "animation_finished")

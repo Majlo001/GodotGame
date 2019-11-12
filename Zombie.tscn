@@ -5,19 +5,19 @@
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-3.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-0.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=18]
 [ext_resource path="res://items/heart.png" type="Texture" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -27,22 +27,22 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "Die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Hurt",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Attack",
 "speed": 5.0
@@ -62,7 +62,9 @@ script = ExtResource( 1 )
 position = Vector2( -2.23132, -10.5066 )
 scale = Vector2( 1.78188, 1.78188 )
 frames = SubResource( 1 )
-animation = "Walk"
+animation = "Attack"
+frame = 1
+playing = true
 
 [node name="TileMap2" type="TileMap" parent="Sprite"]
 position = Vector2( -71.5677, -13.872 )
