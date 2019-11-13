@@ -168,6 +168,8 @@ func take_damage(count):
 		Health1.hide()
 		
 	if (health == 1):
+		var Health0 = get_parent().get_node("UI/UI/Health/Health0")
+		Health0.hide()
 		dying = true
 		$Sprite.play("Die")
 		yield($Sprite, "animation_finished")
@@ -215,15 +217,19 @@ func _on_Coin_body_entered(_body):
 
 
 func _on_Bolce_body_entered(body):
-	var Health1 = get_parent().get_node("UI/UI/Health/Health1")
-	var Health2 = get_parent().get_node("UI/UI/Health/Health2")
-	var Health3 = get_parent().get_node("UI/UI/Health/Health3")
-	Health1.hide()
-	Health2.hide()
-	Health3.hide()
-	dying = true
-	$Sprite.play("Die")
-	yield($Sprite, "animation_finished")
-	dying = false
-	queue_free()
-	get_tree().change_scene("res://Death.tscn")
+	var bolce = get_parent().get_node("Bolce/CollisionShape2D")
+	if body.name == "Janek":
+		var Health1 = get_parent().get_node("UI/UI/Health/Health1")
+		var Health2 = get_parent().get_node("UI/UI/Health/Health2")
+		var Health3 = get_parent().get_node("UI/UI/Health/Health3")
+		var Health0 = get_parent().get_node("UI/UI/Health/Health0")
+		Health0.hide()
+		Health1.hide()
+		Health2.hide()
+		Health3.hide()
+		dying = true
+		$Sprite.play("Die")
+		yield($Sprite, "animation_finished")
+		dying = false
+		queue_free()
+		get_tree().change_scene("res://Death.tscn")

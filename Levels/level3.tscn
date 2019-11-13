@@ -33,9 +33,9 @@ position = Vector2( 102.173, 415.653 )
 visible = false
 
 [node name="UI" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="UI" type="CanvasLayer" parent="UI"]
-editor/display_folded = true
 
 [node name="Health" type="Control" parent="UI/UI"]
 margin_left = -4.0
