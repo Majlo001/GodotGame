@@ -16,7 +16,8 @@ func _input(event):
 		visible = not visible
 
 func _on_TextureButton_pressed():
-	get_tree().reload_current_scene()
+	print("reload")
+	get_tree().reload_current_scene()s
 
 func _on_TextureButton2_pressed():
 	get_tree().quit()

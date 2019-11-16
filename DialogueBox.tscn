@@ -12,10 +12,10 @@ rect_pivot_offset = Vector2( 167.354, 242.003 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="TextureRect" parent="."]
-margin_left = 296.0
-margin_top = 109.0
-margin_right = 368.0
-margin_bottom = 218.0
+margin_left = 842.0
+margin_top = 296.0
+margin_right = 954.0
+margin_bottom = 451.0
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0.647059 )
