@@ -228,6 +228,7 @@ func _on_Bolce_body_entered(body):
 		Health2.hide()
 		Health3.hide()
 		dying = true
+		velocity.x = 0
 		$Sprite.play("Die")
 		yield($Sprite, "animation_finished")
 		dying = false
