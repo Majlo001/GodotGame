@@ -134,7 +134,7 @@ text = "0"
 position = Vector2( 596.392, 370 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 976, 380 )
+position = Vector2( 976, 379.226 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 editor/display_folded = true

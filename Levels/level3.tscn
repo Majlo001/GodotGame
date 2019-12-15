@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Levels/Level3.png" type="Texture" id=1]
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://items/heart.png" type="Texture" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://src/Bolce.gd" type="Script" id=7]
+[ext_resource path="res://other/wall.png" type="Texture" id=8]
+[ext_resource path="res://Levels/lever.gd" type="Script" id=9]
+[ext_resource path="res://other/lever_on.png" type="Texture" id=10]
+[ext_resource path="res://other/lever_off.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 91.3061, 17.9489 )
@@ -14,9 +18,17 @@ extents = Vector2( 91.3061, 17.9489 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 68.4198, 15.8278 )
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21.7876, 68.5136 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 20.3568
+height = 0.749146
+
 [node name="World" type="Node2D"]
 
 [node name="Level" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1670.84, 410.586 )
 scale = Vector2( 0.713127, 0.713127 )
 
@@ -125,5 +137,36 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Bolce"]
 position = Vector2( 717.386, -135.739 )
 shape = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="wall" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 1125.09, 272.792 )
+scale = Vector2( 0.681202, 0.713127 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+visible = false
+position = Vector2( 1124.94, 272.655 )
+shape = SubResource( 3 )
+
+[node name="lever" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 996.714, 320.914 )
+scale = Vector2( 1.23051, 1.23051 )
+script = ExtResource( 9 )
+
+[node name="lever_on" type="Sprite" parent="lever"]
+visible = false
+position = Vector2( -0.193359, -0.0178528 )
+texture = ExtResource( 10 )
+
+[node name="lever_off" type="Sprite" parent="lever"]
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lever"]
+shape = SubResource( 4 )
 [connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
+[connection signal="body_entered" from="lever" to="lever" method="_on_lever_body_entered"]
+[connection signal="body_exited" from="lever" to="lever" method="_on_lever_body_exited"]
