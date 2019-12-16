@@ -26,7 +26,7 @@ var next_dir_time = 0
 
 var next_jump_time = -1
 
-var target_player_dsit = 100
+var target_player_dsit = 70
 
 var eye_reach = 15
 var vision = 200
@@ -95,7 +95,8 @@ func _physics_process(_delta):
 			set_dir(1)
 		elif Player.position.x > position.x - target_player_dsit or Player.position.x < position.x + target_player_dsit and sees_player():
 			print("spelnia")
-			$Timer.start()
+			attack()
+#			$Timer.start()
 		else:
 			$Sprite.play("Idle")
 			set_dir(0)
@@ -168,7 +169,7 @@ func attack():
 		$Sprite.play("Attack")
 		weapon.attack()
 		yield($Sprite, "animation_finished")
-		$Timer.start()
+#		$Timer.start()
 		attacking = false
 
 func take_damage(count):
