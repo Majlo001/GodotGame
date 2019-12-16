@@ -1,0 +1,109 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://src/Summoner.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_6.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_7.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_8.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_9.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_10.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_15.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_11.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_12.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_13.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Nowy folder/summoner/summoner_summon_14.png" type="Texture" id=16]
+[ext_resource path="res://items/heart.png" type="Texture" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Summon",
+"speed": 5.0
+} ]
+
+[sub_resource type="TileSet" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 20.3821, 74.392 )
+
+[node name="Summoner" type="KinematicBody2D" groups=[
+"character",
+]]
+scale = Vector2( 1.00942, 1 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 1 )
+animation = "Summon"
+frame = 1
+
+[node name="TileMap2" type="TileMap" parent="Sprite"]
+position = Vector2( -71.5677, -13.872 )
+scale = Vector2( 0.561205, 0.561205 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="heart" type="TextureRect" parent="Sprite/TileMap2"]
+margin_left = 854.214
+margin_top = -882.719
+margin_right = 884.214
+margin_bottom = -854.719
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="heart2" type="TextureRect" parent="Sprite/TileMap2"]
+margin_left = 874.214
+margin_top = -882.719
+margin_right = 904.214
+margin_bottom = -854.719
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="heart3" type="TextureRect" parent="Sprite/TileMap2"]
+margin_left = 894.214
+margin_top = -882.719
+margin_right = 924.214
+margin_bottom = -854.719
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="heart4" type="TextureRect" parent="Sprite/TileMap2"]
+margin_left = 914.214
+margin_top = -882.719
+margin_right = 944.214
+margin_bottom = -854.719
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 132.713, -10.5033 )
+scale = Vector2( 2.5, 1.5 )
+shape = SubResource( 3 )
+one_way_collision_margin = 0.0
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2( 32.0387, -17.967 )
+
+[node name="AnchorPoint" type="Node2D" parent="SpawnPoint"]
+position = Vector2( -12.474, 91.8883 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
+scale = Vector2( 1, 0.935261 )
+enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

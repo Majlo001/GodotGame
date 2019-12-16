@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Zombie.gd" type="Script" id=1]
+[ext_resource path="res://Zombie_Summon.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-0.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-2.png" type="Texture" id=4]
@@ -63,7 +63,7 @@ position = Vector2( -2.23132, -10.5066 )
 scale = Vector2( 1.78188, 1.78188 )
 frames = SubResource( 1 )
 animation = "Attack"
-frame = 4
+frame = 3
 playing = true
 
 [node name="TileMap2" type="TileMap" parent="Sprite"]

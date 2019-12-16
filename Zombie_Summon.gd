@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var Player = get_parent().get_node("Janek")
+onready var Player = get_parent().get_parent().get_parent().get_parent().get_node("Janek")
 
 var SPEED = 90
 var GRAVITY = 10
@@ -93,7 +93,7 @@ func _physics_process(_delta):
 		elif Player.position.x > position.x + target_player_dsit and sees_player():
 			$Sprite.play("Walk")
 			set_dir(1)
-		elif Player.position.x > position.x - target_player_dsit or Player.position.x < position.x + target_player_dsit and sees_player():
+		elif Player.position.x < position.x - target_player_dsit or Player.position.x > position.x + target_player_dsit and sees_player():
 			print("spelnia")
 			$Timer.start()
 		else:
