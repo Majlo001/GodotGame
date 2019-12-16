@@ -233,4 +233,4 @@ func _on_Bolce_body_entered(body):
 		yield($Sprite, "animation_finished")
 		dying = false
 		queue_free()
-		get_parent().get_node("Death").show()
+		get_parent().get_node("Death/Death").show()
