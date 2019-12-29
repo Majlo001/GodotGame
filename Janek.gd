@@ -144,9 +144,6 @@ func attack():
 		attacking = false
 
 func _process(delta):
-	var LabelNode = get_parent().get_node("UI/UI/Control/RichTextLabel")
-	LabelNode.text = str(score)
-	
 	if $Sprite.flip_h == true:
 		$WeaponSpawnPoint.rotation = 22
 	else:
