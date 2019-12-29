@@ -37,4 +37,4 @@ func update_content() -> void:
 	var dialogue_player_name = dialogue_player.title
 	name_label.text = dialogue_player_name
 	text_label.text = dialogue_player.title
-	sprite.texture = DialogueDatabase.get_texture(dialogue_player_name, dialogue_player.expression)
+#	sprite.texture = DialogueDatabase.get_texture(dialogue_player_name, dialogue_player.expression)
