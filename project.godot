@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "DialoguePlayer",
 "language": "GDScript",
 "path": "res://dialogue/DialoguePlayer.gd"
+}, {
+"base": "Resource",
+"class": "SaveGame",
+"language": "GDScript",
+"path": "res://SaveGame/SaveGame.gd"
 } ]
 _global_script_class_icons={
 "DialogueAction": "",
 "DialogueBox": "",
-"DialoguePlayer": ""
+"DialoguePlayer": "",
+"SaveGame": ""
 }
 
 [application]
@@ -35,6 +41,11 @@ _global_script_class_icons={
 config/name="Gra jednak w GD"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
+config/Version="1.7.5"
+
+[autoload]
+
+Global="*res://Levels/Global.gd"
 
 [debug]
 

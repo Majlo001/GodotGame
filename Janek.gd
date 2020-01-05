@@ -203,9 +203,6 @@ func _on_Timer2_timeout():
 func _on_Timer3_timeout():
 	SPEED = 150
 
-func _on_Coin_body_entered(_body):
-	score += 1
-	print(score)
 
 
 #onready var fps_label = get_node('fps_label')
