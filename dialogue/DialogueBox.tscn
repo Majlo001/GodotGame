@@ -1,0 +1,141 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="GDScript" id=2]
+script/source = "\"\"\"
+Janek Dialogue System
+Author: MΔJLO
+Version: 0.1
+\"\"\"
+
+extends Control
+
+var dialogue_folder = 'res://dialogue/dialogues'
+
+onready var frame : Node = $Frame
+onready var label : Node = $Frame/RichTextLabel
+onready var sprite_name : Node = $Frame/Label
+onready var next_button : Node = $Frame/NextButton
+onready var finish_button : Node = $Frame/FinishButton
+
+
+var wait_time : float = 0.02 # TO BE CONTINUED...
+var pause_time : float = 2.0
+var pause_char : String = '|'
+var newline_char : String = '@'
+
+
+var id
+var dialogue
+
+
+func initial(file_id, block = '001'):
+	id = file_id
+	var file = File.new()
+	file.open('%s/%s.json' % [dialogue_folder, id], file.READ)
+	var json = file.get_as_text()
+	dialogue = JSON.parse(json).result
+	file.close()
+	first(block)
+
+
+func first(block):
+	if block == '001':
+		pass
+#		if dialogue.has('repeat'):
+#			if progress.get(dialogues_dict).has(id): 
+#				update_dialogue(dialogue['repeat']) 
+#			else:
+#				progress.get(dialogues_dict)[id] = true 
+#				update_dialogue(dialogue['001']) 
+#		else:
+#				update_dialogue(dialogue['001'])
+	else: 
+		update_dialogue(dialogue[block])
+
+
+
+func clean():
+	pass
+
+
+func update_dialogue(block):
+	pass
+
+
+
+
+
+
+
+func _ready():
+	pass # Replace with function body.
+
+"
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frame" type="ColorRect" parent="."]
+margin_left = 60.0
+margin_top = 380.0
+margin_right = 940.0
+margin_bottom = 560.0
+rect_pivot_offset = Vector2( 813.316, 134.895 )
+color = Color( 0.176471, 0.176471, 0.176471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Frame"]
+margin_left = 18.2854
+margin_top = 5.2262
+margin_right = 234.285
+margin_bottom = 40.2262
+custom_fonts/font = SubResource( 1 )
+text = "John"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Frame"]
+margin_left = 19.0526
+margin_top = 45.892
+margin_right = 748.053
+margin_bottom = 144.892
+text = "AHAHAHAHAA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="Frame"]
+margin_left = 760.994
+margin_top = 62.543
+margin_right = 858.994
+margin_bottom = 108.543
+text = "Dalej"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishButton" type="Button" parent="Frame"]
+margin_left = 761.105
+margin_top = 117.446
+margin_right = 859.105
+margin_bottom = 163.446
+text = "Koniec"
+__meta__ = {
+"_edit_use_anchors_": false
+}

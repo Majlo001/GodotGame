@@ -24,4 +24,4 @@ func _on_Jegomosc_body_exited(body):
 
 func _input(_event):
 	if Input.is_action_just_pressed("ui_accept") and interact == true:
-		get_parent().get_node("Pause/DialogueBox").show()
+		get_parent().get_node("Dialogue/Dialogue").show()

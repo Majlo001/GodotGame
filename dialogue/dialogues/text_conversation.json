@@ -1,0 +1,20 @@
+{
+    "001": { 
+        "type": "text",
+        "name": "Janek", 
+        "text": "Kim jestem i co tutaj robię?",
+        "next": "002" 
+    },
+    "002": { 
+        "type": "text",
+        "name": "Jegomosc",
+        "text": "A bo ja wiem.",
+        "next": "003" 
+    },
+    "003": { 
+        "type": "text",
+        "name": "Janek",
+        "text": "No, powinieneś wiedzieć, wkońcu zarosłeś.",
+        "next": "003" 
+    }
+}
