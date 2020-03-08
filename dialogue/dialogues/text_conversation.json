@@ -2,7 +2,7 @@
     "001": { 
         "type": "text",
         "name": "Janek", 
-        "text": "Kim jestem i co tutaj robię?",
+        "text": "Kim jestem i co tutaj robie?",
         "next": "002" 
     },
     "002": { 
@@ -14,7 +14,6 @@
     "003": { 
         "type": "text",
         "name": "Janek",
-        "text": "No, powinieneś wiedzieć, wkońcu zarosłeś.",
-        "next": "003" 
+        "text": "No, powinienes wiedziec, wkońcu zarosles."
     }
 }

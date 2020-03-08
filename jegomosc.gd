@@ -1,4 +1,5 @@
 extends Area2D
+onready var dialogue = get_node('../Dialogue/Dialogue')
 
 var interact = false
 var vis1 = false
@@ -25,3 +26,7 @@ func _on_Jegomosc_body_exited(body):
 func _input(_event):
 	if Input.is_action_just_pressed("ui_accept") and interact == true:
 		get_parent().get_node("Dialogue/Dialogue").show()
+		init_a()
+
+func init_a():
+	dialogue.initial('text_conversation')
