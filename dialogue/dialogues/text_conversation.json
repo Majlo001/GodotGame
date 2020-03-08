@@ -7,7 +7,7 @@
     },
     "002": { 
         "type": "text",
-        "name": "Jegomosc",
+        "name": "Jegomość",
         "text": "A bo ja wiem.",
         "next": "003" 
     },

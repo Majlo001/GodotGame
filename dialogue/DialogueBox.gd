@@ -31,6 +31,7 @@ var is_question : = false
 var dialogues_dict = 'dialogues'
 var current = ''
 var next_block = ''
+var expression = ''
 
 
 func initial(file_id, block = '001'):
@@ -74,14 +75,22 @@ func update_dialogue(block):
 			not_question()
 			label.bbcode_text = block['text']
 			check_names(block)
-#			number_characters = phrase_raw.length()
+			characters_number = expression.length()
+			print(characters_number)
 
 			if block.has('next'):
 				next_block = block['next']
 			else:
 				next_block = ''
 			
-				
+	var t = Timer.new() # Timer na grab focus, by nie łapał nexta przy rozpoczęciu dialogu
+	t.set_wait_time(0.1)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
+	next_button.grab_focus()
 
 #		'question':
 #			label.bbcode_text = step['text']
@@ -113,11 +122,10 @@ func check_names(block):
 #		yield(get_tree(), 'idle_frame')
 		sprite_name.set_process(true)
 		sprite_name.show()
-		sprite_name.hide()
+		#sprite_name.hide()
 	else:
 		pass
 
 
 func _on_NextButton_pressed():
-	print("HOLA AMIGO")
 	next()

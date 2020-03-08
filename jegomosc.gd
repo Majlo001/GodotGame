@@ -4,6 +4,7 @@ onready var dialogue = get_node('../Dialogue/Dialogue')
 var interact = false
 var vis1 = false
 var vis2 = false
+var conversation = false
 
 
 func _on_Jegomosc_body_entered(body):
@@ -24,8 +25,10 @@ func _on_Jegomosc_body_exited(body):
 		vis1 = true
 
 func _input(_event):
-	if Input.is_action_just_pressed("ui_accept") and interact == true:
+	if Input.is_action_just_pressed("ui_accept") and interact == true and conversation == false:
 		get_parent().get_node("Dialogue/Dialogue").show()
+		conversation = true
+		$Label.hide()
 		init_a()
 
 func init_a():
