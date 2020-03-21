@@ -16,6 +16,7 @@ export var max_health = 4
 var health 
 var score = 0
 
+var can_move = true
 
 #var attack_delay = 1
 var attacking = false
@@ -50,7 +51,7 @@ func get_input():
 
 	if dying == false:
 		#inventarz
-		if Input.is_action_just_pressed("action_inventory"):
+		if Input.is_action_just_pressed("action_inventory") and can_move == true:
 			if inv == false:
 				add_child(node)
 				inv = true
@@ -61,7 +62,7 @@ func get_input():
 		if attacking == false:
 				
 			#ruch w prawo
-			if Input.is_action_pressed("move_right"):
+			if Input.is_action_pressed("move_right") and can_move == true:
 				velocity.x = SPEED
 				$Sprite.flip_h = false
 				if $Timer2.time_left > 0:
@@ -70,7 +71,7 @@ func get_input():
 					$Sprite.play("Run")
 				
 			#ruch w lewo
-			elif Input.is_action_pressed("move_left"):
+			elif Input.is_action_pressed("move_left") and can_move == true:
 				velocity.x = -SPEED
 				$Sprite.flip_h = true
 				if $Timer2.time_left > 0:
@@ -92,7 +93,7 @@ func get_input():
 					
 				
 			#ślizg
-			if Input.is_action_just_pressed("action_slide"):
+			if Input.is_action_just_pressed("action_slide") and can_move == true:
 				if is_on_floor():
 					dash()
 	#			
@@ -101,13 +102,13 @@ func get_input():
 				
 			#skok
 			if is_on_floor():
-				if Input.is_action_just_pressed("action_jump"):
+				if Input.is_action_just_pressed("action_jump") and can_move == true:
 					velocity.y = JUMP
 			else:
 				$Sprite.play("Jump")
 				
 				#atak
-			if Input.is_action_just_pressed("action_attack"):
+			if Input.is_action_just_pressed("action_attack") and can_move == true:
 				$Timer.start()
 				$Timer2.start()
 				attack()
@@ -120,11 +121,6 @@ func get_input():
 
 	velocity.y += GRAVITY
 	
-	#ESC wywala gre i elo
-#func _unhandled_input(event):
-#	if event is InputEventKey:
-#		if event.pressed and event.scancode == KEY_ESCAPE:
-#			get_tree().quit()
 
 func dash():
 	SPEED = 500

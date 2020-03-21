@@ -1,5 +1,6 @@
 extends Area2D
 onready var dialogue = get_node('../Dialogue/Dialogue')
+onready var Janek = get_parent().get_node('Janek')
 
 var interact = false
 var vis1 = false

@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://dialogue/DialogueBox.gd" type="Script" id=2]
 
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
@@ -31,7 +37,7 @@ margin_left = 18.2854
 margin_top = 5.2262
 margin_right = 234.285
 margin_bottom = 40.2262
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "John"
 align = 1
 valign = 1
@@ -44,7 +50,9 @@ margin_left = 19.0526
 margin_top = 45.892
 margin_right = 748.053
 margin_bottom = 144.892
-text = "AHAHAHAHAA"
+custom_fonts/mono_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "Go  go power rengers"
 __meta__ = {
 "_edit_use_anchors_": false
 }

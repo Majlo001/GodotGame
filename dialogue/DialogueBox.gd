@@ -9,6 +9,7 @@ Version: 0.2
 extends Control
 
 var dialogue_folder = 'res://dialogue/dialogues'
+onready var Janek = get_parent().get_parent().get_node('Janek')
 
 onready var frame : Node = $Frame
 onready var label : Node = $Frame/RichTextLabel
@@ -35,12 +36,12 @@ var expression = ''
 
 
 func initial(file_id, block = '001'):
+	Janek.can_move = false
 	id = file_id
 	var file = File.new()
 	file.open('%s/%s.json' % [dialogue_folder, id], file.READ)
 	var json = file.get_as_text()
 	dialogue = JSON.parse(json).result
-	print("przeczytany")
 	file.close()
 	first(block)
 
@@ -102,7 +103,8 @@ func update_dialogue(block):
 
 func next():
 	if next_block == '':
-		frame.hide() 
+		frame.hide()
+		Janek.can_move = true
 	else:
 		label.bbcode_text = ''
 		update_dialogue(dialogue[next_block])
@@ -119,7 +121,6 @@ func check_names(block):
 		return
 	if block.has('name'):
 		sprite_name.text = block['name']
-#		yield(get_tree(), 'idle_frame')
 		sprite_name.set_process(true)
 		sprite_name.show()
 		#sprite_name.hide()
@@ -127,5 +128,10 @@ func check_names(block):
 		pass
 
 
+func question(text, options, next):
+	pass
+
 func _on_NextButton_pressed():
 	next()
+
+
