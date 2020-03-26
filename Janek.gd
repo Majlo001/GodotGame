@@ -4,7 +4,7 @@ extends KinematicBody2D
 #var SSPEED = 170
 var SPEED = 150
 var GRAVITY = 10
-var JUMP = -300
+var JUMP = -400
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
@@ -17,6 +17,7 @@ var health
 var score = 0
 
 var can_move = true
+var time_jump = true
 
 #var attack_delay = 1
 var attacking = false
@@ -101,11 +102,15 @@ func get_input():
 				$Sprite.play("Slide")
 				
 			#skok
-			if is_on_floor():
-				if Input.is_action_just_pressed("action_jump") and can_move == true:
-					velocity.y = JUMP
-			else:
+			if Input.is_action_pressed("action_jump") and can_move == true and time_jump == true:
+#				$Timer4.start(-1)
+				velocity.y = JUMP
 				$Sprite.play("Jump")
+			if is_on_floor():
+				time_jump = true
+			if Input.is_action_just_pressed("action_jump") and can_move == true and time_jump == true:
+				$Timer4.start()
+				
 				
 				#atak
 			if Input.is_action_just_pressed("action_attack") and can_move == true:
@@ -224,3 +229,7 @@ func _on_Bolce_body_entered(body):
 		dying = false
 		queue_free()
 		get_parent().get_node("Death/Death").show()
+
+
+func _on_Timer4_timeout():
+	time_jump = false

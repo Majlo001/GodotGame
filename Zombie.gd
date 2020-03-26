@@ -7,11 +7,8 @@ var GRAVITY = 10
 var max_GRAVITY = 90
 var FLOOR = Vector2(0, -1)
 
-# onready var body = $CollisionShape2D
-
 var velocity = Vector2(0, 0)
 
-#export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
 var attacking = false
@@ -28,17 +25,14 @@ var next_jump_time = -1
 
 var target_player_dsit = 70
 
-var eye_reach = 15
+var eye_reach = 10
 var vision = 200
 
 var timing = 0
 
-var dummy = null
-
 func _ready():
 	set_process(true)
 	health = max_health
-	
 	
 	var weapon_instance = load("res://weapons/Weaponz.tscn").instance()
 	var weapon_anchor = $WeaponSpawnPoint/WeaponAnchorPoint
@@ -49,8 +43,6 @@ func _ready():
 	weapon_path = weapon.get_path()
 	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
 	$Timer.start()
-	
-	dummy = get_parent().get_node("Zombie")
 
 func set_dir(target_dir):
 	if next_dir != target_dir:
@@ -58,7 +50,6 @@ func set_dir(target_dir):
 		next_dir_time = OS.get_ticks_msec() + react_time
 
 func sees_player():
-#	var positioning = dummy.position
 	var eye_center = position
 	var eye_top =eye_center + Vector2(0, -eye_reach)
 	var eye_left =eye_center + Vector2(-eye_reach, 0)
@@ -83,7 +74,7 @@ func sees_player():
 	return false
 
 func _physics_process(_delta):
-	print (sees_player())
+#	print (sees_player())
 	
 	if attacking == false:
 		
@@ -96,7 +87,6 @@ func _physics_process(_delta):
 		elif Player.position.x > position.x - target_player_dsit or Player.position.x < position.x + target_player_dsit and sees_player():
 			print("spelnia")
 			attack()
-#			$Timer.start()
 		else:
 			$Sprite.play("Idle")
 			set_dir(0)
@@ -117,9 +107,6 @@ func _physics_process(_delta):
 			next_jump_time = OS.get_ticks_msec() + react_time
 		
 		velocity.y += GRAVITY
-	
-#	if Player.position.x < position.x - target_player_dsit or Player.position.x > position.x + target_player_dsit:
-#		$Timer.start()
 
 	
 	if is_on_floor() and velocity.y > 0:
@@ -131,50 +118,26 @@ func _physics_process(_delta):
 		$Sprite.flip_h = false
 	elif dir == 1:
 		$Sprite.flip_h = true
-	
-#	if attacking == false:
-#		$Sprite.play("Walk")
-#		
-#		velocity.x = -SPEED * direction
-#	
 		if set_process(false):
 			$Timer2.start()
-#		
-#		velocity = move_and_slide(velocity,FLOOR)
-#		
-#	
-#	velocity.y += GRAVITY
+
 	if $Sprite.flip_h == true:
 		$WeaponSpawnPoint.rotation = 0
 	else:
 		$WeaponSpawnPoint.rotation = 22
-#	
-#	if is_on_wall():
-#		direction *= -1
-#		$RayCast2D.position.x *= -1
-#		if direction == 1:
-#			$Sprite.flip_h = false
-#		else:
-#			$Sprite.flip_h = true
+
 
 func attack():
 	if is_on_floor():
 		attacking = true
 		velocity.x = 0
 		velocity.y = 0
-#		if $Sprite.flip_h == true:
-#			self.position += Vector2(15, 0)
-#		else:
-#			self.position -= Vector2(15, 0)
 		$Sprite.play("Attack")
-		weapon.attack()
 		yield($Sprite, "animation_finished")
-#		$Timer.start()
+		weapon.attack()
 		attacking = false
 
 func take_damage(count):
-#	if current_state == DEAD:
-#		return
 	if (health == 4):
 		var Health3 = get_parent().get_node("Zombie/Sprite/TileMap2/heart4")
 		Health3.hide()
@@ -194,7 +157,6 @@ func take_damage(count):
 	if health <= 0:
 		health = 0
 		queue_free()
-#		emit_signal("died")
 		return
 
 func _on_Timer_timeout():

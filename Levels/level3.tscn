@@ -187,7 +187,7 @@ margin_bottom = 0.265869
 
 [node name="Jegomosc" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1304.16, 271.809 )
-[connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
+[connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="lever" to="lever" method="_on_lever_body_entered"]
 [connection signal="body_exited" from="lever" to="lever" method="_on_lever_body_exited"]
