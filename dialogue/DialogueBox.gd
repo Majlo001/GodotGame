@@ -17,6 +17,7 @@ onready var sprite_name : Node = $Frame/Label
 onready var next_button : Node = $Frame/NextButton
 onready var finish_button : Node = $Frame/FinishButton
 
+onready var timer1 : Timer = $Timer1
 
 var wait_time : float = 0.02 # TO BE CONTINUED...
 var pause_time : float = 2.0
@@ -74,7 +75,8 @@ func update_dialogue(block):
 	match block['type']:
 		'text':
 			not_question()
-			label.bbcode_text = block['text']
+			#label.bbcode_text = block['text']
+			typewriter(block['text'])
 			check_names(block)
 			characters_number = expression.length()
 			print(characters_number)
@@ -98,7 +100,11 @@ func update_dialogue(block):
 #		'action':
 
 
-
+func typewriter(string):
+	for letter in string:
+		timer1.start(wait_time)
+		label.append_bbcode(letter)
+		yield(timer1, "timeout")
 
 
 func next():

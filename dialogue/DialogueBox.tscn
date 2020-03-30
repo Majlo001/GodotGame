@@ -52,7 +52,6 @@ margin_right = 748.053
 margin_bottom = 144.892
 custom_fonts/mono_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
-text = "Go  go power rengers"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -76,4 +75,6 @@ text = "Koniec"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer1" type="Timer" parent="."]
 [connection signal="pressed" from="Frame/NextButton" to="." method="_on_NextButton_pressed"]
