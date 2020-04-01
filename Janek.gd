@@ -3,8 +3,8 @@ extends KinematicBody2D
 
 #var SSPEED = 170
 var SPEED = 150
-var GRAVITY = 10
-var JUMP = -400
+var GRAVITY = 15
+var JUMP = -450
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
@@ -67,18 +67,22 @@ func get_input():
 				velocity.x = SPEED
 				$Sprite.flip_h = false
 				if $Timer2.time_left > 0:
-					$Sprite.play("Run-Sword")
+					if is_on_floor():
+						$Sprite.play("Run-Sword")
 				else:
-					$Sprite.play("Run")
+					if is_on_floor():
+						$Sprite.play("Run")
 				
 			#ruch w lewo
 			elif Input.is_action_pressed("move_left") and can_move == true:
 				velocity.x = -SPEED
 				$Sprite.flip_h = true
 				if $Timer2.time_left > 0:
-					$Sprite.play("Run-Sword")
+					if is_on_floor():
+						$Sprite.play("Run-Sword")
 				else:
-					$Sprite.play("Run")
+					if is_on_floor():
+						$Sprite.play("Run")
 				
 			#bezruch
 			else:

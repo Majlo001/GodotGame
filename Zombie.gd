@@ -25,7 +25,7 @@ var next_jump_time = -1
 
 var target_player_dsit = 70
 
-var eye_reach = 10
+var eye_reach = 25
 var vision = 200
 
 var timing = 0
@@ -42,7 +42,7 @@ func _ready():
 
 	weapon_path = weapon.get_path()
 	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
-	$Timer.start()
+	
 
 func set_dir(target_dir):
 	if next_dir != target_dir:
@@ -74,7 +74,11 @@ func sees_player():
 	return false
 
 func _physics_process(_delta):
-#	print (sees_player())
+	print()
+	
+	if attacking == true:
+		velocity.x = 0
+		velocity.y = 0
 	
 	if attacking == false:
 		
@@ -84,9 +88,10 @@ func _physics_process(_delta):
 		elif Player.position.x > position.x + target_player_dsit and sees_player():
 			$Sprite.play("Walk")
 			set_dir(1)
-		elif Player.position.x > position.x - target_player_dsit or Player.position.x < position.x + target_player_dsit and sees_player():
-			print("spelnia")
-			attack()
+		elif Player.position.x > position.x - target_player_dsit - 20 or Player.position.x < position.x + target_player_dsit + 20 and sees_player():
+			#print("spelnia")
+			$Timer.start()
+			attacks()
 		else:
 			$Sprite.play("Idle")
 			set_dir(0)
@@ -127,15 +132,18 @@ func _physics_process(_delta):
 		$WeaponSpawnPoint.rotation = 22
 
 
-func attack():
-	if is_on_floor():
+func attacks():
+	if is_on_floor() and attacking == false:
+		print("yes")
 		attacking = true
 		velocity.x = 0
 		velocity.y = 0
 		$Sprite.play("Attack")
 		yield($Sprite, "animation_finished")
+		$Sprite.stop()
 		weapon.attack()
-		attacking = false
+		
+		
 
 func take_damage(count):
 	if (health == 4):
@@ -160,7 +168,7 @@ func take_damage(count):
 		return
 
 func _on_Timer_timeout():
-	attack()
+	attacking = false
 
 
 func _on_Timer2_timeout():
