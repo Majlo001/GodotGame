@@ -4,7 +4,7 @@ extends KinematicBody2D
 #var SSPEED = 170
 var SPEED = 150
 var GRAVITY = 15
-var JUMP = -450
+var JUMP = -350
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 

@@ -2,8 +2,8 @@
 Janek Dialogue System
 Author: MΔJLO
 first commit: 07.03.20
-last commit: 08.03.20
-Version: 0.2
+last commit: 08.04.20
+Version: 0.5
 """
 
 extends Control
@@ -86,6 +86,14 @@ func update_dialogue(block):
 			else:
 				next_block = ''
 			
+		'question':
+			label.bbcode_text = block['text']
+			question(block['text'], block['options'], block['next'])
+			check_names(block)
+			next_block = block['next'][0]
+			
+#		'action':
+#			not_question()
 	var t = Timer.new() # Timer na grab focus, by nie łapał nexta przy rozpoczęciu dialogu
 	t.set_wait_time(0.1)
 	t.set_one_shot(true)
@@ -94,10 +102,6 @@ func update_dialogue(block):
 	yield(t, "timeout")
 	t.queue_free()
 	next_button.grab_focus()
-
-#		'question':
-#			label.bbcode_text = step['text']
-#		'action':
 
 
 func typewriter(string):
@@ -119,7 +123,7 @@ func not_question():
 	is_question = false
 
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 func check_names(block):
