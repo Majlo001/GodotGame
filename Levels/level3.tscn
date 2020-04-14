@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Levels/Global.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Level3.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Death.tscn" type="PackedScene" id=12]
 [ext_resource path="res://dialogue/DialogueBox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Jegomosc.tscn" type="PackedScene" id=14]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 91.3061, 17.9489 )
@@ -48,6 +49,10 @@ polygon = PoolVector2Array( 9.57687, 476.206, 8.85425, 305.799, 95.0261, 259.259
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Level"]
 visible = false
 polygon = PoolVector2Array( -1385.19, 62.9705, -1298.86, 63.5275, -1299.41, 72.4393, -1303.87, 71.8823, -1305.54, 163.229, -1297.18, 172.698, -1304.98, 182.167, -1380.73, 182.724, -1389.09, 174.926, -1382.41, 165.457, -1381.29, 71.8823, -1385.75, 72.4393 )
+
+[node name="torch" parent="Level" instance=ExtResource( 15 )]
+position = Vector2( -1531.84, -75.5978 )
+scale = Vector2( 8.81666, 8.81666 )
 
 [node name="Janek" parent="." instance=ExtResource( 3 )]
 position = Vector2( 102.173, 415.653 )

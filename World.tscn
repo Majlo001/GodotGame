@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Levels/Global.gd" type="Script" id=1]
 [ext_resource path="res://Janek.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://items/heart.png" type="Texture" id=13]
 [ext_resource path="res://icon.png" type="Texture" id=14]
 [ext_resource path="res://changeLevel.gd" type="Script" id=15]
-[ext_resource path="res://Fonts/piexel-torch.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 329.207, 33.5466 )
@@ -268,11 +267,6 @@ shape = SubResource( 8 )
 position = Vector2( 128.784, 334.141 )
 scale = Vector2( 5.389, 5.389 )
 z_index = -9
-
-[node name="Sprite" type="Sprite" parent="torch"]
-position = Vector2( 0.0365925, 6.27832 )
-scale = Vector2( 0.0106776, 0.0106776 )
-texture = ExtResource( 16 )
 [connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
