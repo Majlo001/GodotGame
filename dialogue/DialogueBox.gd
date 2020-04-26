@@ -11,11 +11,21 @@ extends Control
 var dialogue_folder = 'res://dialogue/dialogues'
 onready var Janek = get_parent().get_parent().get_node('Janek')
 
+#Camery
+onready var JegomoscCam = get_parent().get_parent().get_node('Jegomosc-cam')
+onready var JanekCam = Janek.get_node("Camera2D")
+
 onready var frame : Node = $Frame
 onready var label : Node = $Frame/RichTextLabel
 onready var sprite_name : Node = $Frame/Label
 onready var next_button : Node = $Frame/NextButton
 onready var finish_button : Node = $Frame/FinishButton
+
+
+onready var question_options : Node = $Frame/VBoxContainer
+onready var option1 : Button = $Frame/VBoxContainer/Option1
+onready var option2 : Button = $Frame/VBoxContainer/Option2
+onready var option3 : Button = $Frame/VBoxContainer/Option3
 
 onready var timer1 : Timer = $Timer1
 
@@ -87,10 +97,12 @@ func update_dialogue(block):
 				next_block = ''
 			
 		'question':
+			var que
 			label.bbcode_text = block['text']
-			question(block['text'], block['options'], block['next'])
+			que = question(block['text'], block['options'], block['next'])
 			check_names(block)
-			next_block = block['next'][0]
+			#next_block = block['next'][que]
+			
 			
 #		'action':
 #			not_question()
@@ -133,15 +145,39 @@ func check_names(block):
 		sprite_name.text = block['name']
 		sprite_name.set_process(true)
 		sprite_name.show()
-		#sprite_name.hide()
+		
+		
+		#To Change
+		if block['name'] == "Jegomość":
+			print("ss")
+			JegomoscCam.current = true
+		else:
+			JanekCam.current = true
+		
 	else:
 		pass
 
 
 func question(text, options, next):
-	pass
+	question_options.show()
+	option1.text = options[0]
+	option2.text = options[1]
+	option3.text = options[2]
+	
+	if option1.is_hovered() == true:
+		option1.grab_focus()
+		
+	if option2.is_hovered() == true:
+		option2.grab_focus()
+		
+	if option3.is_hovered() == true:
+		option3.grab_focus()
+		
+	
 
 func _on_NextButton_pressed():
 	next()
 
-
+func _on_FinishButton_pressed():
+	frame.hide()
+	Janek.can_move = true

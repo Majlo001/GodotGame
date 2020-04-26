@@ -12,8 +12,25 @@
         "next": "003" 
     },
     "003": { 
-        "type": "text",
+        "type": "question",
         "name": "Janek",
-        "text": "Tutaj będzie pytanie?"
+        "text": "Jakie by mu zadać pytanie?",
+        "options": ["Kim ty właściwie jesteś?", "Co tu robisz?", "Jest tu gdzieś toaleta?"],
+        "next": ["option_1", "option_2", "option_3"]
+    },
+    "option_1":{
+        "type": "text",
+        "name": "Jegomość",
+        "text": "Ja jestem Jegomościem, najwspanialszym ze wspaniałych."
+    },
+    "option_2":{
+        "type": "text",
+        "name": "Jegomość",
+        "text": "Tak se stoje, a co nie można?"
+    },
+    "option_3":{
+        "type": "text",
+        "name": "Jegomość",
+        "text": "Za schodanmi w lewo."
     }
 }
