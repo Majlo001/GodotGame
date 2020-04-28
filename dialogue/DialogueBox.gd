@@ -2,8 +2,8 @@
 Janek Dialogue System
 Author: MΔJLO
 first commit: 07.03.20
-last commit: 08.04.20
-Version: 0.5
+last commit: 27.04.20
+Version: 0.9
 """
 
 extends Control
@@ -45,6 +45,8 @@ var current = ''
 var next_block = ''
 var expression = ''
 
+var chose_option1 = false
+
 
 func initial(file_id, block = '001'):
 	Janek.can_move = false
@@ -79,9 +81,6 @@ func clean():
 
 
 func update_dialogue(block):
-	current = block
-	characters_number = 0
-	
 	match block['type']:
 		'text':
 			not_question()
@@ -97,24 +96,28 @@ func update_dialogue(block):
 				next_block = ''
 			
 		'question':
-			var que
-			label.bbcode_text = block['text']
-			que = question(block['text'], block['options'], block['next'])
 			check_names(block)
-			#next_block = block['next'][que]
-			
+			typewriter(block['text'])
+			show_question(block['options'])
 			
 #		'action':
 #			not_question()
-	var t = Timer.new() # Timer na grab focus, by nie łapał nexta przy rozpoczęciu dialogu
-	t.set_wait_time(0.1)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	yield(t, "timeout")
-	t.queue_free()
-	next_button.grab_focus()
+	if is_question == false:# Timer na grab focus, by nie łapał nexta przy rozpoczęciu dialogu
+		var t = Timer.new() 
+		t.set_wait_time(wait_time)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		t.queue_free()
+		next_button.grab_focus()
 
+
+func update_dialogue_by_option(block1):
+	next_block = block1
+	next_button.show()
+	finish_button.show()
+	next()
 
 func typewriter(string):
 	for letter in string:
@@ -127,12 +130,27 @@ func next():
 	if next_block == '':
 		frame.hide()
 		Janek.can_move = true
+		JanekCam.current = true
 	else:
-		label.bbcode_text = ''
-		update_dialogue(dialogue[next_block])
+		is_question(dialogue[next_block])
+		print(is_question)
+		if is_question == false:
+				label.bbcode_text = ''
+				update_dialogue(dialogue[next_block])
+				print ("Next block")
+		else:
+			label.bbcode_text = ''
+			update_dialogue(dialogue[next_block])
 
 func not_question():
 	is_question = false
+	question_options.hide()
+
+func is_question(block):
+	if block['type'] == 'question':
+		is_question = true
+	else:
+		is_question = false
 
 func _ready():
 	pass
@@ -149,7 +167,6 @@ func check_names(block):
 		
 		#To Change
 		if block['name'] == "Jegomość":
-			print("ss")
 			JegomoscCam.current = true
 		else:
 			JanekCam.current = true
@@ -158,22 +175,15 @@ func check_names(block):
 		pass
 
 
-func question(text, options, next):
+func show_question(options):
+	next_button.hide()
+	finish_button.hide()
 	question_options.show()
 	option1.text = options[0]
 	option2.text = options[1]
 	option3.text = options[2]
-	
-	if option1.is_hovered() == true:
-		option1.grab_focus()
-		
-	if option2.is_hovered() == true:
-		option2.grab_focus()
-		
-	if option3.is_hovered() == true:
-		option3.grab_focus()
-		
-	
+	option1.grab_focus()
+
 
 func _on_NextButton_pressed():
 	next()
@@ -181,3 +191,19 @@ func _on_NextButton_pressed():
 func _on_FinishButton_pressed():
 	frame.hide()
 	Janek.can_move = true
+
+
+func _on_Option1_pressed():
+	#Dodać wait time
+	#option2.hide()
+	#option3.hide()
+	update_dialogue_by_option(dialogue[next_block]['next'][0])
+	
+
+
+func _on_Option2_pressed():
+	update_dialogue_by_option(dialogue[next_block]['next'][1])
+
+
+func _on_Option3_pressed():
+	update_dialogue_by_option(dialogue[next_block]['next'][2])

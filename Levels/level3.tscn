@@ -195,7 +195,7 @@ position = Vector2( 1304.16, 271.809 )
 
 [node name="Jegomosc-cam" type="Camera2D" parent="."]
 position = Vector2( 1232.63, 298.806 )
-[connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
+[connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="lever" to="lever" method="_on_lever_body_entered"]
 [connection signal="body_exited" from="lever" to="lever" method="_on_lever_body_exited"]
