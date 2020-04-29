@@ -2,7 +2,7 @@
     "001": { 
         "type": "text",
         "name": "Janek", 
-        "text": "Kim jestem i co tutaj robie?",
+        "text": "Kim jestem i co tutaj robie|???|",
         "next": "002" 
     },
     "002": { 
@@ -14,7 +14,7 @@
     "003": { 
         "type": "question",
         "name": "Janek",
-        "text": "Jakie by mu zadać pytanie?",
+        "text": "Jakie by mu |zadać| pytanie?",
         "options": ["Kim ty właściwie jesteś?", "Co tu robisz?", "Jest tu gdzieś toaleta?"],
         "next": ["option_1", "option_2", "option_3"]
     },

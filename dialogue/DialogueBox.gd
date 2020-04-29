@@ -30,10 +30,11 @@ onready var option3 : Button = $Frame/VBoxContainer/Option3
 onready var timer1 : Timer = $Timer1
 
 var wait_time : float = 0.02 # TO BE CONTINUED...
-var pause_time : float = 2.0
+var pause_time : float = 1.0
 var pause_char : String = '|'
 var newline_char : String = '@'
 var show_names : bool = true
+var pause_char_on : bool = false
 
 
 var id
@@ -43,7 +44,6 @@ var is_question : = false
 var dialogues_dict = 'dialogues'
 var current = ''
 var next_block = ''
-var expression = ''
 
 var chose_option1 = false
 
@@ -87,7 +87,7 @@ func update_dialogue(block):
 			#label.bbcode_text = block['text']
 			typewriter(block['text'])
 			check_names(block)
-			characters_number = expression.length()
+			#characters_number = expression.length()
 			print(characters_number)
 
 			if block.has('next'):
@@ -119,11 +119,23 @@ func update_dialogue_by_option(block1):
 	finish_button.show()
 	next()
 
+
 func typewriter(string):
+	var wt = wait_time
 	for letter in string:
-		timer1.start(wait_time)
-		label.append_bbcode(letter)
-		yield(timer1, "timeout")
+		if pause_char_on == false and letter == pause_char:
+			wt = pause_time
+			pause_char_on = true
+		elif pause_char_on == true and letter == pause_char:
+			wt = wait_time
+			pause_char_on = false
+		
+		if letter == pause_char:
+			pass
+		else:
+			timer1.start(wt)
+			label.append_bbcode(letter)
+			yield(timer1, "timeout")
 
 
 func next():
@@ -142,15 +154,18 @@ func next():
 			label.bbcode_text = ''
 			update_dialogue(dialogue[next_block])
 
+
 func not_question():
 	is_question = false
 	question_options.hide()
+
 
 func is_question(block):
 	if block['type'] == 'question':
 		is_question = true
 	else:
 		is_question = false
+
 
 func _ready():
 	pass
@@ -207,3 +222,4 @@ func _on_Option2_pressed():
 
 func _on_Option3_pressed():
 	update_dialogue_by_option(dialogue[next_block]['next'][2])
+
