@@ -11,10 +11,10 @@
 [ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Death.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Pause.tscn" type="PackedScene" id=11]
-[ext_resource path="res://torch.tscn" type="PackedScene" id=12]
-[ext_resource path="res://items/heart.png" type="Texture" id=13]
-[ext_resource path="res://icon.png" type="Texture" id=14]
-[ext_resource path="res://changeLevel.gd" type="Script" id=15]
+[ext_resource path="res://items/heart.png" type="Texture" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://changeLevel.gd" type="Script" id=14]
+[ext_resource path="res://torch.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 329.207, 33.5466 )
@@ -204,28 +204,28 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 90.0
 margin_bottom = 80.0
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Health1" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 110.0
 margin_top = 20.0
 margin_right = 180.0
 margin_bottom = 80.0
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Health2" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 200.0
 margin_top = 20.0
 margin_right = 270.0
 margin_bottom = 80.0
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Health3" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 290.0
 margin_top = 20.0
 margin_right = 360.0
 margin_bottom = 80.0
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Control" type="Control" parent="UI/UI"]
 margin_left = 58.0
@@ -238,7 +238,7 @@ margin_left = 740.0
 margin_top = 20.0
 margin_right = 800.0
 margin_bottom = 80.0
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/UI/Control"]
 margin_left = 809.0
@@ -252,23 +252,28 @@ text = "0"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 892, 334 )
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 
 [node name="icon" type="Sprite" parent="Area2D"]
 position = Vector2( 2.05054, 1 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 2.55054, 5.72205e-06 )
+position = Vector2( 2.55054, 5.72205e-006 )
 scale = Vector2( 3.25, 3.2 )
 shape = SubResource( 8 )
 
-[node name="torch" parent="." instance=ExtResource( 12 )]
-position = Vector2( 128.784, 334.141 )
+[node name="torch" parent="." instance=ExtResource( 15 )]
+position = Vector2( 49.518, 357.401 )
 scale = Vector2( 5.389, 5.389 )
 z_index = -9
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.109804, 0.109804, 0.109804, 1 )
 [connection signal="body_entered" from="Coins/Coin2" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Coins/Coin3" to="Janek" method="_on_Coin_body_entered"]
 [connection signal="body_entered" from="Sign" to="Sign" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Sign" to="Sign" method="_on_Area2D_body_exited"]
+
+[editable path="torch"]
