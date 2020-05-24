@@ -17,6 +17,7 @@ onready var JanekCam = Janek.get_node("Camera2D")
 
 onready var frame : Node = $Frame
 onready var label : Node = $Frame/RichTextLabel
+onready var label2 : Node = $Frame/RichTextLabel2
 onready var sprite_name : Node = $Frame/Label
 onready var next_button : Node = $Frame/NextButton
 onready var finish_button : Node = $Frame/FinishButton
@@ -32,7 +33,7 @@ onready var timer1 : Timer = $Timer1
 var wait_time : float = 0.02 # TO BE CONTINUED...
 var pause_time : float = 1.0
 var pause_char : String = '|'
-var newline_char : String = '@'
+var reference_char : String = '['
 var show_names : bool = true
 var pause_char_on : bool = false
 
@@ -84,7 +85,9 @@ func update_dialogue(block):
 	match block['type']:
 		'text':
 			not_question()
-			#label.bbcode_text = block['text']
+			var text
+			label2.bbcode_text = block['text']
+			block['text'] = label2.text
 			typewriter(block['text'])
 			check_names(block)
 			#characters_number = expression.length()
@@ -129,6 +132,10 @@ func typewriter(string):
 		elif pause_char_on == true and letter == pause_char:
 			wt = wait_time
 			pause_char_on = false
+		
+		var act
+		if string == '[':
+			check_b(string)
 		
 		if letter == pause_char:
 			pass
@@ -223,3 +230,5 @@ func _on_Option2_pressed():
 func _on_Option3_pressed():
 	update_dialogue_by_option(dialogue[next_block]['next'][2])
 
+func check_b(string):
+		pass

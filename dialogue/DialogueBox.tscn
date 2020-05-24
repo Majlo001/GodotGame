@@ -64,9 +64,15 @@ margin_right = 748.053
 margin_bottom = 144.892
 custom_fonts/mono_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
+bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Frame"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
 
 [node name="NextButton" type="Button" parent="Frame"]
 margin_left = 760.994

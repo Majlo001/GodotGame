@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Levels/Global.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Level3.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Death.tscn" type="PackedScene" id=13]
 [ext_resource path="res://dialogue/DialogueBox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Jegomosc.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ExperienceBar.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 91.3061, 17.9489 )
@@ -86,6 +87,9 @@ margin_left = -4.0
 margin_top = -10.0
 margin_right = 36.0
 margin_bottom = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Health0" type="NinePatchRect" parent="UI/UI/Health"]
 margin_left = 20.0
@@ -141,6 +145,8 @@ text = "0"
 [node name="Fps counter" type="Control" parent="UI/UI"]
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="ExperienceBar" parent="UI/UI" instance=ExtResource( 16 )]
 
 [node name="Bolce" type="Area2D" parent="."]
 position = Vector2( 636.004, 641.544 )
