@@ -4,11 +4,11 @@
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scenes/Skills.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 size = 13
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 28
 font_data = ExtResource( 2 )
 
@@ -29,7 +29,6 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -86,7 +85,7 @@ margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,7 +100,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -150,7 +149,7 @@ margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -165,7 +164,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -214,7 +213,7 @@ margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -229,7 +228,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -278,7 +277,7 @@ margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -293,7 +292,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -342,7 +341,7 @@ margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -357,7 +356,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -444,7 +443,7 @@ rect_min_size = Vector2( 0, 60 )
 margin_right = 111.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "Reset"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -456,15 +455,20 @@ anchor_right = 1.0
 margin_left = -156.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "Potwierdź"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Strength/ButtonMinus" to="." method="_on_ButtonMinus_pressed" binds= [ "str" ]]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Strength/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "str" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Dexterity/ButtonMinus" to="." method="_on_ButtonMinus_pressed" binds= [ "dex" ]]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Dexterity/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "dex" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Durability/ButtonMinus" to="." method="_on_ButtonMinus_pressed" binds= [ "dur" ]]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Durability/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "dur" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Inteligence/ButtonMinus" to="." method="_on_ButtonMinus_pressed" binds= [ "int" ]]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Inteligence/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "int" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Charisma/ButtonMinus" to="." method="_on_ButtonMinus_pressed" binds= [ "cha" ]]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Charisma/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "cha" ]]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Buttons/ButtonReset" to="." method="_on_ButtonReset_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Buttons/ButtonConfirm" to="." method="_on_ButtonConfirm_pressed"]

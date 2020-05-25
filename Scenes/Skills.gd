@@ -3,7 +3,7 @@ Janek Skills System
 Author: MΔJLO
 first commit: 25.05.20
 last commit: 25.05.20
-Version: 0.4
+Version: 0.5
 """
 
 extends Control
@@ -38,8 +38,8 @@ var visible_panel = false
 
 var points
 var strength
-var dexterity
 var durability
+var dexterity
 var inteligence
 var charisma
 
@@ -138,6 +138,14 @@ func disabledPlus():
 	inteligence_plus.disabled = true
 	charisma_plus.disabled = true
 
+func enabledPlus():
+	if points > 0:
+		strength_plus.disabled = false
+		dexterity_plus.disabled = false
+		durability_plus.disabled = false
+		inteligence_plus.disabled = false
+		charisma_plus.disabled = false
+	
 func zero():
 	if points == 0:
 		disabledPlus()
@@ -145,6 +153,7 @@ func zero():
 func _on_ButtonReset_pressed():
 	first()
 	refresh()
+	enabledPlus()
 	disabledMinus()
 
 
@@ -154,5 +163,52 @@ func _on_ButtonConfirm_pressed():
 	Janek.durability = durability
 	Janek.inteligence = inteligence
 	Janek.charisma = charisma
+	Experience.points = points
 	disabledMinus()
 	zero()
+
+
+func _on_ButtonMinus_pressed(extra_arg):
+	print(extra_arg)
+	
+	if extra_arg == "str":
+		strength_minus.disabled = false
+		points+=1
+		strength = int(strength)-1 
+		refresh()
+		if Janek.strength == strength:
+			strength_minus.disabled = true
+	
+	if extra_arg == "dex":
+		dexterity_minus.disabled = false
+		points+=1
+		dexterity = int(dexterity)-1 
+		refresh()
+		if Janek.dexterity == dexterity:
+			dexterity_minus.disabled = true
+	
+	if extra_arg == "dur":
+		durability_minus.disabled = false
+		points+=1
+		durability = int(durability)-1 
+		refresh()
+		if Janek.durability == durability:
+			durability_minus.disabled = true
+	
+	if extra_arg == "int":
+		inteligence_minus.disabled = false
+		points+=1
+		inteligence = int(inteligence)-1 
+		refresh()
+		if Janek.inteligence == inteligence:
+			inteligence_minus.disabled = true
+	
+	if extra_arg == "cha":
+		charisma_minus.disabled = false
+		points+=1
+		charisma = int(charisma)-1 
+		refresh()
+		if Janek.charisma == charisma:
+			charisma_minus.disabled = true
+	
+	enabledPlus()
