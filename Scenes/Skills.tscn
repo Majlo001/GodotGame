@@ -1,32 +1,35 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/SHPinscher-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/Skills.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 13
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 28
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 32
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 30
 font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -50,19 +53,19 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
 margin_right = 300.0
-margin_bottom = 512.0
+margin_bottom = 502.0
 rect_min_size = Vector2( 300, 0 )
 
 [node name="VSeparator" type="VSeparator" parent="Panel/HBoxContainer"]
 margin_left = 304.0
 margin_right = 329.0
-margin_bottom = 512.0
+margin_bottom = 502.0
 rect_min_size = Vector2( 25, 0 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
 margin_left = 333.0
 margin_right = 633.0
-margin_bottom = 512.0
+margin_bottom = 502.0
 rect_min_size = Vector2( 300, 0 )
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/VBoxContainer"]
@@ -76,20 +79,20 @@ margin_right = 300.0
 margin_bottom = 94.0
 rect_min_size = Vector2( 0, 60 )
 
-[node name="Button-" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Strength"]
+[node name="ButtonMinus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Strength"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button+" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Strength"]
+[node name="ButtonPlus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Strength"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -98,7 +101,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -111,7 +114,7 @@ anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Siła:"
 valign = 1
 __meta__ = {
@@ -126,7 +129,7 @@ margin_left = -0.100006
 margin_top = -1.16635
 margin_right = -0.100006
 margin_bottom = -1.16636
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
 valign = 1
@@ -140,20 +143,20 @@ margin_right = 300.0
 margin_bottom = 158.0
 rect_min_size = Vector2( 0, 60 )
 
-[node name="Button-" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Dexterity"]
+[node name="ButtonMinus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Dexterity"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button+" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Dexterity"]
+[node name="ButtonPlus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Dexterity"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -162,7 +165,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -175,7 +178,7 @@ anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Zręczność:"
 valign = 1
 __meta__ = {
@@ -190,7 +193,7 @@ margin_left = -0.100006
 margin_top = -1.16635
 margin_right = -0.100006
 margin_bottom = -1.16636
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
 valign = 1
@@ -204,20 +207,20 @@ margin_right = 300.0
 margin_bottom = 222.0
 rect_min_size = Vector2( 0, 60 )
 
-[node name="Button-" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Durability"]
+[node name="ButtonMinus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Durability"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button+" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Durability"]
+[node name="ButtonPlus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Durability"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -226,7 +229,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -239,7 +242,7 @@ anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Wytrzymałość:"
 valign = 1
 __meta__ = {
@@ -254,7 +257,7 @@ margin_left = 1.06631
 margin_top = -1.16635
 margin_right = 1.06631
 margin_bottom = -1.16636
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
 valign = 1
@@ -268,20 +271,20 @@ margin_right = 300.0
 margin_bottom = 286.0
 rect_min_size = Vector2( 0, 60 )
 
-[node name="Button-" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Inteligence"]
+[node name="ButtonMinus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Inteligence"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button+" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Inteligence"]
+[node name="ButtonPlus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Inteligence"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -290,7 +293,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -303,7 +306,7 @@ anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Inteligencja:"
 valign = 1
 __meta__ = {
@@ -318,7 +321,7 @@ margin_left = -0.100006
 margin_top = -1.16635
 margin_right = -0.100006
 margin_bottom = -1.16636
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
 valign = 1
@@ -332,20 +335,20 @@ margin_right = 300.0
 margin_bottom = 350.0
 rect_min_size = Vector2( 0, 60 )
 
-[node name="Button-" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Charisma"]
+[node name="ButtonMinus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Charisma"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -20.0
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button+" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Charisma"]
+[node name="ButtonPlus" type="Button" parent="Panel/HBoxContainer/VBoxContainer/Charisma"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -354,7 +357,7 @@ margin_left = -40.0
 margin_top = -21.1664
 margin_bottom = 18.8336
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -367,7 +370,7 @@ anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Charyzma:"
 valign = 1
 __meta__ = {
@@ -382,7 +385,7 @@ margin_left = -0.100006
 margin_top = -1.16635
 margin_right = -0.100006
 margin_bottom = -1.16636
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
 valign = 1
@@ -409,7 +412,7 @@ anchor_bottom = 1.0
 margin_top = -30.0
 margin_right = -0.100021
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Punkty do użycia:"
 valign = 1
 __meta__ = {
@@ -423,7 +426,7 @@ anchor_bottom = 1.0
 margin_left = -0.100006
 margin_right = -0.100006
 margin_bottom = -3.8147e-06
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
 valign = 1
@@ -441,7 +444,7 @@ rect_min_size = Vector2( 0, 60 )
 margin_right = 111.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Reset"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -453,7 +456,7 @@ anchor_right = 1.0
 margin_left = -156.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Potwierdź"
 __meta__ = {
 "_edit_use_anchors_": false

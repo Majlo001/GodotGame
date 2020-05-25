@@ -3,7 +3,7 @@ Janek Dialogue System
 Author: MΔJLO
 first commit: 07.03.20
 last commit: 27.04.20
-Version: 0.9
+Version: 1.1
 """
 
 extends Control

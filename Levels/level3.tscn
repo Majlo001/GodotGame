@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Levels/Global.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Level3.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://dialogue/DialogueBox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Jegomosc.tscn" type="PackedScene" id=15]
 [ext_resource path="res://ExperienceBar.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Skills.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 91.3061, 17.9489 )
@@ -219,6 +220,10 @@ margin_left = 0.112793
 margin_top = 0.265839
 margin_right = 0.112793
 margin_bottom = 0.265869
+
+[node name="Skills" type="CanvasLayer" parent="."]
+
+[node name="Skills" parent="Skills" instance=ExtResource( 17 )]
 
 [node name="Jegomosc" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1304.16, 271.809 )

@@ -8,6 +8,13 @@ var JUMP = -350
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
+
+var strength = 10
+var dexterity = 7
+var durability = 18
+var inteligence = 12
+var charisma = 9
+
 #export(String) var weapon_scene_path = "res://weapons/Weapon.tscn"
 var weapon = null
 var weapon_path = ""
