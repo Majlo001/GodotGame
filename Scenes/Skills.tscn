@@ -461,3 +461,8 @@ text = "Potwierdź"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Strength/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "str" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Dexterity/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "dex" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Durability/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "dur" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Inteligence/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "int" ]]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/Charisma/ButtonPlus" to="." method="_on_ButtonPlus_pressed" binds= [ "cha" ]]
