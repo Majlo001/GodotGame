@@ -3,12 +3,14 @@ Janek Skills System
 Author: MΔJLO
 first commit: 25.05.20
 last commit: 25.05.20
-Version: 0.3
+Version: 0.4
 """
 
 extends Control
 
 onready var Janek = get_parent().get_parent().get_node('Janek')
+const experience = preload('res://src/Experience.gd')
+onready var Experience = experience.new()
 
 onready var frame : Node = $Panel
 
@@ -34,7 +36,7 @@ onready var points_count : Node = $Panel/HBoxContainer/VBoxContainer/Points/Labe
 
 var visible_panel = false
 
-var points = 3
+var points
 var strength
 var dexterity
 var durability
@@ -42,18 +44,13 @@ var inteligence
 var charisma
 
 func _ready():
-	strength = str(Janek.strength)
-	dexterity = str(Janek.dexterity)
-	durability = str(Janek.durability)
-	inteligence = str(Janek.inteligence)
-	charisma = str(Janek.charisma)
+	first()
 
 	strength_count.text = strength
 	dexterity_count.text = dexterity
 	durability_count.text = durability
 	inteligence_count.text = inteligence
 	charisma_count.text = charisma
-	points_count.text = str(points)
 	
 	strength_minus.disabled = true
 	dexterity_minus.disabled = true
@@ -106,11 +103,56 @@ func _on_ButtonPlus_pressed(extra_arg):
 		points-=1
 		charisma = int(charisma)+1 
 		refresh()
+	
+	zero()
 
 func refresh():
-		strength_count.text = str(strength)
-		dexterity_count.text = str(dexterity)
-		durability_count.text = str(durability)
-		inteligence_count.text = str(inteligence)
-		charisma_count.text = str(charisma)
-		points_count.text = str(points)
+	strength_count.text = str(strength)
+	dexterity_count.text = str(dexterity)
+	durability_count.text = str(durability)
+	inteligence_count.text = str(inteligence)
+	charisma_count.text = str(charisma)
+	points_count.text = str(points)
+
+func first():
+	strength = str(Janek.strength)
+	dexterity = str(Janek.dexterity)
+	durability = str(Janek.durability)
+	inteligence = str(Janek.inteligence)
+	charisma = str(Janek.charisma)
+	points = Experience.points
+	points_count.text = str(points)
+	zero()
+
+func disabledMinus():
+	strength_minus.disabled = true
+	dexterity_minus.disabled = true
+	durability_minus.disabled = true
+	inteligence_minus.disabled = true
+	charisma_minus.disabled = true
+
+func disabledPlus():
+	strength_plus.disabled = true
+	dexterity_plus.disabled = true
+	durability_plus.disabled = true
+	inteligence_plus.disabled = true
+	charisma_plus.disabled = true
+
+func zero():
+	if points == 0:
+		disabledPlus()
+
+func _on_ButtonReset_pressed():
+	first()
+	refresh()
+	disabledMinus()
+
+
+func _on_ButtonConfirm_pressed():
+	Janek.strength = strength
+	Janek.dexterity = dexterity
+	Janek.durability = durability
+	Janek.inteligence = inteligence
+	Janek.charisma = charisma
+	disabledMinus()
+	zero()
