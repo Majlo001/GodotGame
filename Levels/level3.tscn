@@ -124,6 +124,9 @@ margin_left = 58.0
 margin_top = -13.0
 margin_right = 98.0
 margin_bottom = 27.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Coin" type="NinePatchRect" parent="UI/UI/Control"]
 margin_left = 740.0
@@ -143,6 +146,7 @@ tab_size = 1
 text = "0"
 
 [node name="Fps counter" type="Control" parent="UI/UI"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -224,7 +228,7 @@ position = Vector2( 1232.63, 298.806 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.109804, 0.109804, 0.109804, 1 )
-[connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
+[connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="lever" to="lever" method="_on_lever_body_entered"]
 [connection signal="body_exited" from="lever" to="lever" method="_on_lever_body_exited"]
