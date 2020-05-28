@@ -9,7 +9,7 @@ Version: 0.5
 extends Control
 
 onready var Janek = get_parent().get_parent().get_node('Janek')
-const experience = preload('res://src/Experience.gd')
+var experience = load('res://src/Experience.gd')
 onready var Experience = experience.new()
 
 onready var frame : Node = $Panel
@@ -211,4 +211,10 @@ func _on_ButtonMinus_pressed(extra_arg):
 		if Janek.charisma == charisma:
 			charisma_minus.disabled = true
 	
+	enabledPlus()
+
+
+func _on_ExperienceBar_point_change(value):
+	points = points + 1
+	refresh()
 	enabledPlus()

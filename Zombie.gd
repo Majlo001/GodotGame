@@ -9,6 +9,9 @@ var FLOOR = Vector2(0, -1)
 
 var velocity = Vector2(0, 0)
 
+signal exp_gain(value)
+var exp_points = 50
+
 var weapon = null
 var weapon_path = ""
 var attacking = false
@@ -163,6 +166,7 @@ func take_damage(count):
 
 	health -= count
 	if health <= 0:
+		emit_signal("exp_gain", exp_points)
 		health = 0
 		queue_free()
 		return

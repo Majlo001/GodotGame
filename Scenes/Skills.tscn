@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Fonts/SHPinscher-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/Skills.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Scenes/Skills.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/SHPinscher-Regular.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 13
@@ -14,16 +14,16 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
-font_data = ExtResource( 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 30
-font_data = ExtResource( 1 )
+font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -112,7 +112,7 @@ anchor_right = 0.607
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 3 )
 text = "Siła:"
 valign = 1
@@ -176,7 +176,7 @@ anchor_right = 0.607
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 3 )
 text = "Zręczność:"
 valign = 1
@@ -240,7 +240,7 @@ anchor_right = 0.607
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 3 )
 text = "Wytrzymałość:"
 valign = 1
@@ -304,7 +304,7 @@ anchor_right = 0.607
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 3 )
 text = "Inteligencja:"
 valign = 1
@@ -368,7 +368,7 @@ anchor_right = 0.607
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_right = -0.100021
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 3 )
 text = "Charyzma:"
 valign = 1
@@ -410,7 +410,7 @@ anchor_right = 0.727
 anchor_bottom = 1.0
 margin_top = -30.0
 margin_right = -0.100021
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 3 )
 text = "Punkty do użycia:"
 valign = 1
@@ -424,7 +424,7 @@ anchor_right = 0.977
 anchor_bottom = 1.0
 margin_left = -0.100006
 margin_right = -0.100006
-margin_bottom = -3.8147e-06
+margin_bottom = -3.8147e-006
 custom_fonts/font = SubResource( 4 )
 text = "11"
 align = 1
