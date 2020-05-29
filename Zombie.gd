@@ -150,15 +150,15 @@ func attacks():
 
 func take_damage(count):
 	if (health == 4):
-		var Health3 = get_parent().get_node("Zombie/Sprite/TileMap2/heart4")
+		var Health3 = get_node("Sprite/TileMap2/heart4")
 		Health3.hide()
 	
 	if (health == 3):
-		var Health2 = get_parent().get_node("Zombie/Sprite/TileMap2/heart3")
+		var Health2 = get_node("Sprite/TileMap2/heart3")
 		Health2.hide()
 	
 	if (health == 2):
-		var Health1 = get_parent().get_node("Zombie/Sprite/TileMap2/heart2")
+		var Health1 = get_node("Sprite/TileMap2/heart2")
 		Health1.hide()
 		
 	if (health == 1):
