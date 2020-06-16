@@ -12,6 +12,8 @@ var velocity = Vector2(0, 0)
 signal exp_gain(value)
 var exp_points = 50
 
+var dead = false
+
 var weapon = null
 var weapon_path = ""
 var attacking = false
@@ -83,38 +85,39 @@ func _physics_process(_delta):
 		velocity.x = 0
 		velocity.y = 0
 	
-	if attacking == false:
-		
-		if  Player.position.x < position.x - target_player_dsit and sees_player():
-			$Sprite.play("Walk")
-			set_dir(-1)
-		elif Player.position.x > position.x + target_player_dsit and sees_player():
-			$Sprite.play("Walk")
-			set_dir(1)
-		elif Player.position.x > position.x - target_player_dsit - 20 or Player.position.x < position.x + target_player_dsit + 20 and sees_player():
-			#print("spelnia")
-			$Timer.start()
-			attacks()
-		else:
-			$Sprite.play("Idle")
-			set_dir(0)
-		
-		if OS.get_ticks_msec() > next_dir_time:
-			dir = next_dir
-		
-		
-		if OS.get_ticks_msec() > next_jump_time and next_jump_time != -1 and is_on_floor():
-			if Player.position.y < position.y - 40 and sees_player():
-				velocity.y = -300
-			next_jump_time = -1
-		
-		
-		velocity.x = dir * SPEED
-		
-		if Player.position.y < position.y - 40 and next_jump_time == -1 and sees_player():
-			next_jump_time = OS.get_ticks_msec() + react_time
-		
-		velocity.y += GRAVITY
+	if dead != true:
+		if attacking == false:
+			
+			if  Player.position.x < position.x - target_player_dsit and sees_player():
+				$Sprite.play("Walk")
+				set_dir(-1)
+			elif Player.position.x > position.x + target_player_dsit and sees_player():
+				$Sprite.play("Walk")
+				set_dir(1)
+			elif Player.position.x > position.x - target_player_dsit - 20 or Player.position.x < position.x + target_player_dsit + 20 and sees_player():
+				#print("spelnia")
+				$Timer.start()
+				attacks()
+			else:
+				$Sprite.play("Idle")
+				set_dir(0)
+			
+			if OS.get_ticks_msec() > next_dir_time:
+				dir = next_dir
+			
+			
+			if OS.get_ticks_msec() > next_jump_time and next_jump_time != -1 and is_on_floor():
+				if Player.position.y < position.y - 40 and sees_player():
+					velocity.y = -300
+				next_jump_time = -1
+			
+			
+			velocity.x = dir * SPEED
+			
+			if Player.position.y < position.y - 40 and next_jump_time == -1 and sees_player():
+				next_jump_time = OS.get_ticks_msec() + react_time
+			
+			velocity.y += GRAVITY
 
 	
 	if is_on_floor() and velocity.y > 0:
@@ -162,13 +165,20 @@ func take_damage(count):
 		Health1.hide()
 		
 	if (health == 1):
-		set_process(false)
+		var Health = get_node("Sprite/TileMap2/heart")
+		Health.hide()
 
 	health -= count
 	if health <= 0:
 		emit_signal("exp_gain", exp_points)
 		health = 0
-		queue_free()
+		$Sprite.play("Die")
+		yield($Sprite, "animation_finished")
+		$Sprite.play("Dead")
+		dead = true
+		var col = get_node("CollisionShape2D")
+		col.disabled = true
+#		queue_free()
 		return
 
 func _on_Timer_timeout():
