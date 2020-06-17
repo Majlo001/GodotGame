@@ -225,6 +225,7 @@ margin_bottom = 0.265869
 [node name="Skills" type="CanvasLayer" parent="."]
 
 [node name="Skills" parent="Skills" instance=ExtResource( 16 )]
+visible = false
 
 [node name="Jegomosc" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1304.16, 271.809 )
@@ -241,8 +242,8 @@ position = Vector2( 1058.69, 321.828 )
 [node name="Zombie2" parent="." instance=ExtResource( 18 )]
 position = Vector2( 1563.9, 356.303 )
 [connection signal="point_change" from="UI/UI/ExperienceBar" to="Skills/Skills" method="_on_ExperienceBar_point_change"]
-[connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="Bolce" to="Janek" method="_on_Bolce_body_entered"]
+[connection signal="body_entered" from="Bolce" to="Bolce" method="_on_Bolce_body_entered"]
 [connection signal="body_entered" from="lever" to="lever" method="_on_lever_body_entered"]
 [connection signal="body_exited" from="lever" to="lever" method="_on_lever_body_exited"]
 [connection signal="exp_gain" from="Zombie" to="UI/UI/ExperienceBar" method="_on_Zombie_exp_gain"]
