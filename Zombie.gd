@@ -2,6 +2,10 @@ extends KinematicBody2D
 
 onready var Player = get_parent().get_node("Janek")
 
+onready var AreaDistance = $AreaDistance
+onready var DropDistance = $AreaDistance/DropDistance
+onready var GrabLabel = $GrabLabel
+
 var SPEED = 90
 var GRAVITY = 10
 var max_GRAVITY = 90
@@ -178,6 +182,7 @@ func take_damage(count):
 		dead = true
 		var col = get_node("CollisionShape2D")
 		col.disabled = true
+		drop()
 #		queue_free()
 		return
 
@@ -187,3 +192,14 @@ func _on_Timer_timeout():
 
 func _on_Timer2_timeout():
 	set_process(true)
+
+func drop():
+	AreaDistance.show()
+
+
+func _on_AreaDistance_body_entered(body):
+	GrabLabel.show()
+
+
+func _on_AreaDistance_body_exited(body):
+	GrabLabel.hide()
