@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Zombie.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-idle-0.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=18]
 [ext_resource path="res://items/heart.png" type="Texture" id=19]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=20]
+[ext_resource path="res://other/smalleq.png" type="Texture" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -64,7 +65,7 @@ radius = 83.1027
 height = 2.94965
 
 [sub_resource type="DynamicFont" id=5]
-size = 9
+size = 17
 font_data = ExtResource( 20 )
 
 [node name="Zombie" type="KinematicBody2D" groups=[
@@ -139,20 +140,32 @@ wait_time = 2.5
 one_shot = true
 
 [node name="AreaDistance" type="Area2D" parent="."]
-visible = false
 
 [node name="DropDistance" type="CollisionShape2D" parent="AreaDistance"]
 shape = SubResource( 4 )
 
 [node name="GrabLabel" type="Label" parent="."]
 visible = false
-margin_left = -46.9157
-margin_top = -50.7028
-margin_right = 61.0843
-margin_bottom = -22.7028
+margin_left = -98.6811
+margin_top = -70.4554
+margin_right = 105.319
+margin_bottom = -33.4554
 custom_fonts/font = SubResource( 5 )
 text = "Kliknij 'g' 
 aby zebrać"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropEq" type="TextureRect" parent="."]
+visible = false
+margin_left = -96.5831
+margin_top = -174.871
+margin_right = 99.4169
+margin_bottom = -46.8715
+texture = ExtResource( 21 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

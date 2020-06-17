@@ -5,6 +5,7 @@ onready var Player = get_parent().get_node("Janek")
 onready var AreaDistance = $AreaDistance
 onready var DropDistance = $AreaDistance/DropDistance
 onready var GrabLabel = $GrabLabel
+onready var DropEq = $DropEq
 
 var SPEED = 90
 var GRAVITY = 10
@@ -17,6 +18,8 @@ signal exp_gain(value)
 var exp_points = 50
 
 var dead = false
+var can_grab = false
+var Eqshowing = false
 
 var weapon = null
 var weapon_path = ""
@@ -83,7 +86,7 @@ func sees_player():
 	return false
 
 func _physics_process(_delta):
-	print()
+	get_input()
 	
 	if attacking == true:
 		velocity.x = 0
@@ -182,7 +185,6 @@ func take_damage(count):
 		dead = true
 		var col = get_node("CollisionShape2D")
 		col.disabled = true
-		drop()
 #		queue_free()
 		return
 
@@ -194,12 +196,28 @@ func _on_Timer2_timeout():
 	set_process(true)
 
 func drop():
-	AreaDistance.show()
+	pass
 
 
 func _on_AreaDistance_body_entered(body):
-	GrabLabel.show()
+	if body.name == "Janek" and dead == true:
+		GrabLabel.show()
+		can_grab = true
 
 
 func _on_AreaDistance_body_exited(body):
-	GrabLabel.hide()
+	if body.name == "Janek" and dead == true:
+		GrabLabel.hide()
+		can_grab = false
+
+
+func get_input():
+	if Input.is_action_pressed("ui_grab") and can_grab == true and Eqshowing == false:
+		DropEq.show()
+		GrabLabel.hide()
+		Player.can_move = false
+		Eqshowing = true
+	elif Input.is_action_pressed("ui_grab") and can_grab == true and Eqshowing == true:
+		DropEq.hide()
+		Player.can_move = true
+		Eqshowing = false
