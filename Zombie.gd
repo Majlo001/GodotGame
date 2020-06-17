@@ -86,7 +86,6 @@ func sees_player():
 	return false
 
 func _physics_process(_delta):
-	get_input()
 	
 	if attacking == true:
 		velocity.x = 0
@@ -211,13 +210,14 @@ func _on_AreaDistance_body_exited(body):
 		can_grab = false
 
 
-func get_input():
-	if Input.is_action_pressed("ui_grab") and can_grab == true and Eqshowing == false:
-		DropEq.show()
-		GrabLabel.hide()
-		Player.can_move = false
-		Eqshowing = true
-	elif Input.is_action_pressed("ui_grab") and can_grab == true and Eqshowing == true:
-		DropEq.hide()
-		Player.can_move = true
-		Eqshowing = false
+func _input(action):
+	if action.is_action_pressed("ui_grab") and can_grab == true:
+		if Eqshowing == false:
+			DropEq.show()
+			GrabLabel.hide()
+			Player.can_move = false
+			Eqshowing = true
+		else:
+			DropEq.hide()
+			Player.can_move = true
+			Eqshowing = false
