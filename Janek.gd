@@ -114,7 +114,7 @@ func get_input():
 			if Input.is_action_just_pressed("action_slide") and can_move == true:
 				if is_on_floor():
 					dash()
-	#			
+				
 			if SPEED == 500 and friction == false:
 				$Sprite.play("Slide")
 				
