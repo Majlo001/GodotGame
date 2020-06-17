@@ -146,7 +146,7 @@ func _physics_process(_delta):
 
 
 func attacks():
-	if is_on_floor() and attacking == false:
+	if is_on_floor() and attacking == false and dead == false:
 		print("yes")
 		attacking = true
 		velocity.x = 0

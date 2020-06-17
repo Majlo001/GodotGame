@@ -1,6 +1,10 @@
 #warning-ignore-all:unused_variable
 extends KinematicBody2D
 
+const Stats = preload("res://src/Stats.gd")
+
+var stats = Stats.new()
+
 #var SSPEED = 170
 var SPEED = 150
 var GRAVITY = 15
@@ -8,6 +12,7 @@ var JUMP = -350
 var FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
+onready var SAVE_KEY : String = "Hero_" + name
 
 var strength = 10
 var dexterity = 7
@@ -35,6 +40,7 @@ var inv = false
 var invenotry = load("Inventory.tscn")
 var node = invenotry.instance()
 var dying = false
+
 
 func _ready():
 	set_process(true)
@@ -246,3 +252,8 @@ func _on_Timer4_timeout():
 	time_jump = false
 
 
+#func save(save_game : Resource):
+#	save_game.data[SAVE_KEY] = stats.save_stats(
+
+#func load(save_game : Resource):
+#	break

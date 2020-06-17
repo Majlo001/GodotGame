@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "SaveGame",
 "language": "GDScript",
 "path": "res://SaveGame/SaveGame.gd"
+}, {
+"base": "Node",
+"class": "Stats",
+"language": "GDScript",
+"path": "res://src/Stats.gd"
 } ]
 _global_script_class_icons={
-"SaveGame": ""
+"SaveGame": "",
+"Stats": ""
 }
 
 [application]

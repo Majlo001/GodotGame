@@ -9,15 +9,15 @@
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-1.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-2.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Slime/Individual Sprites/slime-die-3.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-0.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-move-3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-0.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-2.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-3.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Slime/Individual Sprites/slime-attack-4.png" type="Texture" id=18]
 [ext_resource path="res://items/heart.png" type="Texture" id=19]
 [ext_resource path="res://Fonts/PressStart2P.ttf" type="DynamicFontData" id=20]
 [ext_resource path="res://other/smalleq.png" type="Texture" id=21]
@@ -29,7 +29,12 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "Die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 5.0
@@ -39,19 +44,14 @@ animations = [ {
 "name": "Dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": false,
-"name": "Die",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": false,
-"name": "Hurt",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": false,
 "name": "Attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "Hurt",
 "speed": 5.0
 } ]
 
@@ -65,7 +65,7 @@ radius = 83.1027
 height = 2.94965
 
 [sub_resource type="DynamicFont" id=5]
-size = 17
+size = 9
 font_data = ExtResource( 20 )
 
 [node name="Zombie" type="KinematicBody2D" groups=[
