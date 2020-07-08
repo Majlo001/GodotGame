@@ -60,24 +60,39 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Run",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Die",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ],
 "loop": true,
-"name": "Idle-NoSword",
+"name": "Attack3",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "Attack1",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ) ],
+"loop": true,
+"name": "Hurt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "Idle-Sword",
 "speed": 4.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": false,
 "name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "Slide",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
@@ -90,39 +105,24 @@ animations = [ {
 "name": "Run-Sword",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "Slide",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ],
-"loop": true,
-"name": "Attack3",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
-"loop": true,
-"name": "Idle-Sword",
+"name": "Idle-NoSword",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Attack1",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ) ],
-"loop": true,
-"name": "Hurt",
-"speed": 5.0
+"name": "Run",
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11.211, 9.04247 )
 
 [node name="Janek" type="KinematicBody2D" groups=[
-"save",
 "character",
 "player",
+"save",
 ]]
 position = Vector2( 392.591, 304.851 )
 script = ExtResource( 1 )

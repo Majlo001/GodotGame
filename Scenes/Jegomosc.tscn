@@ -5,21 +5,22 @@
 [ext_resource path="res://other/PressStart2P.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
+radius = 11.385
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 3 )
 
 [node name="Jegomosc" type="Area2D"]
-position = Vector2( 567.625, 266.799 )
+position = Vector2( 0.00304413, -0.0142441 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -71.192, 34.8329 )
+position = Vector2( -0.0505371, 0.141884 )
 scale = Vector2( 2.24152, 2.24152 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -70, 30 )
+position = Vector2( 1.34985, 0.600342 )
 scale = Vector2( 5, 4 )
 shape = SubResource( 1 )
 

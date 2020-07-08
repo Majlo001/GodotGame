@@ -3,16 +3,17 @@ Janek Dialogue System
 Author: MΔJLO
 first commit: 07.03.20
 last commit: 27.04.20
-Version: 1.1
+Version: 1.2
 """
 
 extends Control
 
 var dialogue_folder = 'res://dialogue/dialogues'
 onready var Janek = get_parent().get_parent().get_node('Janek')
+onready var Jegomosc = get_parent().get_parent().get_node('Jegomosc')
 
 #Camery
-onready var JegomoscCam = get_parent().get_parent().get_node('Jegomosc-cam')
+onready var MainCam = get_parent().get_parent().get_node('MainCam')
 onready var JanekCam = Janek.get_node("Camera2D")
 
 onready var frame : Node = $Frame
@@ -147,6 +148,7 @@ func typewriter(string):
 
 func next():
 	if next_block == '':
+		change_camera(Janek.get_position())
 		frame.hide()
 		Janek.can_move = true
 		JanekCam.current = true
@@ -182,6 +184,7 @@ func check_names(block):
 	if not show_names:
 		return
 	if block.has('name'):
+		MainCam.current = true
 		sprite_name.text = block['name']
 		sprite_name.set_process(true)
 		sprite_name.show()
@@ -189,12 +192,17 @@ func check_names(block):
 		
 		#To Change
 		if block['name'] == "Jegomość":
-			JegomoscCam.current = true
+			change_camera(Jegomosc.get_position())
+		if block['name'] == "Janek":
+			change_camera(Janek.get_position())
 		else:
-			JanekCam.current = true
+			pass
 		
 	else:
-		pass
+		sprite_name.text = "nieznajomy"
+
+func change_camera(target):
+	MainCam.position = target
 
 
 func show_question(options):
