@@ -2,8 +2,8 @@
 Janek Dialogue System
 Author: MΔJLO
 first commit: 07.03.20
-last commit: 27.04.20
-Version: 1.2
+last commit: 07.08.20
+Version: 1.3
 """
 
 extends Control
@@ -11,6 +11,9 @@ extends Control
 var dialogue_folder = 'res://dialogue/dialogues'
 onready var Janek = get_parent().get_parent().get_node('Janek')
 onready var Jegomosc = get_parent().get_parent().get_node('Jegomosc')
+
+const Quests = preload("res://src/Quest/Quest.gd")
+var quests = Quests.new()
 
 #Camery
 onready var MainCam = get_parent().get_parent().get_node('MainCam')
@@ -83,6 +86,7 @@ func clean():
 
 
 func update_dialogue(block):
+	nextYield = true
 	match block['type']:
 		'text':
 			not_question()
@@ -90,6 +94,7 @@ func update_dialogue(block):
 			label2.bbcode_text = block['text']
 			block['text'] = label2.text
 			typewriter(block['text'])
+			nextYield = false
 			check_names(block)
 			#characters_number = expression.length()
 			print(characters_number)
@@ -106,6 +111,20 @@ func update_dialogue(block):
 			
 #		'action':
 #			not_question()
+
+		'quest':
+			not_question()
+			label2.bbcode_text = block['quest']
+			block['quest'] = label2.text
+			typewriter(block['text'])
+			check_names(block)
+			quest(block['quest'])
+			
+			if block.has('next'):
+				next_block = block['next']
+			else:
+				next_block = ''
+
 	if is_question == false:# Timer na grab focus, by nie łapał nexta przy rozpoczęciu dialogu
 		var t = Timer.new() 
 		t.set_wait_time(wait_time)
@@ -123,6 +142,7 @@ func update_dialogue_by_option(block1):
 	finish_button.show()
 	next()
 
+var nextYield = false
 
 func typewriter(string):
 	var wt = wait_time
@@ -141,12 +161,18 @@ func typewriter(string):
 		if letter == pause_char:
 			pass
 		else:
-			timer1.start(wt)
-			label.append_bbcode(letter)
-			yield(timer1, "timeout")
+			#if nextYield == false:
+				timer1.start(wt)
+				label.append_bbcode(letter)
+				yield(timer1, "timeout")
+				print("time")
+			#else: 
+				#pass
 
 
 func next():
+	if not dialogue: # Check if is in the middle of a dialogue 
+		return
 	if next_block == '':
 		change_camera(Janek.get_position())
 		frame.hide()
@@ -228,15 +254,16 @@ func _on_Option1_pressed():
 	#option2.hide()
 	#option3.hide()
 	update_dialogue_by_option(dialogue[next_block]['next'][0])
-	
-
 
 func _on_Option2_pressed():
 	update_dialogue_by_option(dialogue[next_block]['next'][1])
-
 
 func _on_Option3_pressed():
 	update_dialogue_by_option(dialogue[next_block]['next'][2])
 
 func check_b(string):
-		pass
+	pass
+
+func quest(quest_name):
+	print(quest_name)
+	quests.startQuest(quest_name)

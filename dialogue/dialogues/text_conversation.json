@@ -19,9 +19,10 @@
         "next": ["option_1", "option_2", "option_3"]
     },
     "option_1": {
-        "type": "text",
+        "type": "quest",
         "name": "Jegomość",
-        "text": "Ja jestem Jegomościem, najwspanialszym ze wspaniałych."
+        "text": "Ja jestem Jegomościem, najwspanialszym ze wspaniałych.",
+        "quest": "quest1"
     },
     "option_2": {
         "type": "text",
