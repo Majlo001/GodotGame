@@ -1,0 +1,8 @@
+{
+    "001": { 
+        "type": "text",
+        "name": "Janek", 
+        "text": "Kim jestem i [b] co tutaj robie [/b] |???|",
+        "next": "002" 
+    }
+}
