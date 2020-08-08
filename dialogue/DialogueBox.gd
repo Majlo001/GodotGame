@@ -74,8 +74,6 @@ func first(block):
 #			else:
 #				progress.get(dialogues_dict)[id] = true 
 		update_dialogue(dialogue['001']) 
-#		else:
-#		update_dialogue(dialogue['002'])
 	else: 
 		update_dialogue(dialogue[block])
 
@@ -165,7 +163,7 @@ func typewriter(string):
 				timer1.start(wt)
 				label.append_bbcode(letter)
 				yield(timer1, "timeout")
-				print("time")
+				#print("time")
 			#else: 
 				#pass
 
@@ -180,7 +178,6 @@ func next():
 		JanekCam.current = true
 	else:
 		is_question(dialogue[next_block])
-		print(is_question)
 		if is_question == false:
 				label.bbcode_text = ''
 				update_dialogue(dialogue[next_block])

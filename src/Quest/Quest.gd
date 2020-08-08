@@ -1,18 +1,29 @@
-extends Node
+extends Node2D
 
 
-onready var quest_folder = "res://src/Quest/quests"
+var quest_folder = 'res://src/Quest/quests'
+
+onready var quest_label : Node = $GGLabel
 
 var quest
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-func startQuest(quest_name, id='001'):
+func _ready():
+	pass 
+
+func startQuest(quest_name, block = '001'):
 	var file = File.new()
-	file.open('%s/%s.json' % [quest_folder, id], file.READ) # ID dać do fora
+	file.open('%s/%s.json' % [quest_folder, quest_name], file.READ) # 
 	var json = file.get_as_text()
 	quest = JSON.parse(json).result
 	file.close()
-	print(quest)
+	readQuest(quest[block])
+
+
+func readQuest(block):
+	match block['type']:
+		'find':
+			print(quest_label)
+			print(block['text'])
+			get_node("GGLabel").bbcode_text = block['text']
+			#block['text'] = quest_label.text

@@ -1,8 +1,11 @@
 {
     "001": { 
-        "type": "text",
-        "name": "Janek", 
-        "text": "Kim jestem i [b] co tutaj robie [/b] |???|",
+        "type": "find",
+        "text": "Catch a monster.",
         "next": "002" 
+    },
+    "002": { 
+        "type": "kill",
+        "text": "Kill a monster."
     }
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Levels/Global.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Level3.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Scenes/Skills.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Jegomosc.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Zombie.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/Quest/Quest.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 91.3061, 17.9489 )
@@ -221,6 +222,9 @@ margin_left = 0.112793
 margin_top = 0.265839
 margin_right = 0.112793
 margin_bottom = 0.265869
+
+[node name="Quest" parent="Dialogue" instance=ExtResource( 19 )]
+position = Vector2( 780.074, 389.055 )
 
 [node name="Skills" type="CanvasLayer" parent="."]
 

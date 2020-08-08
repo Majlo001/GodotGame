@@ -14,3 +14,4 @@ func _on_coin_area_enter_shape(_area_id, _area, _area_shape, _area_shape):
 
 func _on_body_entered(_body):
 	pass 
+d
