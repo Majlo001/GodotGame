@@ -2,13 +2,21 @@
 
 [ext_resource path="res://src/Quest/Quest.gd" type="Script" id=1]
 
-[node name="Quest" type="Node2D"]
+[node name="Quest" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="GGLabel" type="Label" parent="."]
-margin_right = 259.0
-margin_bottom = 116.0
-text = "GG WP"
+[node name="Frame" type="Panel" parent="."]
+margin_right = 380.0
+margin_bottom = 330.0
+
+[node name="QuestLabel" type="RichTextLabel" parent="Frame"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

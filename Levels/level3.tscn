@@ -224,7 +224,10 @@ margin_right = 0.112793
 margin_bottom = 0.265869
 
 [node name="Quest" parent="Dialogue" instance=ExtResource( 19 )]
-position = Vector2( 780.074, 389.055 )
+margin_left = 786.0
+margin_top = 396.0
+margin_right = 155.0
+margin_bottom = 142.0
 
 [node name="Skills" type="CanvasLayer" parent="."]
 
