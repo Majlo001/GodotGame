@@ -263,4 +263,4 @@ func check_b(string):
 
 func quest(quest_name):
 	print(quest_name)
-	quests.startQuest(quest_name)
+	#quests.startQuest(quest_name)

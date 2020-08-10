@@ -7,8 +7,12 @@ onready var quest_label : Node = $Frame/QuestLabel
 #$Frame/QuestLabel
 #get_parent().get_node("Quest/Frame/QuestLabel")
 
+#Colors
+const Colors = preload("res://src/core/colors.gd")
+var colors = Colors.new()
 
 var quest
+var text : String
 
 
 func _ready():
@@ -31,7 +35,8 @@ func readQuest(block):
 		'find':
 			print(quest_label)
 			print(block['text'])
-			quest_label.append_bbcode(block['text'] + '\n')
+			text = '[color=' + colors.lapis_blue + ']' + block['text']  + '[/color]' + '\n'
+			quest_label.append_bbcode(text )
 		
 		'kill':
 			print("kill")
