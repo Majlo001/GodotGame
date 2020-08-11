@@ -25,6 +25,7 @@ var arrayNum
 var title : String
 var text : String
 var killCount : String
+var killAmount : String
 
 
 func createQuestArray(): #Made only on starting/creating game.
@@ -82,8 +83,12 @@ func readQuest(block):
 		'kill':
 			print("kill")
 			killCounter(block["killArray"], block['creature'], block['count'])
-			killCount = String(block['count'])
-			text = '[color=' + colors.ferrari_red + ']' + block['text']  + ' | 0/' + killCount + '[/color]' + '\n'
+			killAmount = String(block['count']) #Number of creatures player have to kill
+			print("=====")
+			print(block["killArray"])
+			print(killQuestArray[0])
+			#killCount = String(killQuestArray[block["killArray"]]) #Number of creatures player killed
+			text = '[color=' + colors.ferrari_red + ']' + block['text']  + ' | ' + killCount + '/' + killAmount + '[/color]' + '\n'
 			quest_label.append_bbcode(text)
 		
 		'collect':

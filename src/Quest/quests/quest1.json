@@ -1,5 +1,5 @@
 {
-    "arrayNum": 1,
+    "arrayNum": 0,
     "title": "Be kind.",
     "001": { 
         "type": "find",
@@ -9,8 +9,16 @@
     "002": { 
         "type": "kill",
         "text": "Kill a monster",
-        "killArray": 1,
+        "killArray": 0,
         "count": 25,
-        "creature": "Zombie"
+        "creature": "Zombie",
+        "next": "003" 
+    },
+    "003": {
+        "type": "collect",
+        "text": "Collect 10 pieces of map.",
+        "collectArray": 0,
+        "count": 10,
+        "creature": "Map"
     }
 }
