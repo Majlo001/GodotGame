@@ -1,11 +1,16 @@
 {
+    "arrayNum": 1,
+    "title": "Be kind.",
     "001": { 
         "type": "find",
-        "text": "Catch a monster.",
+        "text": "Find a monster",
         "next": "002" 
     },
     "002": { 
         "type": "kill",
-        "text": "Kill a monster."
+        "text": "Kill a monster",
+        "killArray": 1,
+        "count": 25,
+        "creature": "Zombie"
     }
 }
